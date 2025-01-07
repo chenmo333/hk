@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MachineVision.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fa3f5c6bd533da8fd9692cd92011d4f07f86f0d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MachineVision.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MachineVision.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
