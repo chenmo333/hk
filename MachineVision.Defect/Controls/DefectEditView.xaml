@@ -1,0 +1,42 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:control="clr-namespace:MachineVision.Defect.Controls"
+    xmlns:halcon="clr-namespace:HalconDotNet;assembly=halcondotnet"
+    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <Style TargetType="control:DefectEditView">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="control:DefectEditView">
+                    <Grid Background="Black">
+                        <Grid.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem x:Name="PART_Refer" Header="绘制参考点" />
+                                <MenuItem x:Name="PART_Update" Header="更新参考点" />
+                                <MenuItem x:Name="PART_Region" Header="绘制检测区域" />
+                                <MenuItem x:Name="PART_UpdateRegion" Header="更新检测区域" />
+
+                                <MenuItem x:Name="PART_Clear" Header="清空" />
+                            </ContextMenu>
+                        </Grid.ContextMenu>
+
+                        <TextBlock
+                            x:Name="PART_MSG"
+                            Margin="10"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Panel.ZIndex="1"
+                            FontSize="18"
+                            FontWeight="Bold"
+                            Foreground="#32CD32"
+                            Text="{TemplateBinding Message}" />
+
+                        <halcon:HSmartWindowControlWPF x:Name="PART_SMART" Grid.Row="1" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,188 @@
+﻿<Window
+    x:Class="MachineVision.Views.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:local="clr-namespace:MachineVision.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="WPF机器视觉检测平台" 
+    Width="1400"
+    Height="960"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    Background="{DynamicResource MaterialDesignPaper}"
+
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    
+    WindowStartupLocation="CenterScreen"
+    WindowState="Maximized"
+    mc:Ignorable="d">
+    <!-- 使用MaterialDesign的DialogHost控件包裹整个窗口 -->
+    <md:DialogHost Identifier="Root">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <!-- 第一行，自动高度 -->
+                <RowDefinition />
+                <!-- 第二行，占用剩余空间 -->
+            </Grid.RowDefinitions>
+
+            <!-- 顶部ColorZone，使用MaterialDesign的主色调 -->
+            <md:ColorZone md:ElevationAssist.Elevation="Dp2" Mode="PrimaryDark">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <!-- 第一列，自动宽度 -->
+                        <ColumnDefinition />
+                        <!-- 第二列，占用剩余空间 -->
+                    </Grid.ColumnDefinitions>
+
+                    <!-- 显示应用名称的TextBlock -->
+                    <TextBlock
+                        Margin="10,15,15,15"
+                        FontSize="22"
+                        FontWeight="Bold"
+                        Foreground="White"
+                        Text="{DynamicResource ApplicationName}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseLeftButtonDown">
+                                <!-- 单击事件触发GoHomeCommand命令 -->
+                                <i:InvokeCommandAction Command="{Binding GoHomeCommand}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TextBlock>
+
+                    <!-- 显示菜单项的ListBox -->
+                    <ListBox
+                        x:Name="listMenuBox"
+                        Grid.Column="1"
+                        ItemsSource="{Binding NavigationService.Items}">
+                        <!-- 定义菜单项的排列方式为水平排列 -->
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+
+                        <!-- 菜单项样式 -->
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListBoxItem">
+                                            <Grid>
+                                                <Border x:Name="border" />
+                                                <Border x:Name="borderHeader" Background="{TemplateBinding Background}" />
+                                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                            </Grid>
+
+                                            <!-- 选中项和鼠标悬停时的触发样式 -->
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsSelected" Value="True">
+                                                    <Setter TargetName="borderHeader" Property="Background" Value="#ffffff" />
+                                                    <Setter TargetName="borderHeader" Property="Opacity" Value="0.1" />
+                                                    <Setter TargetName="border" Property="BorderBrush" Value="#ffffff" />
+                                                    <Setter TargetName="border" Property="BorderThickness" Value="0,0,0,3" />
+                                                </Trigger>
+
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter TargetName="borderHeader" Property="Background" Value="#ffffff" />
+                                                    <Setter TargetName="borderHeader" Property="Opacity" Value="0.1" />
+                                                    <Setter TargetName="border" Property="BorderBrush" Value="#ffffff" />
+                                                    <Setter TargetName="border" Property="BorderThickness" Value="0,0,0,3" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+
+                        <!-- 菜单项的显示模板 -->
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    Margin="20,5"
+                                    FontSize="16"
+                                    Foreground="White"
+                                    Text="{Binding Name}" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <!-- 选择变化时，触发NavigateCommand命令 -->
+                                <i:InvokeCommandAction Command="{Binding NavigateCommand}" CommandParameter="{Binding ElementName=listMenuBox, Path=SelectedItem}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ListBox>
+                </Grid>
+            </md:ColorZone>
+
+            <!-- 主内容区域，使用DrawerHost显示可收缩的侧边栏 -->
+            <md:DialogHost Grid.Row="1">
+                <md:DrawerHost Content="{Binding ElementName=MainViewContentControl, Path=Content, Mode=TwoWay}" IsTopDrawerOpen="{Binding IsTopDrawerOpen}">
+                    <md:DrawerHost.TopDrawerContent>
+                        <!-- 显示二级菜单项的ItemsControl -->
+                        <ItemsControl ItemsSource="{Binding NavigationService.Items[0].Items}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+
+                            <!-- 二级菜单项的显示模板 -->
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock
+                                            Margin="15,10"
+                                            FontWeight="Bold"
+                                            Text="{Binding Name}" />
+
+                                        <!-- 子菜单项的ItemsControl -->
+                                        <ItemsControl
+                                            Grid.Row="1"
+                                            Margin="10"
+                                            ItemsSource="{Binding Items}">
+                                            <ItemsControl.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <UniformGrid Columns="2" />
+                                                </ItemsPanelTemplate>
+                                            </ItemsControl.ItemsPanel>
+
+                                            <!-- 子菜单项的按钮模板 -->
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Button
+                                                        Margin="5"
+                                                        Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"
+                                                        CommandParameter="{Binding}"
+                                                        Content="{Binding Name}" />
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </md:DrawerHost.TopDrawerContent>
+                </md:DrawerHost>
+            </md:DialogHost>
+
+            <!-- 显示主内容区域的ContentControl -->
+            <ContentControl
+                x:Name="MainViewContentControl"
+                prism:RegionManager.RegionName="MainViewRegion"
+                Visibility="Collapsed" />
+        </Grid>
+    </md:DialogHost>
+</Window>

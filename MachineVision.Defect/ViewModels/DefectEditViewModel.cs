@@ -1,0 +1,793 @@
+﻿using DryIoc;
+using HalconDotNet;
+using MachineVision.Core;
+using MachineVision.Core.Extensions;
+using MachineVision.Core.TemplateMatch;
+using MachineVision.Defect.Events;
+using MachineVision.Defect.Extensions;
+using MachineVision.Defect.Models;
+using MachineVision.Defect.Models.UI;
+using MachineVision.Defect.Services;
+using MachineVision.Defect.ViewModels.Components;
+using MachineVision.Defect.ViewModels.Components.Models;
+using MachineVision.Shared.Controls;
+using MachineVision.Shared.Services.Session;
+using MvCameraControl;
+using Prism.Commands;
+using Prism.Events;
+using Prism.Regions;
+using Prism.Services.Dialogs;
+using System.Collections.ObjectModel;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Windows.Forms;
+
+
+namespace MachineVision.Defect.ViewModels
+{
+    internal class DefectEditViewModel : NavigationViewModel
+    {
+       
+
+        #region 相机标志位
+        readonly DeviceTLayerType enumTLayerType = DeviceTLayerType.MvGigEDevice | DeviceTLayerType.MvUsbDevice
+    | DeviceTLayerType.MvGenTLGigEDevice | DeviceTLayerType.MvGenTLCXPDevice | DeviceTLayerType.MvGenTLCameraLinkDevice | DeviceTLayerType.MvGenTLXoFDevice;
+
+        List<IDeviceInfo> deviceInfoList = new List<IDeviceInfo>();
+        IDevice device = null;
+
+        bool isGrabbing = false;        // ch:是否正在取图 | en: Grabbing flag
+
+        //相机曝光
+        double exposureTime;
+
+        //相机增益
+        double gain;
+
+
+
+        #endregion
+        private ObservableCollection<Camera> _cameraList;
+        public ObservableCollection<Camera> CameraList
+        {
+            get => _cameraList;
+            set
+            {
+                _cameraList = value;
+                RaisePropertyChanged(nameof(CameraList));
+            }
+        }
+
+        private Camera _selectedCamera;
+        public Camera SelectedCamera
+        {
+            get => _selectedCamera;
+            set
+            {
+                _selectedCamera = value;
+                RaisePropertyChanged(nameof(SelectedCamera));
+                // 你可以在这里添加逻辑，当选择的相机改变时执行相应操作
+            }
+        }
+
+        public DefectEditViewModel(TargetService targetService,
+            ProjectService appService,
+            InspectionService inspec,
+            IHostDialogService dialog,
+            IEventAggregator aggregator)
+        {
+
+
+            Files = new ObservableCollection<ImageFile>();
+         
+            DrawingObjectInfos = new ObservableCollection<HDrawingObjectInfo>();
+            RegionList = new ObservableCollection<InspecRegionModel>();
+
+            this.targetService = targetService;
+            this.appService = appService;
+            this.inspec = inspec;
+            this.dialog = dialog;
+            this.aggregator = aggregator;
+            InitBindingCommands();
+        }
+
+        #region 接口服务
+
+        private readonly TargetService targetService;
+        private readonly ProjectService appService;
+        public InspectionService inspec { get; }
+        private readonly IHostDialogService dialog;
+        private readonly IEventAggregator aggregator;
+
+        #endregion
+
+        #region 命令
+
+        public DelegateCommand ExecNextCommand { get; private set; }
+        public DelegateCommand<string> ExecuteCommand { get; private set; }
+
+        public DelegateCommand ReturnCommand { get; private set; }
+
+        public DelegateCommand TrainCommand { get; private set; }
+
+        public DelegateCommand RunCommand { get; private set; }
+
+        /// <summary>
+        /// 加载图像列表
+        /// </summary>
+        public DelegateCommand LoadImageCommand { get; private set; }
+        //相机
+        public DelegateCommand xjCommand { get; private set; }
+        
+         public DelegateCommand TextrecognitionCommand { get; private set; }
+        public DelegateCommand RefreshDeviceListCommand { get; private set; }//寻找相机
+        public DelegateCommand OpenDeviceCommand { get; private set; }//打开相机
+        public DelegateCommand OnceSoftTriggerCommand { get; private set; }//相机拍照
+        /// <summary>
+        /// 设置项目参数
+        /// </summary>
+        public DelegateCommand SetModelParamCommand { get; private set; }
+
+        /// <summary>
+        /// 更新项目参数
+        /// </summary>
+        public DelegateCommand UpdateModelParamCommand { get; private set; }
+
+        /// <summary>
+        /// 新建检测区域
+        /// </summary>
+        public DelegateCommand CreateRegionCommand { get; private set; }
+
+        /// <summary>
+        /// 更新区域参数
+        /// </summary>
+        public DelegateCommand UpdateRegionCommand { get; private set; }
+
+        /// <summary>
+        /// 删除检测区域
+        /// </summary>
+        public DelegateCommand<InspecRegionModel> DeleteInspecRegionCommand { get; private set; }
+
+        /// <summary>
+        /// 编辑检测区域
+        /// </summary>
+        public DelegateCommand<InspecRegionModel> EditInspecRegionCommand { get; private set; }
+
+        /// <summary>
+        /// 初始化绑定命令RefreshDeviceList
+        /// </summary>
+        private void InitBindingCommands()
+        {
+            LoadImageCommand = new DelegateCommand(LoadImage);
+            xjCommand = new DelegateCommand(xj); 
+            RefreshDeviceListCommand = new DelegateCommand(RefreshDeviceList);//枚举相机
+          
+            OpenDeviceCommand = new DelegateCommand(OpenDevice);//打开相机
+            OnceSoftTriggerCommand = new DelegateCommand(OnceSoftTrigger);//打开拍照
+
+            TextrecognitionCommand = new DelegateCommand(Textrecognition);//识别文字
+            SetModelParamCommand = new DelegateCommand(SetModelParam);
+            UpdateModelParamCommand = new DelegateCommand(UpdateModelParam);
+            CreateRegionCommand = new DelegateCommand(CreateRegion);
+            UpdateRegionCommand = new DelegateCommand(UpdateRegion);
+
+            EditInspecRegionCommand = new DelegateCommand<InspecRegionModel>(EditInspecRegion);
+            DeleteInspecRegionCommand = new DelegateCommand<InspecRegionModel>(DeleteInspecRegion);
+
+            RunCommand = new DelegateCommand(Run);
+
+            TrainCommand = new DelegateCommand(() =>
+            {
+                DialogParameters param = new DialogParameters();
+                param.Add("Value", RegionList);
+                dialog.ShowDialog("TrainView", param, callback =>
+                {
+
+                });
+            });
+
+            ReturnCommand = new DelegateCommand(() =>
+            {
+                if (Journal.CanGoBack)
+                    Journal.GoBack();
+            });
+
+            ExecNextCommand = new DelegateCommand(Execute);
+            ExecuteCommand = new DelegateCommand<string>(Execute);
+        }
+
+     
+        #endregion
+
+        #region 编辑器绑定
+
+        private HObject image;
+        private bool isModelEditMode;
+        private ObservableCollection<HDrawingObjectInfo> drawingObjectInfos;
+
+        public HObject Image
+        {
+            get { return image; }
+            set { image = value; RaisePropertyChanged(); }
+        }
+
+        public bool IsModelEditMode
+        {
+            get { return isModelEditMode; }
+            set { isModelEditMode = value; RaisePropertyChanged(); }
+        }
+
+        /// <summary>
+        /// 绘制形状集合
+        /// </summary>
+        public ObservableCollection<HDrawingObjectInfo> DrawingObjectInfos
+        {
+            get { return drawingObjectInfos; }
+            set { drawingObjectInfos = value; RaisePropertyChanged(); }
+        }
+
+        #endregion
+
+        #region 项目/检测区域/图像列表
+
+        private int selectedImageIndex;
+
+        public int SelectedImageIndex
+        {
+            get { return selectedImageIndex; }
+            set { selectedImageIndex = value; RaisePropertyChanged(); }
+        }
+
+        private ProjectModel model;
+        private ObservableCollection<InspecRegionModel> regionList;
+        private ObservableCollection<ImageFile> files;
+        private InspecRegionModel selectedRegion;
+
+        /// <summary>
+        /// 项目
+        /// </summary>
+        public ProjectModel Model
+        {
+            get { return model; }
+            set { model = value; RaisePropertyChanged(); }
+        }
+
+        /// <summary>
+        /// 检测区域列表
+        /// </summary>
+        public ObservableCollection<InspecRegionModel> RegionList
+        {
+            get { return regionList; }
+            set { regionList = value; RaisePropertyChanged(); }
+        }
+
+        /// <summary>
+        /// 选中检测区域
+        /// </summary>
+        public InspecRegionModel SelectedRegion
+        {
+            get { return selectedRegion; }
+            set
+            {
+                selectedRegion = value;
+                RestoreRegionParameter();
+            }
+        }
+
+        public ObservableCollection<ImageFile> Files
+        {
+            get { return files; }
+            set { files = value; RaisePropertyChanged(); }
+        }
+
+        private string message;
+
+        public string Message
+        {
+            get { return message; }
+            set { message = value; RaisePropertyChanged(); }
+        }
+
+        #endregion
+
+        #region 命令方法
+
+        /// <summary>
+        /// 处理下一张图像
+        /// </summary>
+        private void Execute()
+        {
+            SelectedImageIndex += 1;
+            if (Image == null || !Image.IsInitialized()) return;
+            Result = inspec.ExecuteAsync(Image, Model, RegionList);
+        }
+
+        /// <summary>
+        /// 执行操作
+        /// </summary>
+        /// <param name="arg"></param>
+        private void Execute(string arg)
+        {
+            switch (arg)
+            { 
+                case "Left": 
+                    break;
+                case "Right": 
+                    break;
+                case "Top": 
+                    break;
+                case "Bottom": 
+                    break;
+                case "Restore": 
+                    break;
+            }
+        }
+       
+        private void xj()
+        { 
+        
+        
+        }
+        public async Task Template()
+        {
+            await Task.Run(() =>
+            {
+            });
+        }
+        private void RefreshDeviceList()
+        {
+            SDKSystem.Initialize();//相机初始化SDK资源
+                                   // 检查 CameraList 是否已初始化
+            if (CameraList == null)
+            {
+                CameraList = new ObservableCollection<Camera>(); // 如果未初始化，进行初始化
+            }
+            // 清空 CameraList
+            CameraList.Clear();
+
+            // 枚举设备
+            int nRet = DeviceEnumerator.EnumDevices(enumTLayerType, out deviceInfoList);
+          
+
+            // 在 CameraList 中添加设备
+            foreach (var deviceInfo in deviceInfoList)
+            {
+                string cameraName = !string.IsNullOrEmpty(deviceInfo.UserDefinedName) ?
+                    $"{deviceInfo.TLayerType}: {deviceInfo.UserDefinedName} ({deviceInfo.SerialNumber})" :
+                    $"{deviceInfo.TLayerType}: {deviceInfo.ManufacturerName} {deviceInfo.ModelName} ({deviceInfo.SerialNumber})";
+
+                CameraList.Add(new Camera
+                {
+                    CameraName = cameraName,
+                    DeviceInfo = deviceInfo
+                });
+
+            }
+        }
+
+        private void OpenDevice()
+        {
+            Template1();
+        }
+        public async Task Template1()
+        {
+            await Task.Run(() =>
+            {
+            // ch:获取选择的设备信息 | en:Get selected device information
+            IDeviceInfo deviceInfo = CameraList[0].DeviceInfo;
+            try
+            {
+                    // 创建设备
+                device = DeviceFactory.CreateDevice(deviceInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("创建设备失败！" + ex.Message);
+                return;
+            }
+
+            int result = device.Open();
+
+
+            // 判断是否为GigE设备并设置包大小
+            if (device is IGigEDevice gigEDevice)
+            {
+                int optionPacketSize;
+                result = gigEDevice.GetOptimalPacketSize(out optionPacketSize);
+                if (result == MvError.MV_OK)
+                {
+                    result = device.Parameters.SetIntValue("GevSCPSPacketSize", (long)optionPacketSize);
+
+                }
+
+            }
+
+            // 设置心跳超时
+            device.Parameters.SetIntValue("GevHeartbeatTimeout", 3000);
+
+            // **设置触发源为软件**
+            result = device.Parameters.SetEnumValueByString("TriggerSource", "Software");
+
+
+            // **启用触发模式**
+            result = device.Parameters.SetEnumValueByString("TriggerMode", "On");
+
+
+            // 设置采集模式为连续
+            result = device.Parameters.SetEnumValueByString("AcquisitionMode", "Continuous");
+
+            StartGrab();
+            });
+        }
+
+        private void StartGrab()
+        {
+            Template2();
+        }
+        public async Task Template2()
+        {
+            await Task.Run(() =>
+            {
+
+                isGrabbing = true;
+
+                // ch:开始采集 | en:Start Grabbing
+                int result = device.StreamGrabber.StartGrabbing();
+                if (result != MvError.MV_OK)
+                {
+                    isGrabbing = false;
+
+                    return;
+                }
+            });
+        }
+        private void OnceSoftTrigger()
+        {
+
+            Template3();
+        }
+        public async Task Template3()
+        {
+            await Task.Run(() =>
+            {
+                try
+                {
+                    // 发送软件触发命令
+                    int result = device.Parameters.SetCommandValue("TriggerSoftware");
+                    if (result != MvError.MV_OK)
+                    {
+
+                        return;
+                    }
+
+
+                    GetImageFromDevice();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("发送软件触发时出错：" + ex.Message, "错误");
+                }
+            });
+        }
+
+        private void GetImageFromDevice()
+        {
+            int nRet;
+            IFrameOut frameOut;
+            HImage hImage = new HImage();//读取主图片
+            nRet = device.StreamGrabber.GetImageBuffer(500, out frameOut);
+            if (nRet != MvError.MV_OK)
+            {
+
+
+             
+                return;
+            }
+            else
+            {
+                var img = new HImage();
+                Image mimage = frameOut.Image.ToBitmap();
+
+                // 指定保存路径
+                string filePath = @"C:\image.jpg"; // 可以修改文件名和格式
+
+                // 将图像保存到指定路径
+                mimage.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg); // 可以根据需要修改格式，如 PNG、BMP 等
+
+                hImage.ReadImage("C:/image.jpg");
+                Image = hImage;
+
+                device.StreamGrabber.FreeImageBuffer(frameOut);
+            }
+
+        }
+        private void Textrecognition()
+        {
+            HTuple modelid = new HTuple();////定义变量给模板
+            HTuple hv_Row = new HTuple(), hv_Column = new HTuple();//定义变量
+            HTuple hv_Angle = new HTuple(), hv_Score = new HTuple();//定义变量
+            try
+            {
+                HOperatorSet.ReadShapeModel("C:/Users/HZSK2023/Pictures/crop.shm", out modelid);//读取本地模板
+
+                HOperatorSet.FindShapeModel(Image, modelid, -0.39, 0.79, 0.5, 1, 0.5, "least_squares", 0, 0.9, out hv_Row, out hv_Column, out hv_Angle, out hv_Score);
+             System.Diagnostics.Debug.WriteLine($"score:{hv_Score} angle:{hv_Angle} row:{hv_Row} column{hv_Column}");
+                
+            }
+            catch { }
+        }
+
+        public async Task Template4()
+        {
+            await Task.Run(() =>
+            {
+            });
+        }
+        /// <summary>
+        /// 加载图像
+        /// </summary>
+        private void LoadImage()
+        {
+            //FolderBrowserDialog 是 Windows 窗体应用程序中的一种对话框控件，允许用户选择文件夹而不是单个文件。
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            //dialog.Description 设置了对话框的说明文本，显示为“请选择导入图像”。
+            dialog.Description = "请选择导入图像";
+
+            //dialog.ShowDialog() 方法会显示对话框。返回值 System.Windows.Forms.DialogResult.OK 表示用户选择了文件夹并点击了“确定”按钮。
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                //将每个 ImageFile 对象添加到 Files 集合中。
+                var files = new DirectoryInfo(dialog.SelectedPath).GetFiles();
+
+                Files.Clear();
+
+                foreach (var file in files)
+                {
+                    if (Path.GetExtension(file.FullName) != ".bmp") continue;
+                    Files.Add(new ImageFile()
+                    {
+                        FileName = file.Name,//文件名
+                        FilePath = file.FullName,//文件路径
+                    });
+                }
+            }
+        }
+
+        /// <summary>
+        /// 设置项目参数
+        /// </summary>
+        private void SetModelParam()
+        {
+            //1.如果本身的项目参数中存在，就把对应的参数还原到界面上, 模板匹配的过程
+            //2.如果不存在参数，则进入编辑参数的模式 
+            targetService.GetRefer(Image, Model);
+            IsModelEditMode = !IsModelEditMode;
+
+            Message = "全局参数设置, 右键创建基准点。";
+        }
+
+        /// <summary>
+        /// 更新项目参数
+        /// </summary> 
+        private async void UpdateModelParam()
+        {
+            var drawingObj = DrawingObjectInfos.FirstOrDefault(q => q.Color == "green");
+            if (drawingObj != null)
+            {
+                //1.记录当前的形状的尺寸信息: 左上角，右下角，宽度，高度
+                var refer = Model.ReferSetting;
+                refer.SetReferParam(drawingObj);
+
+                //2.生成一个NCC匹配模板，保存到本地，数据库则存储模板的绝对路径 
+                var template = Image.ReduceDomain(refer.X1, refer.Y1, refer.X2, refer.Y2).CropDomain();
+                await Model.UpdateReferTemplate(template);
+
+                //3.把上面所设置的信息都保存到数据当中。 
+                await appService.CreateOrUpdateAsync(Model);
+            }
+
+            Message = "全局参数更新完成。";
+        }
+
+        /// <summary>
+        /// 创建检测区域
+        /// </summary>
+        private async void CreateRegion()
+        {
+            await appService.CreateRegionAsync(new InspecRegionModel()
+            {
+                Name = "P" + (RegionList.Count + 1),
+                ProjectId = Model.Id,
+                MatchParameter = string.Empty,
+                Parameter = string.Empty
+            });
+
+            GetRegionListAsync();
+            SelectedRegion = RegionList.Last();
+            Message = "当前选中区域：" + SelectedRegion.Name;
+        }
+
+        /// <summary>
+        /// 编辑检测区域参数
+        /// </summary>
+        /// <param name="input"></param>
+        private async void EditInspecRegion(InspecRegionModel input)
+        {
+            if (input == null) return;
+
+            DialogParameters param = new DialogParameters();
+            param.Add("Value", input);
+
+            await dialog.ShowDialogAsync("RegionParameterView", param);
+        }
+
+        /// <summary>
+        /// 删除检测区域
+        /// </summary>
+        /// <param name="input">选择删除的检测区域</param> 
+        private async void DeleteInspecRegion(InspecRegionModel input)
+        {
+            if (input == null) return;
+
+            var region = RegionList.FirstOrDefault(q => q.Id == input.Id);
+
+            if (region != null)
+            {
+                region.Dispose();
+                await appService.DeleteRegionAsync(region.Id);
+                RegionList.Remove(region);
+            }
+        }
+
+        /// <summary>
+        /// 还原检测区域参数
+        /// </summary>
+        private void RestoreRegionParameter()
+        {
+            if (Image == null || SelectedRegion == null)
+                return;
+
+            //1.先查找基准点位置
+            targetService.GetRefer(Image, Model);
+
+            //2.还原选中检测区域的实际位置
+            if (SelectedRegion.Context is IRestoreMatchRegion restore)
+                restore.RestorePostion(Image, SelectedRegion, Model.ReferSetting.Row, Model.ReferSetting.Column);
+
+            RaisePropertyChanged(nameof(SelectedRegion));
+        }
+
+        /// <summary>
+        /// 更新区域参数
+        /// </summary>
+        private async void UpdateRegion()
+        {
+            var drawingObj = DrawingObjectInfos.FirstOrDefault(q => q.Color == "red");
+            if (drawingObj != null)
+            {
+                //1. 保存区域的尺寸信息以及相对基准点的偏移参数
+                var temp = new TemplateSetting();
+                temp.SetReferParam(drawingObj);
+                temp.RowSpacing = Model.ReferSetting.Row - temp.Row;
+                temp.ColumnSpacing = Model.ReferSetting.Column - temp.Column;
+
+                SelectedRegion.MatchSetting = temp;
+
+                //2. 保存区域的模板数据
+                var template = Image.ReduceDomain(temp.X1, temp.Y1, temp.X2, temp.Y2)
+                    .CropDomain()
+                    .Rgb1ToGray();
+                await SelectedRegion.UpdateRegionTemplate(template);
+
+                //3. 保存区域的检测模型 
+                var Context = new LocalDeformableContext();
+                Context.UpdateVariationModel(template, SelectedRegion);
+                SelectedRegion.Context = Context;
+
+                //4. 更新数据库参数
+                await appService.UpdateRegionAsync(SelectedRegion);
+            }
+        }
+
+        /// <summary>
+        /// 获取检测区域列表
+        /// </summary>
+        private async void GetRegionListAsync()
+        {
+            var list = await appService.GetRegionListAsync(Model.Id);
+            RegionList.Clear();
+            foreach (var region in list)
+            {
+                region.ProjectName = Model.Name;
+                region.InitRegionContext();
+                RegionList.Add(region);
+            }
+        }
+
+        #endregion
+
+        #region 公共方法
+
+        /// <summary>
+        /// 重置绘制对象
+        /// </summary>
+        private void ResetDrawingObject()
+        {
+            DrawingObjectInfos.Clear();
+        }
+
+        #endregion
+
+        #region 导航服务
+
+        private IRegionNavigationJournal Journal;
+
+        public override void OnNavigatedFrom(NavigationContext navigationContext)
+        {
+            aggregator.GetEvent<ImageTrainEvent>().Unsubscribe(ImageTrain);
+
+            base.OnNavigatedFrom(navigationContext);
+        }
+
+        public override void OnNavigatedTo(NavigationContext navigationContext)
+        {
+            if (navigationContext.Parameters.ContainsKey("Value"))
+            {
+                Model = navigationContext.Parameters.GetValue<ProjectModel>("Value");
+                GetRegionListAsync();
+            }
+
+            aggregator.GetEvent<ImageTrainEvent>().Subscribe(ImageTrain);
+            base.OnNavigatedTo(navigationContext);
+
+            Journal = navigationContext.NavigationService.Journal;
+        }
+
+        #endregion
+
+        #region 检测服务
+
+        private InspectionResult result;
+
+        /// <summary>
+        /// 缺陷检测结果
+        /// </summary>
+        public InspectionResult Result
+        {
+            get { return result; }
+            set { result = value; RaisePropertyChanged(); }
+        }
+
+        /// <summary>
+        /// 检测图像
+        /// </summary>
+        public void Run()
+        {
+            Result = inspec.ExecuteAsync(Image, Model, RegionList);
+        }
+
+        #endregion
+
+        #region 模型和训练
+
+        /// <summary>
+        /// 检测区域模型训练
+        /// </summary>
+        /// <param name="info"></param>
+        private void ImageTrain(ImageTrainInfo info)
+        {
+            var region = RegionList.FirstOrDefault(t => t.Name == info.Name);
+            if (region != null)
+            {
+                var url = region.GetRegionTrainUrl() + DateTime.Now.ToString("yyyyMMddhhmmss") + ".bmp";
+                info.Image.SaveIamge(url);
+
+                if (region.Context is LocalDeformableContext context)
+                    context.AddTrainImage(region, info.Image);
+            }
+        }
+
+        #endregion
+    }
+}

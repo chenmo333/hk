@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Controls\ShowErrorView.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Page Remove="Controls\ShowErrorView.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="MaterialDesignColors" Version="2.1.4" />
+		<PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Prism.DryIoc" Version="8.1.97" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\MachineVision.Core\MachineVision.Core.csproj" />
+	  <ProjectReference Include="..\MachineVision.Shared\MachineVision.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="halcondotnet">
+	    <HintPath>..\dlls\halcondotnet.dll</HintPath>
+	  </Reference>
+	  <Reference Include="MvCameraControl.Net">
+	    <HintPath>..\dlls\MvCameraControl.Net.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>
