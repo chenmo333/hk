@@ -53,12 +53,108 @@ namespace MachineVision.TemplateMatch.ViewModels
             CaptureImageCommand = new DelegateCommand(CaptureImage);
             StopCameraCommand = new DelegateCommand(StopCamera);
             SaveImageCommand = new DelegateCommand(SaveImage);
+            // Other command initializations...
+         
+
+            // Set default save path
+            SavePath = "C:\\Users\\Public\\Pictures"; // Default path, can be adjusted as needed
             #region 默认文本
-             ExposureTime = 100; // Set default value, e.g., 100 ms
+            // Set default values
+
+            IPAddress = "192.168.8.23"; // Default IP
+            SubnetMask = "255.255.255.0"; // 子网掩码
+            Gateway = "192.168.8.254"; // 网关
+            SerialNumber = "L34412692"; // 序列号
+            ExposureTime = 5000; // 曝光
+            Gain = 1.0; // 增益
             #endregion
         }
         #region 文本
-  
+
+        private string _ipAddress;
+        public string IPAddress
+        {
+            get { return _ipAddress; }
+            set
+            {
+                if (_ipAddress != value)
+                {
+                    _ipAddress = value;
+                    RaisePropertyChanged(nameof(IPAddress));
+                }
+            }
+        }
+
+        private string _subnetMask;
+        public string SubnetMask
+        {
+            get { return _subnetMask; }
+            set
+            {
+                if (_subnetMask != value)
+                {
+                    _subnetMask = value;
+                    RaisePropertyChanged(nameof(SubnetMask));
+                }
+            }
+        }
+
+        private string _gateway;
+        public string Gateway
+        {
+            get { return _gateway; }
+            set
+            {
+                if (_gateway != value)
+                {
+                    _gateway = value;
+                    RaisePropertyChanged(nameof(Gateway));
+                }
+            }
+        }
+
+        private string _serialNumber;
+        public string SerialNumber
+        {
+            get { return _serialNumber; }
+            set
+            {
+                if (_serialNumber != value)
+                {
+                    _serialNumber = value;
+                    RaisePropertyChanged(nameof(SerialNumber));
+                }
+            }
+        }
+        // Save Path
+        private string _savePath;
+        public string SavePath
+        {
+            get { return _savePath; }
+            set
+            {
+                if (_savePath != value)
+                {
+                    _savePath = value;
+                    RaisePropertyChanged(nameof(SavePath));
+                }
+            }
+        }
+
+        private double _gain;
+        public double Gain
+        {
+            get { return _gain; }
+            set
+            {
+                if (_gain != value)
+                {
+                    _gain = value;
+                    RaisePropertyChanged(nameof(Gain));
+                }
+            }
+        }
+        // Method for saving the image
 
         private double _exposureTime;
         public double ExposureTime
@@ -82,6 +178,7 @@ namespace MachineVision.TemplateMatch.ViewModels
         public DelegateCommand StartCameraCommand { get; private set; }
         public DelegateCommand CaptureImageCommand { get; private set; }
         public DelegateCommand StopCameraCommand { get; private set; }
+
         public DelegateCommand SaveImageCommand { get; private set; }
 
         public ObservableCollection<CameraDevice> CameraList { get; set; } = new ObservableCollection<CameraDevice>();
@@ -269,9 +366,10 @@ namespace MachineVision.TemplateMatch.ViewModels
         }
         private void SaveImage()
         {
-
+            // Implement the logic for saving the image here
+            // Example: Save the image to the specified SavePath
+            Console.WriteLine($"Image saved to {SavePath}");
         }
-
         public HObject Image
         {
             get { return image; }

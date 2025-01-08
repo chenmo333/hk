@@ -61,7 +61,7 @@
                             FontSize="20"
                             VerticalAlignment="Center"   
                                 
-                            Text="{Binding CameraService.Parameters.IP}" />
+                            Text="{Binding IPAddress}" />
                             
                             
                         </DockPanel>
@@ -74,7 +74,7 @@
                              FontSize="20"
                              VerticalAlignment="Center"   
                                 
-                            Text="{Binding CameraService.Parameters.MAK}" />
+                            Text="{Binding SubnetMask}" />
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
                             <TextBlock Text="       网关:" FontSize="20"    VerticalAlignment="Center" />
@@ -85,7 +85,7 @@
                              FontSize="20"   
                                 
                             VerticalAlignment="Center"   
-                            Text="{Binding CameraService.Parameters.MAK}" />
+                            Text="{Binding Gateway}" />
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
                             <TextBlock Text="    序列号:" FontSize="20"     VerticalAlignment="Center" />
@@ -95,7 +95,7 @@
                             Width="200"
                             FontSize="20"   
                             VerticalAlignment="Center"    
-                            Text="{Binding CameraService.Parameters.MAK}" />
+                            Text="{Binding SerialNumber}" />
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15"    VerticalAlignment="Center">
                             <Button
@@ -144,14 +144,14 @@
                                VerticalAlignment="Center"
                             
                             Margin="5"/>
-                            <TextBlock Text="保存路径:" FontSize="30"    VerticalAlignment="Center" />
+                            <TextBlock Text="保存路径:" FontSize="15"    VerticalAlignment="Center" />
                             <TextBox
                              Margin="0,5"
                              Padding="5"
                              Width="200"
-                              FontSize="20"   
+                              FontSize="15"   
                                  VerticalAlignment="Center"  
-                             Text="{Binding CameraService.Parameters.MAK}" />
+                             Text="{Binding SavePath}" />
 
 
                         </DockPanel>
@@ -173,7 +173,7 @@
                              Width="200"
                              FontSize="20"
                                 VerticalAlignment="Center"   
-                             Text="{Binding CameraService.Parameters.MAK}" />
+                             Text="{Binding Gain}" />
                         </DockPanel>
 
                     </StackPanel>

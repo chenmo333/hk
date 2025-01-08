@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MachineVision.Defect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b628129f30cad247043420687bba0fec5ad71c6e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d785f2722b800af0b07a9cf683303a512a8782a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("MachineVision.Defect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MachineVision.Defect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
