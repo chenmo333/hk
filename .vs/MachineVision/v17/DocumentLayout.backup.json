@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.templatematch\\views\\hikview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|solutionrelative:machinevision.templatematch\\views\\hikview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.templatematch\\viewmodels\\hikviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|solutionrelative:machinevision.templatematch\\viewmodels\\hikviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.templatematch\\viewmodels\\nccviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|solutionrelative:machinevision.templatematch\\viewmodels\\nccviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.templatematch\\models\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|solutionrelative:machinevision.templatematch\\models\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.templatematch\\viewmodels\\localdeformableviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|solutionrelative:machinevision.templatematch\\viewmodels\\localdeformableviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\viewmodels\\defecteditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\viewmodels\\defecteditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\models\\ui\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,12 +27,51 @@
       "RelativeMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|solutionrelative:machinevision.templatematch\\machinevision.templatematch.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50BC91C9-3655-4B13-B48B-44A08A042025}|MachineVision.Shared\\MachineVision.Shared.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.shared\\machinevision.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{50BC91C9-3655-4B13-B48B-44A08A042025}|MachineVision.Shared\\MachineVision.Shared.csproj|solutionrelative:machinevision.shared\\machinevision.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.templatematch\\viewmodels\\drawshapeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|solutionrelative:machinevision.templatematch\\viewmodels\\drawshapeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\viewmodels\\defecteditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\viewmodels\\defecteditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.templatematch\\views\\hikview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|solutionrelative:machinevision.templatematch\\views\\hikview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\machinevision.defect.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\machinevision.defect.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.templatematch\\views\\nccview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|solutionrelative:machinevision.templatematch\\views\\nccview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\models\\historydefectresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\models\\historydefectresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\viewmodels\\createprojectviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\viewmodels\\createprojectviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\models\\projectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\models\\projectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\models\\imageinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\models\\imageinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4F8B3EC-B821-4544-89C8-E8F13671A52C}|MachineVision\\MachineVision.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision\\machinevision.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F4F8B3EC-B821-4544-89C8-E8F13671A52C}|MachineVision\\MachineVision.csproj|solutionrelative:machinevision\\machinevision.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.templatematch\\viewmodels\\nccviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|solutionrelative:machinevision.templatematch\\viewmodels\\nccviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50BC91C9-3655-4B13-B48B-44A08A042025}|MachineVision.Shared\\MachineVision.Shared.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.shared\\machinevision.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{50BC91C9-3655-4B13-B48B-44A08A042025}|MachineVision.Shared\\MachineVision.Shared.csproj|solutionrelative:machinevision.shared\\machinevision.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.templatematch\\viewmodels\\shapeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +88,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F4F8B3EC-B821-4544-89C8-E8F13671A52C}|MachineVision\\MachineVision.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F4F8B3EC-B821-4544-89C8-E8F13671A52C}|MachineVision\\MachineVision.csproj|solutionrelative:machinevision\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.templatematch\\viewmodels\\drawshapeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8106493D-9684-4335-B9A5-203576E98723}|MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj|solutionrelative:machinevision.templatematch\\viewmodels\\drawshapeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1905BE4A-0CB2-48F1-B2D5-26EDBCA1A178}|MachineVision.Core\\MachineVision.Core.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.core\\templatematch\\itemplatematchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -131,10 +162,6 @@
       "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\viewmodels\\defectviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\machinevision.defect.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\machinevision.defect.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DC\\7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -159,10 +186,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1905BE4A-0CB2-48F1-B2D5-26EDBCA1A178}|MachineVision.Core\\MachineVision.Core.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.core\\templatematch\\shared\\templatematchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1905BE4A-0CB2-48F1-B2D5-26EDBCA1A178}|MachineVision.Core\\MachineVision.Core.csproj|solutionrelative:machinevision.core\\templatematch\\shared\\templatematchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4F8B3EC-B821-4544-89C8-E8F13671A52C}|MachineVision\\MachineVision.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision\\machinevision.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F4F8B3EC-B821-4544-89C8-E8F13671A52C}|MachineVision\\MachineVision.csproj|solutionrelative:machinevision\\machinevision.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1905BE4A-0CB2-48F1-B2D5-26EDBCA1A178}|MachineVision.Core\\MachineVision.Core.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.core\\templatematch\\shapemodel\\shapemodelinputparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -240,14 +263,6 @@
       "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\views\\defecteditview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\models\\imageinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\models\\imageinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\models\\historydefectresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\models\\historydefectresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\models\\inspectionresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\models\\inspectionresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -266,10 +281,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\viewmodels\\trainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\viewmodels\\trainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\viewmodels\\createprojectviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\viewmodels\\createprojectviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\controls\\defecteditview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -344,16 +355,8 @@
       "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\models\\regioncontextresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\models\\projectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\models\\projectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\models\\lightanddarkregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\models\\lightanddarkregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\models\\rectanglelocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|solutionrelative:machinevision.defect\\models\\rectanglelocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F418183F-EA22-46ED-8439-5789AD3C1052}|MachineVision.Defect\\MachineVision.Defect.csproj|c:\\users\\hzsk2023\\desktop\\machinevision\\machinevision.defect\\\u68C0\u6D4B\u533A\u57DF\u6D41\u7A0B.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
@@ -387,7 +390,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -403,51 +406,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HikView.xaml",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\Views\\HikView.xaml",
-              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\Views\\HikView.xaml",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\Views\\HikView.xaml*",
-              "RelativeToolTip": "MachineVision.TemplateMatch\\Views\\HikView.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-07T07:45:25.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MachineVision.TemplateMatch",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj",
-              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj",
-              "RelativeToolTip": "MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxwAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-07T07:24:53.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Camera.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\Models\\Camera.cs",
+              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\Models\\Camera.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\Models\\Camera.cs",
+              "RelativeToolTip": "MachineVision.TemplateMatch\\Models\\Camera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T09:05:00.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "HikViewModel.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\HikViewModel.cs",
               "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\ViewModels\\HikViewModel.cs",
               "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\HikViewModel.cs",
               "RelativeToolTip": "MachineVision.TemplateMatch\\ViewModels\\HikViewModel.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAADwvzEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAwwIYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-07T01:43:35.593Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
+              "Title": "ProjectModel.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\ProjectModel.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\ProjectModel.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\ProjectModel.cs",
+              "RelativeToolTip": "MachineVision.Defect\\Models\\ProjectModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T01:24:46.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DefectEditViewModel.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
               "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
               "RelativeToolTip": "MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAtwDAAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwKYBAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-02T07:13:14.935Z",
               "EditorCaption": ""
@@ -455,6 +458,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "MachineVision.TemplateMatch.csproj",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj",
+              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj",
+              "RelativeToolTip": "MachineVision.TemplateMatch\\MachineVision.TemplateMatch.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-07T07:24:53.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ImageFile.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\UI\\ImageFile.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\UI\\ImageFile.cs",
@@ -467,98 +483,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Camera.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\UI\\Camera.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\UI\\Camera.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\UI\\Camera.cs",
-              "RelativeToolTip": "MachineVision.Defect\\Models\\UI\\Camera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T03:19:26.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NccViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\NccViewModel.cs",
-              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\ViewModels\\NccViewModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\NccViewModel.cs",
-              "RelativeToolTip": "MachineVision.TemplateMatch\\ViewModels\\NccViewModel.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAUwC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T02:24:25.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LocalDeformableViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\LocalDeformableViewModel.cs",
-              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\ViewModels\\LocalDeformableViewModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\LocalDeformableViewModel.cs",
-              "RelativeToolTip": "MachineVision.TemplateMatch\\ViewModels\\LocalDeformableViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T02:24:26.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ShapeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\ShapeViewModel.cs",
-              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\ViewModels\\ShapeViewModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\ShapeViewModel.cs",
-              "RelativeToolTip": "MachineVision.TemplateMatch\\ViewModels\\ShapeViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T02:05:21.306Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SettingViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\SettingViewModel.cs",
-              "RelativeDocumentMoniker": "MachineVision\\ViewModels\\SettingViewModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\SettingViewModel.cs",
-              "RelativeToolTip": "MachineVision\\ViewModels\\SettingViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T02:22:18.604Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "MachineVision.Shared.csproj",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\MachineVision.Shared.csproj",
-              "RelativeDocumentMoniker": "MachineVision.Shared\\MachineVision.Shared.csproj",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\MachineVision.Shared.csproj",
-              "RelativeToolTip": "MachineVision.Shared\\MachineVision.Shared.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-06T03:09:28.742Z",
-              "EditorCaption": ""
+              "Title": "HikView.xaml",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\Views\\HikView.xaml",
+              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\Views\\HikView.xaml",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\Views\\HikView.xaml",
+              "RelativeToolTip": "MachineVision.TemplateMatch\\Views\\HikView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-07T07:45:25.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "MachineVision\\ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "MachineVision\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T02:22:11.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 6,
               "Title": "DrawShapeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\DrawShapeViewModel.cs",
               "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\ViewModels\\DrawShapeViewModel.cs",
@@ -566,626 +502,36 @@
               "RelativeToolTip": "MachineVision.TemplateMatch\\ViewModels\\DrawShapeViewModel.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T06:32:33.031Z",
+              "WhenOpened": "2025-01-02T06:32:33.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Camera.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\UI\\Camera.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\UI\\Camera.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\UI\\Camera.cs",
+              "RelativeToolTip": "MachineVision.Defect\\Models\\UI\\Camera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T03:19:26.396Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "MachineVision\\ViewModels\\DashboardViewModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\DashboardViewModel.cs",
-              "RelativeToolTip": "MachineVision\\ViewModels\\DashboardViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "HistoryDefectResult.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\HistoryDefectResult.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\HistoryDefectResult.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\HistoryDefectResult.cs",
+              "RelativeToolTip": "MachineVision.Defect\\Models\\HistoryDefectResult.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T02:22:04.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "NavigationMenuService.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\NavigationMenuService.cs",
-              "RelativeDocumentMoniker": "MachineVision\\Services\\NavigationMenuService.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\NavigationMenuService.cs",
-              "RelativeToolTip": "MachineVision\\Services\\NavigationMenuService.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAQwC8AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T01:28:57.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SettingSerivce.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\SettingSerivce.cs",
-              "RelativeDocumentMoniker": "MachineVision\\Services\\SettingSerivce.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\SettingSerivce.cs",
-              "RelativeToolTip": "MachineVision\\Services\\SettingSerivce.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T01:28:52.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "INavigationMenuService.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\INavigationMenuService.cs",
-              "RelativeDocumentMoniker": "MachineVision\\Services\\INavigationMenuService.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\INavigationMenuService.cs",
-              "RelativeToolTip": "MachineVision\\Services\\INavigationMenuService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T02:09:47.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T01:24:37.766Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "ITemplateMatchService.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ITemplateMatchService.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\ITemplateMatchService.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ITemplateMatchService.cs",
-              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\ITemplateMatchService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T06:43:26.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "NavigationItem.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Models\\NavigationItem.cs",
-              "RelativeDocumentMoniker": "MachineVision\\Models\\NavigationItem.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Models\\NavigationItem.cs",
-              "RelativeToolTip": "MachineVision\\Models\\NavigationItem.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAUwBYAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T03:54:42.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "TemplateMatchModule.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\TemplateMatchModule.cs",
-              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\TemplateMatchModule.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\TemplateMatchModule.cs",
-              "RelativeToolTip": "MachineVision.TemplateMatch\\TemplateMatchModule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T10:05:54.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "LanguageInfo.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Models\\LanguageInfo.cs",
-              "RelativeDocumentMoniker": "MachineVision\\Models\\LanguageInfo.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Models\\LanguageInfo.cs",
-              "RelativeToolTip": "MachineVision\\Models\\LanguageInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T03:54:41.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "LanguageHelper.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Extensions\\LanguageHelper.cs",
-              "RelativeDocumentMoniker": "MachineVision\\Extensions\\LanguageHelper.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Extensions\\LanguageHelper.cs",
-              "RelativeToolTip": "MachineVision\\Extensions\\LanguageHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T01:59:53.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ColorToBrushConverter.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Extensions\\ColorToBrushConverter.cs",
-              "RelativeDocumentMoniker": "MachineVision\\Extensions\\ColorToBrushConverter.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Extensions\\ColorToBrushConverter.cs",
-              "RelativeToolTip": "MachineVision\\Extensions\\ColorToBrushConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T01:59:53.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "BaseService.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Services\\BaseService.cs",
-              "RelativeDocumentMoniker": "MachineVision.Shared\\Services\\BaseService.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Services\\BaseService.cs",
-              "RelativeToolTip": "MachineVision.Shared\\Services\\BaseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T01:45:34.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ISettingSerivce.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Services\\ISettingSerivce.cs",
-              "RelativeDocumentMoniker": "MachineVision.Shared\\Services\\ISettingSerivce.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Services\\ISettingSerivce.cs",
-              "RelativeToolTip": "MachineVision.Shared\\Services\\ISettingSerivce.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T01:45:33.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Generic.xaml",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Themes\\Generic.xaml",
-              "RelativeDocumentMoniker": "MachineVision.Shared\\Themes\\Generic.xaml",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Themes\\Generic.xaml",
-              "RelativeToolTip": "MachineVision.Shared\\Themes\\Generic.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-06T02:26:49.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "readme.txt",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Assets\\readme.txt",
-              "RelativeDocumentMoniker": "MachineVision\\Assets\\readme.txt",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Assets\\readme.txt",
-              "RelativeToolTip": "MachineVision\\Assets\\readme.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-07T01:26:21.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "HWindowExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\HWindowExtensions.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\Extensions\\HWindowExtensions.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\HWindowExtensions.cs",
-              "RelativeToolTip": "MachineVision.Core\\Extensions\\HWindowExtensions.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAASwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T01:59:44.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "DefectViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\DefectViewModel.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\DefectViewModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\DefectViewModel.cs",
-              "RelativeToolTip": "MachineVision.Defect\\ViewModels\\DefectViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAABIwEcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T03:50:32.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ShapeModelService.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelService.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelService.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelService.cs",
-              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelService.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAmwMUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:07:00.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "SetTimeHelper.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\SetTimeHelper.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\Extensions\\SetTimeHelper.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\SetTimeHelper.cs",
-              "RelativeToolTip": "MachineVision.Core\\Extensions\\SetTimeHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T01:09:46.228Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "DefectEditView.xaml",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectEditView.xaml",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\Views\\DefectEditView.xaml",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectEditView.xaml",
-              "RelativeToolTip": "MachineVision.Defect\\Views\\DefectEditView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-02T06:32:55.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "MachineVision.Defect.csproj",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\MachineVision.Defect.csproj",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\MachineVision.Defect.csproj",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\MachineVision.Defect.csproj",
-              "RelativeToolTip": "MachineVision.Defect\\MachineVision.Defect.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-02T03:50:51.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "7.cs",
-              "DocumentMoniker": "D:\\DC\\7.cs",
-              "ToolTip": "D:\\DC\\7.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAADwv08AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:17:50.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "ShapeModelRunParameter.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelRunParameter.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelRunParameter.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelRunParameter.cs",
-              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelRunParameter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:06:58.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "MeasureRunParameter.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\ObjectMeasure\\MeasureRunParameter.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\ObjectMeasure\\MeasureRunParameter.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\ObjectMeasure\\MeasureRunParameter.cs",
-              "RelativeToolTip": "MachineVision.Core\\ObjectMeasure\\MeasureRunParameter.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAA2wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T02:00:00.05Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "CircleMeasureService.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\ObjectMeasure\\CircleMeasureService.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\ObjectMeasure\\CircleMeasureService.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\ObjectMeasure\\CircleMeasureService.cs",
-              "RelativeToolTip": "MachineVision.Core\\ObjectMeasure\\CircleMeasureService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T01:59:59.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "TempalteMatchType.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\TempalteMatchType.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\TempalteMatchType.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\TempalteMatchType.cs",
-              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\TempalteMatchType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:06:37.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ocr4.cs",
-              "DocumentMoniker": "D:\\DC\\ocr4.cs",
-              "ToolTip": "D:\\DC\\ocr4.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T09:24:06.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "TemplateMatchResult.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\TemplateMatchResult.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\Shared\\TemplateMatchResult.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\TemplateMatchResult.cs",
-              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\Shared\\TemplateMatchResult.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:06:43.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "MachineVision.csproj",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\MachineVision.csproj",
-              "RelativeDocumentMoniker": "MachineVision\\MachineVision.csproj",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\MachineVision.csproj",
-              "RelativeToolTip": "MachineVision\\MachineVision.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-04T03:34:13.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "ShapeModelInputParameter.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelInputParameter.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelInputParameter.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelInputParameter.cs",
-              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelInputParameter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:06:56.489Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "DialogViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\DialogViewModel.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\DialogViewModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\DialogViewModel.cs",
-              "RelativeToolTip": "MachineVision.Core\\DialogViewModel.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:06:34.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "NavigationViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\NavigationViewModel.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\NavigationViewModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\NavigationViewModel.cs",
-              "RelativeToolTip": "MachineVision.Core\\NavigationViewModel.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:06:32.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "RegionParameterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\RegionParameterViewModel.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\RegionParameterViewModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\RegionParameterViewModel.cs",
-              "RelativeToolTip": "MachineVision.Defect\\ViewModels\\RegionParameterViewModel.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:00:27.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "RoiParameter.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\RoiParameter.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\Shared\\RoiParameter.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\RoiParameter.cs",
-              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\Shared\\RoiParameter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:06:44.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "MethodInfo.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\MethodInfo.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\Shared\\MethodInfo.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\MethodInfo.cs",
-              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\Shared\\MethodInfo.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:06:50.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "MachineVision.Core.csproj",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\MachineVision.Core.csproj",
-              "RelativeDocumentMoniker": "MachineVision.Core\\MachineVision.Core.csproj",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\MachineVision.Core.csproj",
-              "RelativeToolTip": "MachineVision.Core\\MachineVision.Core.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-03T01:25:26.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "5.cs",
-              "DocumentMoniker": "D:\\DC\\5.cs",
-              "ToolTip": "D:\\DC\\5.cs",
-              "ViewState": "AgIAALsCAAAAAAAAAAAqwM4CAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T01:36:01.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "BaseParameter.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\BaseParameter.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\Shared\\BaseParameter.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\BaseParameter.cs",
-              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\Shared\\BaseParameter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T08:06:42.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "TrainView.xaml",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\TrainView.xaml",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\Views\\TrainView.xaml",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\TrainView.xaml",
-              "RelativeToolTip": "MachineVision.Defect\\Views\\TrainView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-02T03:54:59.564Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "DefectModule.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\DefectModule.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\DefectModule.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\DefectModule.cs",
-              "RelativeToolTip": "MachineVision.Defect\\DefectModule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T03:55:18.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "ImageEditView.xaml",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Controls\\ImageEditView.xaml",
-              "RelativeDocumentMoniker": "MachineVision.Shared\\Controls\\ImageEditView.xaml",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Controls\\ImageEditView.xaml",
-              "RelativeToolTip": "MachineVision.Shared\\Controls\\ImageEditView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-06T02:27:30.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "ICamera.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ICamera.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\ICamera.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ICamera.cs",
-              "RelativeToolTip": "MachineVision.Defect\\ICamera.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAwBIAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:46:09.673Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "HKCamera.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\HKCamera.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\HKCamera.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\HKCamera.cs",
-              "RelativeToolTip": "MachineVision.Defect\\HKCamera.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAADwvxkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:46:58.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "DefectProfile.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\DefectProfile.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\DefectProfile.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\DefectProfile.cs",
-              "RelativeToolTip": "MachineVision.Defect\\DefectProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T03:55:11.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "BarCodeService.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Ocr\\BarCodeService.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\Ocr\\BarCodeService.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Ocr\\BarCodeService.cs",
-              "RelativeToolTip": "MachineVision.Core\\Ocr\\BarCodeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T01:59:58.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "HObjectExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\HObjectExtensions.cs",
-              "RelativeDocumentMoniker": "MachineVision.Core\\Extensions\\HObjectExtensions.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\HObjectExtensions.cs",
-              "RelativeToolTip": "MachineVision.Core\\Extensions\\HObjectExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T01:59:43.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "MachineVision\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\AssemblyInfo.cs",
-              "RelativeToolTip": "MachineVision\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T01:28:22.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "DefectEditView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectEditView.xaml.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\Views\\DefectEditView.xaml.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectEditView.xaml.cs",
-              "RelativeToolTip": "MachineVision.Defect\\Views\\DefectEditView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T01:26:09.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "InspectionResult.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\InspectionResult.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\InspectionResult.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\InspectionResult.cs",
-              "RelativeToolTip": "MachineVision.Defect\\Models\\InspectionResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T01:25:02.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
               "Title": "ImageInfo.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\ImageInfo.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\ImageInfo.cs",
@@ -1193,37 +539,34 @@
               "RelativeToolTip": "MachineVision.Defect\\Models\\ImageInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T01:24:41.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T01:24:41.111Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "HistoryDefectResult.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\HistoryDefectResult.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\HistoryDefectResult.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\HistoryDefectResult.cs",
-              "RelativeToolTip": "MachineVision.Defect\\Models\\HistoryDefectResult.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T01:24:37.766Z",
-              "EditorCaption": ""
+              "DocumentIndex": 8,
+              "Title": "MachineVision.Defect.csproj",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\MachineVision.Defect.csproj",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\MachineVision.Defect.csproj",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\MachineVision.Defect.csproj",
+              "RelativeToolTip": "MachineVision.Defect\\MachineVision.Defect.csproj",
+              "ViewState": "AgIAAB4AAAAAAAAAAADwvwAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-02T03:50:51.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "DefectView.xaml",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectView.xaml",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\Views\\DefectView.xaml",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectView.xaml",
-              "RelativeToolTip": "MachineVision.Defect\\Views\\DefectView.xaml",
+              "DocumentIndex": 9,
+              "Title": "NccView.xaml",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\Views\\NccView.xaml",
+              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\Views\\NccView.xaml",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\Views\\NccView.xaml",
+              "RelativeToolTip": "MachineVision.TemplateMatch\\Views\\NccView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-02T03:50:39.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-07T08:31:00.385Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 11,
               "Title": "CreateProjectViewModel.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\CreateProjectViewModel.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\CreateProjectViewModel.cs",
@@ -1231,12 +574,648 @@
               "RelativeToolTip": "MachineVision.Defect\\ViewModels\\CreateProjectViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T09:13:27.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T09:13:27.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAKYTAAAAAAAAAAAewKoTAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-01-07T08:19:19.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "NccViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\NccViewModel.cs",
+              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\ViewModels\\NccViewModel.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\NccViewModel.cs",
+              "RelativeToolTip": "MachineVision.TemplateMatch\\ViewModels\\NccViewModel.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAUwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T02:24:25.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MachineVision.csproj",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\MachineVision.csproj",
+              "RelativeDocumentMoniker": "MachineVision\\MachineVision.csproj",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\MachineVision.csproj",
+              "RelativeToolTip": "MachineVision\\MachineVision.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-04T03:34:13.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ShapeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\ShapeViewModel.cs",
+              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\ViewModels\\ShapeViewModel.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\ViewModels\\ShapeViewModel.cs",
+              "RelativeToolTip": "MachineVision.TemplateMatch\\ViewModels\\ShapeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T02:05:21.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SettingViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\SettingViewModel.cs",
+              "RelativeDocumentMoniker": "MachineVision\\ViewModels\\SettingViewModel.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\SettingViewModel.cs",
+              "RelativeToolTip": "MachineVision\\ViewModels\\SettingViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T02:22:18.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MachineVision.Shared.csproj",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\MachineVision.Shared.csproj",
+              "RelativeDocumentMoniker": "MachineVision.Shared\\MachineVision.Shared.csproj",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\MachineVision.Shared.csproj",
+              "RelativeToolTip": "MachineVision.Shared\\MachineVision.Shared.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-06T03:09:28.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "MachineVision\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "MachineVision\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T02:22:11.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "MachineVision\\ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\ViewModels\\DashboardViewModel.cs",
+              "RelativeToolTip": "MachineVision\\ViewModels\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T02:22:04.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "NavigationMenuService.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\NavigationMenuService.cs",
+              "RelativeDocumentMoniker": "MachineVision\\Services\\NavigationMenuService.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\NavigationMenuService.cs",
+              "RelativeToolTip": "MachineVision\\Services\\NavigationMenuService.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAQwC8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T01:28:57.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SettingSerivce.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\SettingSerivce.cs",
+              "RelativeDocumentMoniker": "MachineVision\\Services\\SettingSerivce.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\SettingSerivce.cs",
+              "RelativeToolTip": "MachineVision\\Services\\SettingSerivce.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T01:28:52.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "INavigationMenuService.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\INavigationMenuService.cs",
+              "RelativeDocumentMoniker": "MachineVision\\Services\\INavigationMenuService.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Services\\INavigationMenuService.cs",
+              "RelativeToolTip": "MachineVision\\Services\\INavigationMenuService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T02:09:47.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ITemplateMatchService.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ITemplateMatchService.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\ITemplateMatchService.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ITemplateMatchService.cs",
+              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\ITemplateMatchService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T06:43:26.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "NavigationItem.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Models\\NavigationItem.cs",
+              "RelativeDocumentMoniker": "MachineVision\\Models\\NavigationItem.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Models\\NavigationItem.cs",
+              "RelativeToolTip": "MachineVision\\Models\\NavigationItem.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAUwBYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T03:54:42.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TemplateMatchModule.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\TemplateMatchModule.cs",
+              "RelativeDocumentMoniker": "MachineVision.TemplateMatch\\TemplateMatchModule.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.TemplateMatch\\TemplateMatchModule.cs",
+              "RelativeToolTip": "MachineVision.TemplateMatch\\TemplateMatchModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T10:05:54.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "LanguageInfo.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Models\\LanguageInfo.cs",
+              "RelativeDocumentMoniker": "MachineVision\\Models\\LanguageInfo.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Models\\LanguageInfo.cs",
+              "RelativeToolTip": "MachineVision\\Models\\LanguageInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T03:54:41.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "LanguageHelper.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Extensions\\LanguageHelper.cs",
+              "RelativeDocumentMoniker": "MachineVision\\Extensions\\LanguageHelper.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Extensions\\LanguageHelper.cs",
+              "RelativeToolTip": "MachineVision\\Extensions\\LanguageHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T01:59:53.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ColorToBrushConverter.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Extensions\\ColorToBrushConverter.cs",
+              "RelativeDocumentMoniker": "MachineVision\\Extensions\\ColorToBrushConverter.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Extensions\\ColorToBrushConverter.cs",
+              "RelativeToolTip": "MachineVision\\Extensions\\ColorToBrushConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T01:59:53.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Services\\BaseService.cs",
+              "RelativeDocumentMoniker": "MachineVision.Shared\\Services\\BaseService.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Services\\BaseService.cs",
+              "RelativeToolTip": "MachineVision.Shared\\Services\\BaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T01:45:34.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ISettingSerivce.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Services\\ISettingSerivce.cs",
+              "RelativeDocumentMoniker": "MachineVision.Shared\\Services\\ISettingSerivce.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Services\\ISettingSerivce.cs",
+              "RelativeToolTip": "MachineVision.Shared\\Services\\ISettingSerivce.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T01:45:33.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Generic.xaml",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Themes\\Generic.xaml",
+              "RelativeDocumentMoniker": "MachineVision.Shared\\Themes\\Generic.xaml",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Themes\\Generic.xaml",
+              "RelativeToolTip": "MachineVision.Shared\\Themes\\Generic.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-06T02:26:49.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "readme.txt",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Assets\\readme.txt",
+              "RelativeDocumentMoniker": "MachineVision\\Assets\\readme.txt",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\Assets\\readme.txt",
+              "RelativeToolTip": "MachineVision\\Assets\\readme.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-07T01:26:21.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "HWindowExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\HWindowExtensions.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\Extensions\\HWindowExtensions.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\HWindowExtensions.cs",
+              "RelativeToolTip": "MachineVision.Core\\Extensions\\HWindowExtensions.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAASwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T01:59:44.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DefectViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\DefectViewModel.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\DefectViewModel.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\DefectViewModel.cs",
+              "RelativeToolTip": "MachineVision.Defect\\ViewModels\\DefectViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAABIwEcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T03:50:32.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ShapeModelService.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelService.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelService.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelService.cs",
+              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelService.cs",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAmwMUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T08:07:00.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "SetTimeHelper.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\SetTimeHelper.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\Extensions\\SetTimeHelper.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\SetTimeHelper.cs",
+              "RelativeToolTip": "MachineVision.Core\\Extensions\\SetTimeHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T01:09:46.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DefectEditView.xaml",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectEditView.xaml",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\Views\\DefectEditView.xaml",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectEditView.xaml",
+              "RelativeToolTip": "MachineVision.Defect\\Views\\DefectEditView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-02T06:32:55.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "7.cs",
+              "DocumentMoniker": "D:\\DC\\7.cs",
+              "ToolTip": "D:\\DC\\7.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAADwv08AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T08:17:50.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ShapeModelRunParameter.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelRunParameter.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelRunParameter.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelRunParameter.cs",
+              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelRunParameter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T08:06:58.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "MeasureRunParameter.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\ObjectMeasure\\MeasureRunParameter.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\ObjectMeasure\\MeasureRunParameter.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\ObjectMeasure\\MeasureRunParameter.cs",
+              "RelativeToolTip": "MachineVision.Core\\ObjectMeasure\\MeasureRunParameter.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAA2wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T02:00:00.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CircleMeasureService.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\ObjectMeasure\\CircleMeasureService.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\ObjectMeasure\\CircleMeasureService.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\ObjectMeasure\\CircleMeasureService.cs",
+              "RelativeToolTip": "MachineVision.Core\\ObjectMeasure\\CircleMeasureService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T01:59:59.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "TempalteMatchType.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\TempalteMatchType.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\TempalteMatchType.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\TempalteMatchType.cs",
+              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\TempalteMatchType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T08:06:37.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ocr4.cs",
+              "DocumentMoniker": "D:\\DC\\ocr4.cs",
+              "ToolTip": "D:\\DC\\ocr4.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T09:24:06.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "TemplateMatchResult.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\TemplateMatchResult.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\Shared\\TemplateMatchResult.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\TemplateMatchResult.cs",
+              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\Shared\\TemplateMatchResult.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T08:06:43.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ShapeModelInputParameter.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelInputParameter.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelInputParameter.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelInputParameter.cs",
+              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\ShapeModel\\ShapeModelInputParameter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T08:06:56.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "DialogViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\DialogViewModel.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\DialogViewModel.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\DialogViewModel.cs",
+              "RelativeToolTip": "MachineVision.Core\\DialogViewModel.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T08:06:34.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "NavigationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\NavigationViewModel.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\NavigationViewModel.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\NavigationViewModel.cs",
+              "RelativeToolTip": "MachineVision.Core\\NavigationViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T08:06:32.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "RegionParameterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\RegionParameterViewModel.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\RegionParameterViewModel.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\RegionParameterViewModel.cs",
+              "RelativeToolTip": "MachineVision.Defect\\ViewModels\\RegionParameterViewModel.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T02:00:27.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "RoiParameter.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\RoiParameter.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\Shared\\RoiParameter.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\RoiParameter.cs",
+              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\Shared\\RoiParameter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T08:06:44.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "MethodInfo.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\MethodInfo.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\Shared\\MethodInfo.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\MethodInfo.cs",
+              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\Shared\\MethodInfo.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T08:06:50.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "MachineVision.Core.csproj",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\MachineVision.Core.csproj",
+              "RelativeDocumentMoniker": "MachineVision.Core\\MachineVision.Core.csproj",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\MachineVision.Core.csproj",
+              "RelativeToolTip": "MachineVision.Core\\MachineVision.Core.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-03T01:25:26.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "5.cs",
+              "DocumentMoniker": "D:\\DC\\5.cs",
+              "ToolTip": "D:\\DC\\5.cs",
+              "ViewState": "AgIAALsCAAAAAAAAAAAqwM4CAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T01:36:01.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "BaseParameter.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\BaseParameter.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\TemplateMatch\\Shared\\BaseParameter.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\TemplateMatch\\Shared\\BaseParameter.cs",
+              "RelativeToolTip": "MachineVision.Core\\TemplateMatch\\Shared\\BaseParameter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T08:06:42.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "TrainView.xaml",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\TrainView.xaml",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\Views\\TrainView.xaml",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\TrainView.xaml",
+              "RelativeToolTip": "MachineVision.Defect\\Views\\TrainView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-02T03:54:59.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "DefectModule.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\DefectModule.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\DefectModule.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\DefectModule.cs",
+              "RelativeToolTip": "MachineVision.Defect\\DefectModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T03:55:18.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ImageEditView.xaml",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Controls\\ImageEditView.xaml",
+              "RelativeDocumentMoniker": "MachineVision.Shared\\Controls\\ImageEditView.xaml",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\Controls\\ImageEditView.xaml",
+              "RelativeToolTip": "MachineVision.Shared\\Controls\\ImageEditView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-06T02:27:30.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "ICamera.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ICamera.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\ICamera.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ICamera.cs",
+              "RelativeToolTip": "MachineVision.Defect\\ICamera.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwBIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T02:46:09.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "HKCamera.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\HKCamera.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\HKCamera.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\HKCamera.cs",
+              "RelativeToolTip": "MachineVision.Defect\\HKCamera.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAADwvxkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T02:46:58.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "DefectProfile.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\DefectProfile.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\DefectProfile.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\DefectProfile.cs",
+              "RelativeToolTip": "MachineVision.Defect\\DefectProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T03:55:11.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "BarCodeService.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Ocr\\BarCodeService.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\Ocr\\BarCodeService.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Ocr\\BarCodeService.cs",
+              "RelativeToolTip": "MachineVision.Core\\Ocr\\BarCodeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T01:59:58.131Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 63,
+              "Title": "HObjectExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\HObjectExtensions.cs",
+              "RelativeDocumentMoniker": "MachineVision.Core\\Extensions\\HObjectExtensions.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\Extensions\\HObjectExtensions.cs",
+              "RelativeToolTip": "MachineVision.Core\\Extensions\\HObjectExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T01:59:43.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "MachineVision\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\AssemblyInfo.cs",
+              "RelativeToolTip": "MachineVision\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T01:28:22.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "DefectEditView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectEditView.xaml.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\Views\\DefectEditView.xaml.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectEditView.xaml.cs",
+              "RelativeToolTip": "MachineVision.Defect\\Views\\DefectEditView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T01:26:09.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "InspectionResult.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\InspectionResult.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\InspectionResult.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\InspectionResult.cs",
+              "RelativeToolTip": "MachineVision.Defect\\Models\\InspectionResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T01:25:02.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "DefectView.xaml",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectView.xaml",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\Views\\DefectView.xaml",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectView.xaml",
+              "RelativeToolTip": "MachineVision.Defect\\Views\\DefectView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-02T03:50:39.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
               "Title": "RectangleExtensions.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Extensions\\RectangleExtensions.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Extensions\\RectangleExtensions.cs",
@@ -1244,12 +1223,11 @@
               "RelativeToolTip": "MachineVision.Defect\\Extensions\\RectangleExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T07:50:39.814Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T07:50:39.814Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "InspecRegionModel.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\InspecRegionModel.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\InspecRegionModel.cs",
@@ -1257,12 +1235,11 @@
               "RelativeToolTip": "MachineVision.Defect\\Models\\InspecRegionModel.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAD4vwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T01:24:40.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T01:24:40.082Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "TrainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\TrainViewModel.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\TrainViewModel.cs",
@@ -1270,12 +1247,11 @@
               "RelativeToolTip": "MachineVision.Defect\\ViewModels\\TrainViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:04:15.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:04:15.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 71,
               "Title": "DefectEditView.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Controls\\DefectEditView.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Controls\\DefectEditView.cs",
@@ -1283,24 +1259,22 @@
               "RelativeToolTip": "MachineVision.Defect\\Controls\\DefectEditView.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:11:48.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:11:48.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 73,
               "Title": "CreateProjectView.xaml",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\CreateProjectView.xaml",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Views\\CreateProjectView.xaml",
               "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\CreateProjectView.xaml",
               "RelativeToolTip": "MachineVision.Defect\\Views\\CreateProjectView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-02T06:32:53.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T06:32:53.558Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 72,
               "Title": "ShowErrorControl.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Controls\\ShowErrorControl.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Controls\\ShowErrorControl.cs",
@@ -1308,24 +1282,22 @@
               "RelativeToolTip": "MachineVision.Defect\\Controls\\ShowErrorControl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:41:03.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:41:03.045Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "RegionParameterView.xaml",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\RegionParameterView.xaml",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Views\\RegionParameterView.xaml",
               "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\RegionParameterView.xaml",
               "RelativeToolTip": "MachineVision.Defect\\Views\\RegionParameterView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-02T06:33:01.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T06:33:01.796Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 78,
               "Title": "RectangleSetting.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\Components\\Models\\RectangleSetting.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\Components\\Models\\RectangleSetting.cs",
@@ -1333,12 +1305,11 @@
               "RelativeToolTip": "MachineVision.Defect\\ViewModels\\Components\\Models\\RectangleSetting.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:41:59.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:41:59.516Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 81,
               "Title": "IStatusToColorConverter.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Converters\\IStatusToColorConverter.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Converters\\IStatusToColorConverter.cs",
@@ -1346,12 +1317,11 @@
               "RelativeToolTip": "MachineVision.Defect\\Converters\\IStatusToColorConverter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:41:09.673Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:41:09.673Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "TemplateSetting.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\Components\\Models\\TemplateSetting.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\Components\\Models\\TemplateSetting.cs",
@@ -1359,12 +1329,11 @@
               "RelativeToolTip": "MachineVision.Defect\\ViewModels\\Components\\Models\\TemplateSetting.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:42:00.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:42:00.762Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 76,
               "Title": "VariationParameter.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\Components\\Models\\VariationParameter.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\Components\\Models\\VariationParameter.cs",
@@ -1372,12 +1341,11 @@
               "RelativeToolTip": "MachineVision.Defect\\ViewModels\\Components\\Models\\VariationParameter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:42:03.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:42:03.844Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "VariationSetting.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\Components\\Models\\VariationSetting.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\Components\\Models\\VariationSetting.cs",
@@ -1385,12 +1353,11 @@
               "RelativeToolTip": "MachineVision.Defect\\ViewModels\\Components\\Models\\VariationSetting.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:42:05.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:42:05.188Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 80,
               "Title": "ImageTrainEvent.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Events\\ImageTrainEvent.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Events\\ImageTrainEvent.cs",
@@ -1398,12 +1365,11 @@
               "RelativeToolTip": "MachineVision.Defect\\Events\\ImageTrainEvent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:41:11.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:41:11.762Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 79,
               "Title": "KindToColorConverter.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Converters\\KindToColorConverter.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Converters\\KindToColorConverter.cs",
@@ -1411,24 +1377,22 @@
               "RelativeToolTip": "MachineVision.Defect\\Converters\\KindToColorConverter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:41:14.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:41:14.037Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 82,
               "Title": "ShowErrorControl.xaml",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Controls\\ShowErrorControl.xaml",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Controls\\ShowErrorControl.xaml",
               "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Controls\\ShowErrorControl.xaml",
               "RelativeToolTip": "MachineVision.Defect\\Controls\\ShowErrorControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-03T02:40:58.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:40:58.694Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 83,
               "Title": "ErrorManagerView.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Controls\\ErrorManagerView.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Controls\\ErrorManagerView.cs",
@@ -1436,36 +1400,33 @@
               "RelativeToolTip": "MachineVision.Defect\\Controls\\ErrorManagerView.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T02:40:56.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:40:56.628Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 84,
               "Title": "ErrorManagerView.xaml",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Controls\\ErrorManagerView.xaml",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Controls\\ErrorManagerView.xaml",
               "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Controls\\ErrorManagerView.xaml",
               "RelativeToolTip": "MachineVision.Defect\\Controls\\ErrorManagerView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-03T02:40:54.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:40:54.106Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 85,
               "Title": "DefectEditView.xaml",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Controls\\DefectEditView.xaml",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Controls\\DefectEditView.xaml",
               "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Controls\\DefectEditView.xaml",
               "RelativeToolTip": "MachineVision.Defect\\Controls\\DefectEditView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-03T02:33:45.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T02:33:45.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 89,
               "Title": "LightAndDarkRegion.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\LightAndDarkRegion.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\LightAndDarkRegion.cs",
@@ -1473,12 +1434,11 @@
               "RelativeToolTip": "MachineVision.Defect\\Models\\LightAndDarkRegion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T01:24:44.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T01:24:44.34Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 86,
               "Title": "ProjectService.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Services\\ProjectService.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Services\\ProjectService.cs",
@@ -1486,12 +1446,11 @@
               "RelativeToolTip": "MachineVision.Defect\\Services\\ProjectService.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T09:36:50.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T09:36:50.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 87,
               "Title": "InspectionService.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Services\\InspectionService.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Services\\InspectionService.cs",
@@ -1499,25 +1458,11 @@
               "RelativeToolTip": "MachineVision.Defect\\Services\\InspectionService.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T09:36:42.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T09:36:42.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
-              "Title": "ProjectModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\ProjectModel.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\ProjectModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\ProjectModel.cs",
-              "RelativeToolTip": "MachineVision.Defect\\Models\\ProjectModel.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T01:24:46.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 88,
               "Title": "RegionContextResult.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\RegionContextResult.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\RegionContextResult.cs",
@@ -1525,25 +1470,11 @@
               "RelativeToolTip": "MachineVision.Defect\\Models\\RegionContextResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T01:24:49.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T01:24:49.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
-              "Title": "RectangleLocation.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\RectangleLocation.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\Models\\RectangleLocation.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Models\\RectangleLocation.cs",
-              "RelativeToolTip": "MachineVision.Defect\\Models\\RectangleLocation.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T01:24:47.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "\u68C0\u6D4B\u533A\u57DF\u6D41\u7A0B.md",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\\u68C0\u6D4B\u533A\u57DF\u6D41\u7A0B.md",
               "RelativeDocumentMoniker": "MachineVision.Defect\\\u68C0\u6D4B\u533A\u57DF\u6D41\u7A0B.md",
@@ -1551,12 +1482,11 @@
               "RelativeToolTip": "MachineVision.Defect\\\u68C0\u6D4B\u533A\u57DF\u6D41\u7A0B.md",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-01-02T03:55:10.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T03:55:10.034Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 91,
               "Title": "readme.md",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\readme.md",
               "RelativeDocumentMoniker": "MachineVision.Defect\\readme.md",
@@ -1564,12 +1494,11 @@
               "RelativeToolTip": "MachineVision.Defect\\readme.md",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-01-02T03:55:10.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T03:55:10.875Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 92,
               "Title": "TargetService.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Services\\TargetService.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Services\\TargetService.cs",
@@ -1577,12 +1506,11 @@
               "RelativeToolTip": "MachineVision.Defect\\Services\\TargetService.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T09:36:52.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T09:36:52.34Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 93,
               "Title": "DefectView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\Views\\DefectView.xaml.cs",
               "RelativeDocumentMoniker": "MachineVision.Defect\\Views\\DefectView.xaml.cs",
@@ -1590,12 +1518,11 @@
               "RelativeToolTip": "MachineVision.Defect\\Views\\DefectView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T03:50:45.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T03:50:45.359Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 94,
               "Title": "BarCodeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Ocr\\ViewModels\\BarCodeViewModel.cs",
               "RelativeDocumentMoniker": "MachineVision.Ocr\\ViewModels\\BarCodeViewModel.cs",
@@ -1603,12 +1530,11 @@
               "RelativeToolTip": "MachineVision.Ocr\\ViewModels\\BarCodeViewModel.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAwwDQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T08:12:32.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T08:12:32.29Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 95,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision\\App.xaml.cs",
               "RelativeDocumentMoniker": "MachineVision\\App.xaml.cs",
@@ -1616,8 +1542,7 @@
               "RelativeToolTip": "MachineVision\\App.xaml.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAQwD8AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T01:28:01.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T01:28:01.421Z"
             }
           ]
         }
