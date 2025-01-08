@@ -12,6 +12,7 @@ using HalconDotNet;
 using MachineVision.Core;
 using MachineVision.Core.TemplateMatch;
 using MachineVision.Shared.Controls;
+using MachineVision.TemplateMatch.Models;
 using MvCameraControl;
 using Prism.Commands;
 
@@ -20,11 +21,7 @@ namespace MachineVision.TemplateMatch.ViewModels
     
    public class HikViewModel : NavigationViewModel
     {
-        public class Camera
-        {
-            public string CameraName { get; set; }
-            public IDeviceInfo DeviceInfo { get; set; }
-        }
+    
         public ITemplateMatchService MatchService { get; set; }
 
         #region 相机标志位
@@ -62,40 +59,50 @@ namespace MachineVision.TemplateMatch.ViewModels
         public DelegateCommand CaptureImageCommand { get; private set; }
         public DelegateCommand StopCameraCommand { get; private set; }
         public DelegateCommand SaveImageCommand { get; private set; }
-        public ObservableCollection<Camera> CameraList { get; set; } = new ObservableCollection<Camera>();
-        public Camera SelectedCamera { get; set; }  // 用于存储选中的相机
+
+        public ObservableCollection<CameraDevice> CameraList { get; set; } = new ObservableCollection<CameraDevice>();
+        public CameraDevice SelectedCamera { get; set; }  // Used to store the selected camera
 
 
+
+        
         private void ScanCamera()
         {
-            SDKSystem.Initialize(); // 相机初始化SDK资源
+            SDKSystem.Initialize(); // Initialize SDK resources
 
-            // 检查 CameraList 是否已初始化
+            // Ensure CameraList is initialized
             if (CameraList == null)
             {
-                CameraList = new ObservableCollection<Camera>(); // 如果未初始化，进行初始化
+                CameraList = new ObservableCollection<CameraDevice>(); // Initialize if not already
             }
 
-            // 清空 CameraList
+            // Clear existing cameras
             CameraList.Clear();
 
-            // 枚举设备
+            // Enumerate devices
             int nRet = DeviceEnumerator.EnumDevices(enumTLayerType, out deviceInfoList);
 
-            // 在 CameraList 中添加设备
+            if (nRet != MvError.MV_OK)
+            {
+                MessageBox.Show("设备枚举失败！");
+                return;
+            }
+
+            // Add devices to CameraList
             foreach (var deviceInfo in deviceInfoList)
             {
                 string cameraName = !string.IsNullOrEmpty(deviceInfo.UserDefinedName) ?
                     $"{deviceInfo.TLayerType}: {deviceInfo.UserDefinedName} ({deviceInfo.SerialNumber})" :
                     $"{deviceInfo.TLayerType}: {deviceInfo.ManufacturerName} {deviceInfo.ModelName} ({deviceInfo.SerialNumber})";
 
-                CameraList.Add(new Camera
+                CameraList.Add(new CameraDevice
                 {
                     CameraName = cameraName,
                     DeviceInfo = deviceInfo
                 });
             }
         }
+
 
 
         private void StartCamera()
@@ -108,7 +115,7 @@ namespace MachineVision.TemplateMatch.ViewModels
             await Task.Run(() =>
             {
                 // 获取选择的设备信息 | Get selected device information
-                IDeviceInfo deviceInfo = SelectedCamera?.DeviceInfo; // 使用绑定的 SelectedCamera 获取 DeviceInfo
+                IDeviceInfo deviceInfo = SelectedCamera?.DeviceInfo;
 
                 try
                 {
@@ -177,9 +184,10 @@ namespace MachineVision.TemplateMatch.ViewModels
                 }
             });
         }
+
         private void CaptureImage()
         {
-
+            Template3();
             int nRet;
             IFrameOut frameOut;
             HImage hImage = new HImage();//读取主图片
@@ -206,10 +214,34 @@ namespace MachineVision.TemplateMatch.ViewModels
             }
 
         }
-        
+        public async Task Template3()
+        {
+            await Task.Run(() =>
+            {
+                try
+                {
+                    // 发送软件触发命令
+                    int result = device.Parameters.SetCommandValue("TriggerSoftware");
+                    if (result != MvError.MV_OK)
+                    {
+
+                        return;
+                    }
+
+
+                   
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("发送软件触发时出错：" + ex.Message, "错误");
+                }
+            });
+        }
+
         private void StopCamera()
         {
-
+            
         }
         private void SaveImage()
         {

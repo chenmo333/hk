@@ -60,7 +60,10 @@
                             Width="200"
                             FontSize="20"
                             VerticalAlignment="Center"   
+                                
                             Text="{Binding CameraService.Parameters.IP}" />
+                            
+                            
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
                             <TextBlock Text="子网掩码:" FontSize="20"    VerticalAlignment="Center" />
@@ -70,6 +73,7 @@
                             Width="200"
                              FontSize="20"
                              VerticalAlignment="Center"   
+                                
                             Text="{Binding CameraService.Parameters.MAK}" />
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
@@ -109,6 +113,7 @@
                                 ItemsSource="{Binding CameraList}"
                                  DisplayMemberPath="CameraName"
                                  SelectedItem="{Binding SelectedCamera}" 
+                                
                                  SelectedIndex="0"
                                 >
                             </ComboBox>
