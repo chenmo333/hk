@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -52,8 +53,31 @@ namespace MachineVision.TemplateMatch.ViewModels
             CaptureImageCommand = new DelegateCommand(CaptureImage);
             StopCameraCommand = new DelegateCommand(StopCamera);
             SaveImageCommand = new DelegateCommand(SaveImage);
+            #region 默认文本
+             ExposureTime = 100; // Set default value, e.g., 100 ms
+            #endregion
         }
-        
+        #region 文本
+  
+
+        private double _exposureTime;
+        public double ExposureTime
+        {
+            get { return _exposureTime; }
+            set
+            {
+                if (_exposureTime != value)
+                {
+                    _exposureTime = value;
+                    RaisePropertyChanged(nameof(ExposureTime));
+                }
+            }
+        }
+
+    
+
+        #endregion
+        #region 按钮
         public DelegateCommand ScanCameraCommand { get; private set; }
         public DelegateCommand StartCameraCommand { get; private set; }
         public DelegateCommand CaptureImageCommand { get; private set; }
@@ -253,5 +277,6 @@ namespace MachineVision.TemplateMatch.ViewModels
             get { return image; }
             set { image = value; RaisePropertyChanged(); }
         }
+        #endregion
     }
 }

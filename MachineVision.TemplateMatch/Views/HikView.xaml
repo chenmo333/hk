@@ -163,7 +163,7 @@
                              Width="200"
                               FontSize="20" 
                                  VerticalAlignment="Center"  
-                             Text="{Binding CameraService.Parameters.MAK}" />
+                             Text="{Binding ExposureTime}" />
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
                             <TextBlock Text="  增益:" FontSize="20"    VerticalAlignment="Center"/>
