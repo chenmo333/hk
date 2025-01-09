@@ -11,6 +11,7 @@ namespace MachineVision.Defect.Models.UI
     {
         public string CameraName { get; set; }
         public IDeviceInfo DeviceInfo { get; set; }
+
     }
 
 }

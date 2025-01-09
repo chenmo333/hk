@@ -71,3 +71,4 @@ C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Defect\obj\Debug\net6.0-wi
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Defect\obj\Debug\net6.0-windows\refint\MachineVision.Defect.dll
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Defect\obj\Debug\net6.0-windows\MachineVision.Defect.pdb
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Defect\obj\Debug\net6.0-windows\ref\MachineVision.Defect.dll
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Defect\obj\Debug\net6.0-windows\MachineVision.Defect.sourcelink.json

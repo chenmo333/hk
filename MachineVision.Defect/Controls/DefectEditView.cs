@@ -117,6 +117,10 @@ namespace MachineVision.Defect.Controls
         public static readonly DependencyProperty DrawingObjectInfosProperty =
             DependencyProperty.Register("DrawingObjectInfos", typeof(ObservableCollection<HDrawingObjectInfo>), typeof(DefectEditView));
 
+
+
+
+
         public ProjectModel Model
         {
             get { return (ProjectModel)GetValue(ModelProperty); }

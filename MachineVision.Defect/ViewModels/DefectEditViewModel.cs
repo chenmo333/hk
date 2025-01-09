@@ -12,15 +12,19 @@ using MachineVision.Defect.ViewModels.Components;
 using MachineVision.Defect.ViewModels.Components.Models;
 using MachineVision.Shared.Controls;
 using MachineVision.Shared.Services.Session;
+using MachineVision.Shared.Services.Tables;
 using MvCameraControl;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Regions;
 using Prism.Services.Dialogs;
+using System;
 using System.Collections.ObjectModel;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
+using System.Windows.Media.Media3D;
+using Camera = MachineVision.Defect.Models.UI.Camera;
 
 
 namespace MachineVision.Defect.ViewModels
@@ -70,6 +74,33 @@ namespace MachineVision.Defect.ViewModels
             }
         }
 
+        private MatchResult matchResult;
+
+        public MatchResult MatchResult
+        {
+            get { return matchResult; }
+            set { matchResult = value; RaisePropertyChanged(); }
+        }
+
+        private MatchResultSetting setting;
+
+        /// <summary>
+        /// 匹配结果显示设置
+        /// </summary>
+        public MatchResultSetting Setting
+        {
+            get { return setting; }
+            set { setting = value; RaisePropertyChanged(); }
+        }
+
+        private HWindow hWindow;
+
+        public HWindow HWindow
+        {
+            get { return hWindow; }
+            set { hWindow = value; RaisePropertyChanged(); }
+        }
+
         public DefectEditViewModel(TargetService targetService,
             ProjectService appService,
             InspectionService inspec,
@@ -88,6 +119,10 @@ namespace MachineVision.Defect.ViewModels
             this.inspec = inspec;
             this.dialog = dialog;
             this.aggregator = aggregator;
+           
+            Setting = new MatchResultSetting();
+            MatchResult = new MatchResult();
+
             InitBindingCommands();
         }
 
@@ -502,18 +537,56 @@ namespace MachineVision.Defect.ViewModels
             }
 
         }
+
         private void Textrecognition()
         {
             HTuple modelid = new HTuple();////定义变量给模板
             HTuple hv_Row = new HTuple(), hv_Column = new HTuple();//定义变量
             HTuple hv_Angle = new HTuple(), hv_Score = new HTuple();//定义变量
+
+            MatchResult.Reset();
+
             try
             {
                 HOperatorSet.ReadShapeModel("C:/Users/HZSK2023/Pictures/crop.shm", out modelid);//读取本地模板
 
                 HOperatorSet.FindShapeModel(Image, modelid, -0.39, 0.79, 0.5, 1, 0.5, "least_squares", 0, 0.9, out hv_Row, out hv_Column, out hv_Angle, out hv_Score);
              System.Diagnostics.Debug.WriteLine($"score:{hv_Score} angle:{hv_Angle} row:{hv_Row} column{hv_Column}");
-                
+                //获取形状模板轮廓
+                HOperatorSet.GetShapeModelContours(out HObject modelContours, modelid, 1);
+
+                for (int i = 0; i < hv_Score.Length; i++)
+                {
+                    //计算轮廓匹配的目标位置对象
+                    HOperatorSet.VectorAngleToRigid(0, 0, 0, hv_Row.DArr[i], hv_Column.DArr[i], hv_Angle.DArr[i], out HTuple homMat2D);
+                    HOperatorSet.AffineTransContourXld(modelContours, out HObject contoursAffineTrans, homMat2D);
+                    //HWindow.DispObj(contoursAffineTrans);
+                    MatchResult.Results.Add(new TemplateMatchResult()
+                    {
+                        Index = i + 1,
+                        Row = hv_Row.DArr[i],
+                        Column = hv_Column.DArr[i],
+                        Angle = hv_Angle.DArr[i],
+                        Score = hv_Score.DArr[i],
+                        Contours = contoursAffineTrans
+                    });
+                }
+
+                //在窗口中渲染结果
+                if (MatchResult.Results != null)
+                {
+                    foreach (var item in MatchResult.Results)
+                    {
+                        if (Setting.IsShowCenter)
+                            HWindow.DispCross(item.Row, item.Column, 30, item.Angle);
+
+                        if (Setting.IsShowDisplayText)
+                            HWindow.SetString($"({Math.Round(item.Row, 2)},{Math.Round(item.Column, 2)})", "Image", item.Row, item.Column, "black", "true");
+
+                        if (Setting.IsShowMatchRange)
+                            HWindow.DispObj(item.Contours);
+                    }
+                }
             }
             catch { }
         }

@@ -81,7 +81,7 @@
                     <controls:DefectEditView
                         DrawingObjectInfos="{Binding DrawingObjectInfos}"
                         Image="{Binding Image}"
-                       
+                        HWindow="{Binding HWindow, Mode=TwoWay}"
                         IsModelEditMode="{Binding IsModelEditMode}"
                         Message="{Binding Message}"
                         Model="{Binding Model}"
