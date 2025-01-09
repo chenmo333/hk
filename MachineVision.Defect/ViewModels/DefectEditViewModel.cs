@@ -584,7 +584,8 @@ namespace MachineVision.Defect.ViewModels
                             HWindow.SetString($"({Math.Round(item.Row, 2)},{Math.Round(item.Column, 2)})", "Image", item.Row, item.Column, "black", "true");
 
                         if (Setting.IsShowMatchRange)
-                            HWindow.DispObj(item.Contours);
+                            HWindow.SetColor("red");
+                        HWindow.DispObj(item.Contours);
                     }
                 }
             }

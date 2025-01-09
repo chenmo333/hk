@@ -16,7 +16,7 @@ using MachineVision.Shared.Controls;
 using MachineVision.TemplateMatch.Models;
 using MvCameraControl;
 using Prism.Commands;
-
+using Prism.Ioc;
 namespace MachineVision.TemplateMatch.ViewModels
 {
     
@@ -48,6 +48,8 @@ namespace MachineVision.TemplateMatch.ViewModels
         private HObject image;
      public HikViewModel()
         {
+            MatchService = ContainerLocator.Current.Resolve<ITemplateMatchService>(nameof(TempalteMatchType.ShapeModel));
+
             ScanCameraCommand = new DelegateCommand(ScanCamera);
             StartCameraCommand = new DelegateCommand(StartCamera);
             CaptureImageCommand = new DelegateCommand(CaptureImage);

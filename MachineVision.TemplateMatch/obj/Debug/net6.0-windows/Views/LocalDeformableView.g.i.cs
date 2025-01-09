@@ -54,7 +54,7 @@ namespace MachineVision.TemplateMatch.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MachineVision.TemplateMatch;V1.0.0.0;component/views/localdeformableview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MachineVision.TemplateMatch;component/views/localdeformableview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\LocalDeformableView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -48,7 +48,7 @@
             </Grid>
         <Grid Grid.Column="1" Margin="10,0">
             <TabControl HorizontalContentAlignment="Left">
-                <TabItem Header="海康相机" Width="332" >
+                <TabItem Header="海康相机" Width="224" >
                     <StackPanel Grid.Row="1" Margin="0,10">
 
 
@@ -178,7 +178,145 @@
 
                     </StackPanel>
                 </TabItem>
-          
+                <TabItem Header="创建模板"  Width="224">
+                    <Grid Cursor="">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                            <StackPanel>
+                                
+                                    
+                                        <Grid Margin="-22,0">
+                                            <TextBlock FontSize="16" Text="     模板参数" />
+                                        </Grid>
+                                  
+                                  
+                                        <StackPanel>
+                                    <TextBlock Text="金字塔层数" />
+                                            <ComboBox
+                                  Margin="0,5"
+                                  Padding="5"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  Text="{Binding MatchService.TemplateParameter.NumLevels}">
+                                                <ComboBoxItem>auto</ComboBoxItem>
+                                                <ComboBoxItem>0</ComboBoxItem>
+                                                <ComboBoxItem>1</ComboBoxItem>
+                                                <ComboBoxItem>2</ComboBoxItem>
+                                                <ComboBoxItem>3</ComboBoxItem>
+                                                <ComboBoxItem>4</ComboBoxItem>
+                                                <ComboBoxItem>5</ComboBoxItem>
+                                                <ComboBoxItem>6</ComboBoxItem>
+                                                <ComboBoxItem>7</ComboBoxItem>
+                                                <ComboBoxItem>8</ComboBoxItem>
+                                                <ComboBoxItem>9</ComboBoxItem>
+                                                <ComboBoxItem>10</ComboBoxItem>
+                                            </ComboBox>
+                                    <TextBlock Text="起始角度" />
+                                            <TextBox
+                                  Margin="0,5"
+                                  Padding="5"
+                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                  Text="{Binding MatchService.TemplateParameter.AngleStart}" />
+                                    <TextBlock Text="角度范围" />
+                                            <TextBox
+                                  Margin="0,5"
+                                  Padding="5"
+                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                  Text="{Binding MatchService.TemplateParameter.AngleExtent}" />
+                                    <TextBlock Text="角度步长" />
+                                            <ComboBox
+                                  Margin="0,5"
+                                  Padding="5"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  Text="{Binding MatchService.TemplateParameter.AngleStep}">
+                                                <ComboBoxItem>auto</ComboBoxItem>
+                                                <ComboBoxItem>0.01</ComboBoxItem>
+                                                <ComboBoxItem>0.03</ComboBoxItem>
+                                                <ComboBoxItem>0.05</ComboBoxItem>
+                                                <ComboBoxItem>0.06</ComboBoxItem>
+                                                <ComboBoxItem>0.08</ComboBoxItem>
+                                            </ComboBox>
+                                    <TextBlock Text="处理速度" />
+                                            <ComboBox
+                                  Margin="0,5"
+                                  Padding="5"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  Text="{Binding MatchService.TemplateParameter.Optimization}">
+                                                <ComboBoxItem>auto</ComboBoxItem>
+                                                <ComboBoxItem>none</ComboBoxItem>
+                                                <ComboBoxItem>point_reduction_low</ComboBoxItem>
+                                                <ComboBoxItem>point_reduction_medium</ComboBoxItem>
+                                                <ComboBoxItem>point_reduction_high</ComboBoxItem>
+                                                <ComboBoxItem>pregeneration</ComboBoxItem>
+                                                <ComboBoxItem>no_pregeneration</ComboBoxItem>
+                                            </ComboBox>
+                                    <TextBlock Text="处理度量" />
+                                            <ComboBox
+                                  Margin="0,5"
+                                  Padding="5"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  Text="{Binding MatchService.TemplateParameter.Metric}">
+                                                <ComboBoxItem>use_polarity</ComboBoxItem>
+                                                <ComboBoxItem>ignore_global_polarity</ComboBoxItem>
+                                                <ComboBoxItem>ignore_local_polarity</ComboBoxItem>
+                                                <ComboBoxItem>ignore_color_polarity</ComboBoxItem>
+                                            </ComboBox>
+                                    <TextBlock Text="亮度度量" />
+                                            <ComboBox
+                                  Margin="0,5"
+                                  Padding="5"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  Text="{Binding MatchService.TemplateParameter.Contrast}">
+                                                <ComboBoxItem>auto</ComboBoxItem>
+                                                <ComboBoxItem>auto_contrast</ComboBoxItem>
+                                                <ComboBoxItem>auto_contrast_hyst</ComboBoxItem>
+                                                <ComboBoxItem>auto_min_size</ComboBoxItem>
+                                                <ComboBoxItem>10</ComboBoxItem>
+                                                <ComboBoxItem>20</ComboBoxItem>
+                                                <ComboBoxItem>30</ComboBoxItem>
+                                                <ComboBoxItem>40</ComboBoxItem>
+                                                <ComboBoxItem>60</ComboBoxItem>
+                                                <ComboBoxItem>80</ComboBoxItem>
+                                            </ComboBox>
+                                    <TextBlock Text="对比度阈值" />
+                                            <ComboBox
+                                  Margin="0,5"
+                                  Padding="5"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  Text="{Binding MatchService.TemplateParameter.MinContrast}">
+                                                <ComboBoxItem>auto</ComboBoxItem>
+                                                <ComboBoxItem>1</ComboBoxItem>
+                                                <ComboBoxItem>2</ComboBoxItem>
+                                                <ComboBoxItem>3</ComboBoxItem>
+                                                <ComboBoxItem>4</ComboBoxItem>
+                                                <ComboBoxItem>5</ComboBoxItem>
+                                                <ComboBoxItem>7</ComboBoxItem>
+                                                <ComboBoxItem>10</ComboBoxItem>
+                                                <ComboBoxItem>20</ComboBoxItem>
+                                                <ComboBoxItem>30</ComboBoxItem>
+                                                <ComboBoxItem>40</ComboBoxItem>
+                                            </ComboBox>
+
+                                            <Button
+                                  Margin="0,10"
+                                  Command="{Binding CreateTemplateCommand}"
+                                  Content="创建匹配模板" />
+                                        </StackPanel>
+                                
+                             
+
+                            
+                            </StackPanel>
+                        </ScrollViewer>
+
+                        <StackPanel Grid.Row="1" Margin="0,10">
+                            <Button Command="{Binding RunCommand}" Content="执行" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
             </TabControl>
         </Grid>
     </Grid>
