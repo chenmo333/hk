@@ -34,18 +34,21 @@
                ColumnWidth="*"
                IsReadOnly="True"
                 FontSize="30"
-               ItemsSource="{Binding MatchService.MatchResult.Results}">
-               <DataGrid.Columns>
+               ItemsSource="{Binding MatchService.MatchResult.Informa}">
+                <DataGrid.Columns>
                     <DataGridTextColumn
                        Width="*"
-                        
-                       Binding="{Binding Information}"
+      
+                       Binding="{Binding Infor}"
                        Header="信息" />
-                   
                 </DataGrid.Columns>
-           </DataGrid>
-           
-            </Grid>
+            </DataGrid>
+            <TextBlock
+            Grid.Row="2"
+            Margin="10"
+            Text="{Binding MatchService.MatchResult.Message}" />
+
+        </Grid>
         <Grid Grid.Column="1" Margin="10,0">
             <TabControl HorizontalContentAlignment="Left">
                 <TabItem Header="海康相机" Width="224" >

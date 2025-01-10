@@ -17,6 +17,11 @@ using MachineVision.TemplateMatch.Models;
 using MvCameraControl;
 using Prism.Commands;
 using Prism.Ioc;
+using Microsoft.Win32;
+using ImTools;
+using static MachineVision.Core.TemplateMatch.MatchResult;
+
+
 namespace MachineVision.TemplateMatch.ViewModels
 {
     
@@ -44,11 +49,31 @@ namespace MachineVision.TemplateMatch.ViewModels
 
         #endregion
 
-
+        private HObject maskObject;
         private HObject image;
-     public HikViewModel()
+        private ObservableCollection<DrawingObjectInfo> drawObjectList;
+        public HikViewModel()
         {
+
+          
+            // 初始化数据
+            MatchResult = new MatchResult
+            {
+                Informa = new ObservableCollection<Match>
+            {
+                new Match { Infor = "信息1" },
+                new Match { Infor = "信息2" },
+                new Match { Infor = "信息3" }
+            }
+            };
+
+
+
+
             MatchService = ContainerLocator.Current.Resolve<ITemplateMatchService>(nameof(TempalteMatchType.ShapeModel));
+            CreateTemplateCommand = new DelegateCommand(CreateTemplate);
+            DrawObjectList = new ObservableCollection<DrawingObjectInfo>();
+
 
             ScanCameraCommand = new DelegateCommand(ScanCamera);
             StartCameraCommand = new DelegateCommand(StartCamera);
@@ -56,7 +81,6 @@ namespace MachineVision.TemplateMatch.ViewModels
             StopCameraCommand = new DelegateCommand(StopCamera);
             SaveImageCommand = new DelegateCommand(SaveImage);
             // Other command initializations...
-         
 
             // Set default save path
             SavePath = "C:\\Users\\Public\\Pictures"; // Default path, can be adjusted as needed
@@ -172,10 +196,11 @@ namespace MachineVision.TemplateMatch.ViewModels
             }
         }
 
-    
+
 
         #endregion
         #region 按钮
+        public DelegateCommand CreateTemplateCommand { get; private set; }
         public DelegateCommand ScanCameraCommand { get; private set; }
         public DelegateCommand StartCameraCommand { get; private set; }
         public DelegateCommand CaptureImageCommand { get; private set; }
@@ -186,13 +211,56 @@ namespace MachineVision.TemplateMatch.ViewModels
         public ObservableCollection<CameraDevice> CameraList { get; set; } = new ObservableCollection<CameraDevice>();
         public CameraDevice SelectedCamera { get; set; }  // Used to store the selected camera
 
+        private MatchResult matchResult;
+
+        public MatchResult MatchResult
+        {
+            get { return matchResult; }
+            set { matchResult = value; RaisePropertyChanged(); }
+        }
+        public HObject MaskObject
+        {
+            get { return maskObject; }
+            set { maskObject = value; RaisePropertyChanged(); }
+        }
+        /// <summary>
+        /// 绘制形状集合
+        /// </summary>
+        public ObservableCollection<DrawingObjectInfo> DrawObjectList
+        {
+            get { return drawObjectList; }
+            set { drawObjectList = value; RaisePropertyChanged(); }
+        }
+
+        /// <summary>
+        /// 创建匹配模板
+        /// </summary>
+        private void CreateTemplate()
+        {
+            var hobject = DrawObjectList.FirstOrDefault();
+            if (hobject != null)
+            {
+                if (MaskObject != null)
+                {
+                    HOperatorSet.Difference(hobject.Hobject, MaskObject, out HObject difference);
+                    MatchService.CreateTemplate(Image, difference);
+                }
+                else
+                {
+                    MatchService.CreateTemplate(Image, hobject.Hobject);
+                }
+            }
+        }
 
 
-        
         private void ScanCamera()
         {
             SDKSystem.Initialize(); // Initialize SDK resources
+            MatchResult.Informa.Add(new Match()
+            {
+                Infor = "1"
 
+            });
             // Ensure CameraList is initialized
             if (CameraList == null)
             {

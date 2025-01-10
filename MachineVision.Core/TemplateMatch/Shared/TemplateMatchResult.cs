@@ -12,6 +12,7 @@ namespace MachineVision.Core.TemplateMatch
     /// </summary>
     public class TemplateMatchResult
     {
+
         /// <summary>
         /// 序号
         /// </summary>

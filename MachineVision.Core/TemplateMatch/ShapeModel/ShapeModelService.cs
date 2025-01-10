@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using System.Windows.Media.Media3D;
 
 namespace MachineVision.Core.TemplateMatch
 {
@@ -124,6 +125,8 @@ namespace MachineVision.Core.TemplateMatch
                    TemplateParameter.Metric,
                    TemplateParameter.Contrast,
                    TemplateParameter.MinContrast, out modelId);
+                HOperatorSet.WriteImage(template, "png", 0, "C:/Users/Public/Pictures/crop.png");//保存模板路径
+                HOperatorSet.WriteShapeModel(modelId, "C:/Users/Public/Pictures/crop.shm");//保存模板ID路径
             });
         }
 
@@ -178,6 +181,7 @@ namespace MachineVision.Core.TemplateMatch
                     Angle = hv_Angle.DArr[i],
                     Score = hv_Score.DArr[i],
                     Contours = contoursAffineTrans
+
                 });
             }
 

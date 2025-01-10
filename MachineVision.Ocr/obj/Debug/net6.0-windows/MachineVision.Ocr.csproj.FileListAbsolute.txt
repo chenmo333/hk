@@ -46,3 +46,4 @@ C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Ocr\obj\Debug\net6.0-windo
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Ocr\obj\Debug\net6.0-windows\refint\MachineVision.Ocr.dll
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Ocr\obj\Debug\net6.0-windows\MachineVision.Ocr.pdb
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Ocr\obj\Debug\net6.0-windows\ref\MachineVision.Ocr.dll
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Ocr\obj\Debug\net6.0-windows\MachineVision.Ocr.sourcelink.json

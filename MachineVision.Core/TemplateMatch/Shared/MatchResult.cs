@@ -1,5 +1,6 @@
 ﻿using Prism.Mvvm;
 using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
 
 namespace MachineVision.Core.TemplateMatch
 {
@@ -10,7 +11,15 @@ namespace MachineVision.Core.TemplateMatch
     {
         public MatchResult()
         {
+
             Results = new ObservableCollection<TemplateMatchResult>();
+
+        }
+        public ObservableCollection<Match> Informa { get; set; }
+        public class Match
+        {
+            public string Infor { get; set; }
+            // 可以添加更多属性
         }
 
         private string message;

@@ -42,3 +42,4 @@ C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Shared\obj\Debug\net6.0-wi
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Shared\obj\Debug\net6.0-windows\refint\MachineVision.Shared.dll
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Shared\obj\Debug\net6.0-windows\MachineVision.Shared.pdb
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Shared\obj\Debug\net6.0-windows\ref\MachineVision.Shared.dll
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Shared\obj\Debug\net6.0-windows\MachineVision.Shared.sourcelink.json

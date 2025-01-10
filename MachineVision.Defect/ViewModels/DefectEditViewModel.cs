@@ -372,7 +372,10 @@ namespace MachineVision.Defect.ViewModels
         private void RefreshDeviceList()
         {
             SDKSystem.Initialize();//相机初始化SDK资源
-                                   // 检查 CameraList 是否已初始化
+
+
+  
+            // 检查 CameraList 是否已初始化
             if (CameraList == null)
             {
                 CameraList = new ObservableCollection<Camera>(); // 如果未初始化，进行初始化

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MachineVision.Ocr")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fc17ee0f1d190985cb8ba4fe903e1f479aaf3a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("MachineVision.Ocr")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MachineVision.Ocr")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
