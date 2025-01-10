@@ -54,7 +54,7 @@ namespace MachineVision.TemplateMatch.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MachineVision.TemplateMatch;component/views/hikview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MachineVision.TemplateMatch;V1.0.0.0;component/views/hikview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\HikView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

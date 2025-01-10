@@ -33,7 +33,7 @@ namespace MachineVision.Defect.ViewModels
     internal class DefectEditViewModel : NavigationViewModel
     {
 
-        static Timer _timer;
+        private Timer _timer;
         #region 相机标志位
         readonly DeviceTLayerType enumTLayerType = DeviceTLayerType.MvGigEDevice | DeviceTLayerType.MvUsbDevice
     | DeviceTLayerType.MvGenTLGigEDevice | DeviceTLayerType.MvGenTLCXPDevice | DeviceTLayerType.MvGenTLCameraLinkDevice | DeviceTLayerType.MvGenTLXoFDevice;
@@ -53,6 +53,7 @@ namespace MachineVision.Defect.ViewModels
 
         #endregion
         private ObservableCollection<Camera> _cameraList;
+
         public ObservableCollection<Camera> CameraList
         {
             get => _cameraList;
@@ -108,7 +109,7 @@ namespace MachineVision.Defect.ViewModels
             IHostDialogService dialog,
             IEventAggregator aggregator)
         {
-          
+       
             // 创建定时器，设置为 2000 毫秒（2 秒）触发一次
             _timer = new Timer(500);
 
@@ -370,7 +371,7 @@ namespace MachineVision.Defect.ViewModels
         static byte[] D;
         static int PZ;
         // 定时器触发的事件处理方法
-        private static void OnTimedEvent(object sender, ElapsedEventArgs e)
+        private  void OnTimedEvent(object sender, ElapsedEventArgs e)
         {
 
             try
@@ -380,12 +381,12 @@ namespace MachineVision.Defect.ViewModels
                 DB();
                 if (PZ==1)
                 {
-                
+                    Template3();
                 }
 
             }
           catch { }
-            Thread.Sleep(1000);
+         
         }
         #region 转换
 
@@ -423,7 +424,7 @@ namespace MachineVision.Defect.ViewModels
             {
                 plc.Open(); // 打开连接
                 Console.WriteLine("装配PLC连接成功");
-                D = plc.ReadBytes(DataType.DataBlock, 2, 0, 30);//提取整个DB块
+                D = plc.ReadBytes(DataType.DataBlock, 1, 0, 30);//提取整个DB块
                 Console.WriteLine("装配数据采集成功");
                 plc.Close(); // 关闭连接
             }

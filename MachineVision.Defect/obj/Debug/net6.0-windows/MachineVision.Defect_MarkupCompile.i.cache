@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 22353773623
 Controls\DefectEditView.xaml;Controls\ErrorManagerView.xaml;Controls\ShowErrorControl.xaml;Themes\Generic.xaml;Views\CreateProjectView.xaml;Views\DefectEditView.xaml;Views\DefectView.xaml;Views\RegionParameterView.xaml;Views\TrainView.xaml;
 
-False
+True
 
