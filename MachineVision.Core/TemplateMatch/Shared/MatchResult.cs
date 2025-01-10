@@ -45,7 +45,6 @@ namespace MachineVision.Core.TemplateMatch
 
         public void Reset()
         {
-           
             Message = string.Empty;
             TimeSpan = -1;
             IsSuccess = false;

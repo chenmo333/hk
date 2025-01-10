@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MachineVision.TemplateMatch.ViewModels;
 
 namespace MachineVision.TemplateMatch.Views
 {
@@ -23,6 +24,7 @@ namespace MachineVision.TemplateMatch.Views
         public HikView()
         {
             InitializeComponent();
+           
         }
     }
 }

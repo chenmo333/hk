@@ -55,11 +55,7 @@ namespace MachineVision.TemplateMatch.ViewModels
         public HikViewModel()
         {
 
-        
-
-
-
-
+       
             MatchService = ContainerLocator.Current.Resolve<ITemplateMatchService>(nameof(TempalteMatchType.ShapeModel));
             CreateTemplateCommand = new DelegateCommand(CreateTemplate);
             DrawObjectList = new ObservableCollection<DrawingObjectInfo>();
@@ -201,13 +197,7 @@ namespace MachineVision.TemplateMatch.ViewModels
         public ObservableCollection<CameraDevice> CameraList { get; set; } = new ObservableCollection<CameraDevice>();
         public CameraDevice SelectedCamera { get; set; }  // Used to store the selected camera
 
-        private MatchResult matchResult;
 
-        public MatchResult MatchResult
-        {
-            get { return matchResult; }
-            set { matchResult = value; RaisePropertyChanged(); }
-        }
         public HObject MaskObject
         {
             get { return maskObject; }
@@ -245,6 +235,7 @@ namespace MachineVision.TemplateMatch.ViewModels
 
         private void ScanCamera()
         {
+       
             SDKSystem.Initialize(); // Initialize SDK resources
 
             // Ensure CameraList is initialized

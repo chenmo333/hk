@@ -164,6 +164,10 @@
             "Prism.DryIoc": {
               "target": "Package",
               "version": "[8.1.97, )"
+            },
+            "S7netplus": {
+              "target": "Package",
+              "version": "[0.20.0, )"
             }
           },
           "imports": [

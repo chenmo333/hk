@@ -25,14 +25,15 @@ using System.IO;
 using System.Windows.Forms;
 using System.Windows.Media.Media3D;
 using Camera = MachineVision.Defect.Models.UI.Camera;
-
-
+using System.Timers;
+using Timer = System.Timers.Timer;
+using S7.Net;
 namespace MachineVision.Defect.ViewModels
 {
     internal class DefectEditViewModel : NavigationViewModel
     {
-       
 
+        static Timer _timer;
         #region 相机标志位
         readonly DeviceTLayerType enumTLayerType = DeviceTLayerType.MvGigEDevice | DeviceTLayerType.MvUsbDevice
     | DeviceTLayerType.MvGenTLGigEDevice | DeviceTLayerType.MvGenTLCXPDevice | DeviceTLayerType.MvGenTLCameraLinkDevice | DeviceTLayerType.MvGenTLXoFDevice;
@@ -108,6 +109,11 @@ namespace MachineVision.Defect.ViewModels
             IEventAggregator aggregator)
         {
 
+            // 创建定时器，设置为 2000 毫秒（2 秒）触发一次
+            _timer = new Timer(500);
+
+            // 绑定定时器的 Elapsed 事件
+            _timer.Elapsed += OnTimedEvent;
 
             Files = new ObservableCollection<ImageFile>();
          
@@ -158,6 +164,8 @@ namespace MachineVision.Defect.ViewModels
         public DelegateCommand RefreshDeviceListCommand { get; private set; }//寻找相机
         public DelegateCommand OpenDeviceCommand { get; private set; }//打开相机
         public DelegateCommand OnceSoftTriggerCommand { get; private set; }//相机拍照
+        public DelegateCommand ConnectPlcCommand { get; private set; }//连接plc
+
         /// <summary>
         /// 设置项目参数
         /// </summary>
@@ -194,7 +202,8 @@ namespace MachineVision.Defect.ViewModels
         private void InitBindingCommands()
         {
             LoadImageCommand = new DelegateCommand(LoadImage);
-            xjCommand = new DelegateCommand(xj); 
+            xjCommand = new DelegateCommand(xj);
+            ConnectPlcCommand = new DelegateCommand(ConnectPlc);
             RefreshDeviceListCommand = new DelegateCommand(RefreshDeviceList);//枚举相机
           
             OpenDeviceCommand = new DelegateCommand(OpenDevice);//打开相机
@@ -357,11 +366,78 @@ namespace MachineVision.Defect.ViewModels
                     break;
             }
         }
-       
+        #region plc程序
+        static byte[] D;
+        static int PZ;
+        // 定时器触发的事件处理方法
+        private static void OnTimedEvent(object sender, ElapsedEventArgs e)
+        {
+
+            try
+            {
+                ZP("192.168.8.30");
+
+                DB();
+            }
+          catch { }
+            Thread.Sleep(1000);
+        }
+        #region 转换
+
+        private static bool ToBool(byte[] D, int byteIndex, int bitIndex)
+        {
+            return (D[byteIndex] & (1 << bitIndex)) != 0;
+        }
+
+        private static float ToReal(byte[] D, int startIndex)
+        {
+            byte[] realBytes = new byte[4];
+            Array.Copy(D, startIndex, realBytes, 0, 4);
+            Array.Reverse(realBytes, 0, 4); // 反转字节顺序以适应大端序
+            return BitConverter.ToSingle(realBytes, 0);
+        }
+
+        private static int ToInt(byte[] D, int startndex)
+        {
+            byte[] wordBytes = new byte[2];
+            Array.Copy(D, startndex, wordBytes, 0, 2);
+            Array.Reverse(wordBytes); // 反转字节顺序以适应大端序
+            return BitConverter.ToUInt16(wordBytes, 0);
+        }
+
+        #endregion
+        private static void DB()
+        {
+            PZ = ToInt(D, 0);
+          
+        }
+        private static void ZP(string IP)
+        {
+            Plc plc = new Plc(CpuType.S71200, IP, 0, 1); // 创建PLC实例
+            try
+            {
+                plc.Open(); // 打开连接
+                Console.WriteLine("装配PLC连接成功");
+                D = plc.ReadBytes(DataType.DataBlock, 2, 0, 30);//提取整个DB块
+                Console.WriteLine("装配数据采集成功");
+                plc.Close(); // 关闭连接
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+        }
+
+        #endregion
         private void xj()
         { 
         
         
+        }
+        private void ConnectPlc()
+        {
+            _timer.Start();
+
         }
         public async Task Template()
         {

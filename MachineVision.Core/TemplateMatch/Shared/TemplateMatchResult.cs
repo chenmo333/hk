@@ -13,9 +13,6 @@ namespace MachineVision.Core.TemplateMatch
     public class TemplateMatchResult
     {
 
-        /// <summary>
-        /// 序号
-        /// </summary>
         public int Index { get; set; }
 
         /// <summary>
