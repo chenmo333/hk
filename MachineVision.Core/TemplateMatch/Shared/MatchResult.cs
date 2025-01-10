@@ -15,12 +15,7 @@ namespace MachineVision.Core.TemplateMatch
             Results = new ObservableCollection<TemplateMatchResult>();
 
         }
-        public ObservableCollection<Match> Informa { get; set; }
-        public class Match
-        {
-            public string Infor { get; set; }
-            // 可以添加更多属性
-        }
+
 
         private string message;
 
@@ -50,6 +45,7 @@ namespace MachineVision.Core.TemplateMatch
 
         public void Reset()
         {
+           
             Message = string.Empty;
             TimeSpan = -1;
             IsSuccess = false;

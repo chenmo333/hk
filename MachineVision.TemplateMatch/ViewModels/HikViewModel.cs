@@ -55,17 +55,7 @@ namespace MachineVision.TemplateMatch.ViewModels
         public HikViewModel()
         {
 
-          
-            // 初始化数据
-            MatchResult = new MatchResult
-            {
-                Informa = new ObservableCollection<Match>
-            {
-                new Match { Infor = "信息1" },
-                new Match { Infor = "信息2" },
-                new Match { Infor = "信息3" }
-            }
-            };
+        
 
 
 
@@ -256,11 +246,7 @@ namespace MachineVision.TemplateMatch.ViewModels
         private void ScanCamera()
         {
             SDKSystem.Initialize(); // Initialize SDK resources
-            MatchResult.Informa.Add(new Match()
-            {
-                Infor = "1"
 
-            });
             // Ensure CameraList is initialized
             if (CameraList == null)
             {

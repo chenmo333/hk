@@ -83,7 +83,7 @@ namespace MachineVision.Defect.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MachineVision.Defect;V1.0.0.0;component/views/defecteditview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MachineVision.Defect;component/views/defecteditview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\DefectEditView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

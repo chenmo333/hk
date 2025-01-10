@@ -46,7 +46,7 @@
             <TextBlock
             Grid.Row="2"
             Margin="10"
-            Text="{Binding MatchService.MatchResult.Message}" />
+            Text="{Binding Message}" />
 
         </Grid>
         <Grid Grid.Column="1" Margin="10,0">
