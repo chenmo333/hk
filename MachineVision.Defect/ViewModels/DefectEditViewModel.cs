@@ -101,14 +101,14 @@ namespace MachineVision.Defect.ViewModels
             get { return hWindow; }
             set { hWindow = value; RaisePropertyChanged(); }
         }
-
+       
         public DefectEditViewModel(TargetService targetService,
             ProjectService appService,
             InspectionService inspec,
             IHostDialogService dialog,
             IEventAggregator aggregator)
         {
-
+          
             // 创建定时器，设置为 2000 毫秒（2 秒）触发一次
             _timer = new Timer(500);
 
@@ -378,6 +378,11 @@ namespace MachineVision.Defect.ViewModels
                 ZP("192.168.8.30");
 
                 DB();
+                if (PZ==1)
+                {
+                
+                }
+
             }
           catch { }
             Thread.Sleep(1000);
@@ -427,6 +432,7 @@ namespace MachineVision.Defect.ViewModels
                 Console.WriteLine("Error: " + ex.Message);
             }
         }
+
 
         #endregion
         private void xj()
@@ -560,6 +566,7 @@ namespace MachineVision.Defect.ViewModels
 
             Template3();
         }
+    
         public async Task Template3()
         {
             await Task.Run(() =>
