@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MachineVision.TemplateMatch")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2441a2f04ec6ecf12c8a2b418d54717e6c86b4d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c55ab235de2797724fa11432480c43c1b2386f4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MachineVision.TemplateMatch")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MachineVision.TemplateMatch")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
