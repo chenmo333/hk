@@ -147,7 +147,7 @@
             <Button
                  Background="Green"
                  BorderThickness="0"
-                 Command="{Binding DataContext}"
+                 Command="{Binding closeDeviceCommand}"
                
                  Content="关闭相机" Margin="5,645,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
 

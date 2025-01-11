@@ -160,8 +160,8 @@ namespace MachineVision.Defect.ViewModels
         public DelegateCommand LoadImageCommand { get; private set; }
         //相机
         public DelegateCommand xjCommand { get; private set; }
-        
-         public DelegateCommand TextrecognitionCommand { get; private set; }
+        public DelegateCommand closeDeviceCommand { get; private set; }
+        public DelegateCommand TextrecognitionCommand { get; private set; }
         public DelegateCommand RefreshDeviceListCommand { get; private set; }//寻找相机
         public DelegateCommand OpenDeviceCommand { get; private set; }//打开相机
         public DelegateCommand OnceSoftTriggerCommand { get; private set; }//相机拍照
@@ -211,6 +211,8 @@ namespace MachineVision.Defect.ViewModels
             OnceSoftTriggerCommand = new DelegateCommand(OnceSoftTrigger);//打开拍照
 
             TextrecognitionCommand = new DelegateCommand(Textrecognition);//识别文字
+            closeDeviceCommand = new DelegateCommand(closeDevice);//识别文字
+            
             SetModelParamCommand = new DelegateCommand(SetModelParam);
             UpdateModelParamCommand = new DelegateCommand(UpdateModelParam);
             CreateRegionCommand = new DelegateCommand(CreateRegion);
@@ -470,6 +472,21 @@ namespace MachineVision.Defect.ViewModels
         { 
         
         
+        }
+        private void closeDevice()
+        {
+            StopGrab();
+
+        }
+        private void StopGrab()//关闭取流
+        {
+
+
+            // ch:停止采集 | en:Stop Grabbing
+            int result = device.StreamGrabber.StopGrabbing();
+            // ch:关闭设备 | en:Close Device
+            device.Close();
+            device.Dispose();
         }
         private void ConnectPlc()
         {

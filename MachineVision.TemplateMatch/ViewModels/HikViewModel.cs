@@ -60,7 +60,7 @@ namespace MachineVision.TemplateMatch.ViewModels
             CreateTemplateCommand = new DelegateCommand(CreateTemplate);
             DrawObjectList = new ObservableCollection<DrawingObjectInfo>();
 
-
+          
             ScanCameraCommand = new DelegateCommand(ScanCamera);
             StartCameraCommand = new DelegateCommand(StartCamera);
             CaptureImageCommand = new DelegateCommand(CaptureImage);
@@ -409,7 +409,19 @@ namespace MachineVision.TemplateMatch.ViewModels
 
         private void StopCamera()
         {
-            
+            closeDevice();
+        }
+        private void closeDevice()
+        {
+            StopGrab();
+        }
+        private void StopGrab()//关闭取流
+        {
+            // ch:停止采集 | en:Stop Grabbing
+            int result = device.StreamGrabber.StopGrabbing();
+            // ch:关闭设备 | en:Close Device
+            device.Close();
+            device.Dispose();
         }
         private void SaveImage()
         {
