@@ -111,7 +111,7 @@ namespace MachineVision.Defect.ViewModels
         {
        
             // 创建定时器，设置为 2000 毫秒（2 秒）触发一次
-            _timer = new Timer(500);
+            _timer = new Timer(1000);
 
             // 绑定定时器的 Elapsed 事件
             _timer.Elapsed += OnTimedEvent;
@@ -370,19 +370,23 @@ namespace MachineVision.Defect.ViewModels
         #region plc程序
         static byte[] D;
         static int PZ;
+        static Plc plc;
         // 定时器触发的事件处理方法
         private  void OnTimedEvent(object sender, ElapsedEventArgs e)
         {
 
             try
             {
-                ZP("192.168.8.30");
-
+                ZP();
                 DB();
+               
                 if (PZ==1)
                 {
                     Template3();
+                   
+                    WritePLC(22, 1);
                 }
+                Textrecognition();
 
             }
           catch { }
@@ -417,16 +421,15 @@ namespace MachineVision.Defect.ViewModels
             PZ = ToInt(D, 0);
           
         }
-        private static void ZP(string IP)
+        private static void ZP()
         {
-            Plc plc = new Plc(CpuType.S71200, IP, 0, 1); // 创建PLC实例
+       
             try
             {
-                plc.Open(); // 打开连接
-                Console.WriteLine("装配PLC连接成功");
-                D = plc.ReadBytes(DataType.DataBlock, 1, 0, 30);//提取整个DB块
-                Console.WriteLine("装配数据采集成功");
-                plc.Close(); // 关闭连接
+
+               
+                D = plc.ReadBytes(DataType.DataBlock,501,0,30);//提取整个DB块
+             
             }
             catch (Exception ex)
             {
@@ -435,6 +438,33 @@ namespace MachineVision.Defect.ViewModels
         }
 
 
+        /// <summary>
+        /// 装配数据 写入
+        /// </summary>
+        /// <param name="varaddres"></param>
+        /// <param name="varValue"></param>
+        /// <returns></returns>
+        public string  WritePLC(int varaddres, int varValue)
+        {
+            lock (this)
+            {
+               
+                try
+                {
+                   
+                    plc.Write(S7.Net.DataType.DataBlock, 501, varaddres, varValue);//  DB块编号            DB块偏移量        写入字符 
+                    return "写入成功";
+                   
+                }
+                catch (Exception ex)
+                {
+
+                    return "写入失败" + ex.Message;
+                }
+
+            }
+
+        }
         #endregion
         private void xj()
         { 
@@ -444,6 +474,9 @@ namespace MachineVision.Defect.ViewModels
         private void ConnectPlc()
         {
             _timer.Start();
+            // Step 1: 创建并连接到 PLC
+             plc = new Plc(CpuType.S71200, "192.168.8.30", 0, 1);  // CPU 类型，PLC IP 地址，Rack 和 Slot
+            plc.Open();  // 打开连接
 
         }
         public async Task Template()

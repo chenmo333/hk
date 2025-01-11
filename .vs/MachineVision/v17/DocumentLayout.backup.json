@@ -377,11 +377,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DefectEditViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
+              "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
+              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
+              "RelativeToolTip": "MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
+              "ViewState": "AgIAAIsCAAAAAAAAAAAqwJYCAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:11:00.297Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -429,19 +442,6 @@
               "ViewState": "AgIAAEwAAAAAAAAAAAAgwFgAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-06T08:06:56.489Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DefectEditViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
-              "RelativeDocumentMoniker": "MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
-              "ToolTip": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
-              "RelativeToolTip": "MachineVision.Defect\\ViewModels\\DefectEditViewModel.cs",
-              "ViewState": "AgIAADYCAAAAAAAAAAAqwEECAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T07:11:00.297Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",

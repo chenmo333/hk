@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 2141454239358
 Views\DrawShapeView.xaml;Views\HikView.xaml;Views\LocalDeformableView.xaml;Views\NccView.xaml;Views\ShapeView.xaml;
 
-True
+False
 
