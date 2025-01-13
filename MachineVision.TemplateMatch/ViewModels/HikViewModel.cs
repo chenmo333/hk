@@ -20,6 +20,7 @@ using Prism.Ioc;
 using Microsoft.Win32;
 using ImTools;
 using static MachineVision.Core.TemplateMatch.MatchResult;
+using System.Security.Cryptography;
 
 
 namespace MachineVision.TemplateMatch.ViewModels
@@ -60,7 +61,9 @@ namespace MachineVision.TemplateMatch.ViewModels
             CreateTemplateCommand = new DelegateCommand(CreateTemplate);
             DrawObjectList = new ObservableCollection<DrawingObjectInfo>();
 
-          
+
+            GetparametersCommand = new DelegateCommand(Getparameters);//修改参数
+            ModifyparametersCommand = new DelegateCommand(Modifyparameters);//获取参数
             ScanCameraCommand = new DelegateCommand(ScanCamera);
             StartCameraCommand = new DelegateCommand(StartCamera);
             CaptureImageCommand = new DelegateCommand(CaptureImage);
@@ -186,6 +189,8 @@ namespace MachineVision.TemplateMatch.ViewModels
 
         #endregion
         #region 按钮
+        public DelegateCommand GetparametersCommand { get; private set; }
+        public DelegateCommand ModifyparametersCommand { get; private set; }
         public DelegateCommand CreateTemplateCommand { get; private set; }
         public DelegateCommand ScanCameraCommand { get; private set; }
         public DelegateCommand StartCameraCommand { get; private set; }
@@ -203,6 +208,10 @@ namespace MachineVision.TemplateMatch.ViewModels
             get { return maskObject; }
             set { maskObject = value; RaisePropertyChanged(); }
         }
+
+
+
+
         /// <summary>
         /// 绘制形状集合
         /// </summary>
@@ -211,6 +220,26 @@ namespace MachineVision.TemplateMatch.ViewModels
             get { return drawObjectList; }
             set { drawObjectList = value; RaisePropertyChanged(); }
         }
+
+        private void Getparameters() //获取相机曝光时间及增益
+        {
+            int nRet = device.Parameters.GetFloatValue("ExposureTime", out IFloatValue exposureTime_IF);
+            nRet = device.Parameters.GetFloatValue("Gain", out IFloatValue gain_IF);
+            exposureTime = exposureTime_IF.CurValue;
+            gain = gain_IF.CurValue;
+            ExposureTime = exposureTime; // 曝光
+            Gain = gain; // 增益
+
+        }
+
+        private void Modifyparameters()
+        {
+
+            int nRet = device.Parameters.SetFloatValue("ExposureTime", (float)ExposureTime);
+            nRet = device.Parameters.SetFloatValue("Gain", (float)Gain);
+        }
+
+
 
         /// <summary>
         /// 创建匹配模板

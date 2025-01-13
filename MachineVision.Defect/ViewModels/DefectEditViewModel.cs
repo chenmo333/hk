@@ -685,7 +685,7 @@ namespace MachineVision.Defect.ViewModels
 
             try
             {
-                HOperatorSet.ReadShapeModel("C:/Users/HZSK2023/Pictures/crop.shm", out modelid);//读取本地模板
+                HOperatorSet.ReadShapeModel("C:/Users/Public/Pictures/crop.shm", out modelid);//读取本地模板
 
                 HOperatorSet.FindShapeModel(Image, modelid, -0.39, 0.79, 0.5, 1, 0.5, "least_squares", 0, 0.9, out hv_Row, out hv_Column, out hv_Angle, out hv_Score);
              System.Diagnostics.Debug.WriteLine($"score:{hv_Score} angle:{hv_Angle} row:{hv_Row} column{hv_Column}");
