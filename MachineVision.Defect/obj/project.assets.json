@@ -503,6 +503,7 @@
           "MaterialDesignThemes": "4.9.0",
           "Newtonsoft.Json": "13.0.3",
           "Prism.DryIoc": "8.1.97",
+          "S7netplus": "0.20.0",
           "System.Drawing.Common": "8.0.0"
         },
         "compile": {

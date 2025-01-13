@@ -68,11 +68,11 @@ namespace MachineVision.TemplateMatch.ViewModels
             StartCameraCommand = new DelegateCommand(StartCamera);
             CaptureImageCommand = new DelegateCommand(CaptureImage);
             StopCameraCommand = new DelegateCommand(StopCamera);
-            SaveImageCommand = new DelegateCommand(SaveImage);
+            SaveImageCommand = new DelegateCommand(SaveImage);//保存图像
             // Other command initializations...
 
             // Set default save path
-            SavePath = "C:\\Users\\Public\\Pictures"; // Default path, can be adjusted as needed
+            SavePath = "C:/Users/Public/Pictures/image.png"; // Default path, can be adjusted as needed
             #region 默认文本
             // Set default values
 
@@ -399,12 +399,12 @@ namespace MachineVision.TemplateMatch.ViewModels
                 Image mimage = frameOut.Image.ToBitmap();
 
                 // 指定保存路径
-                string filePath = @"C:\image.jpg"; // 可以修改文件名和格式
+                string filePath = @"C:/Users/Public/Pictures/image.jpg"; // 可以修改文件名和格式
 
                 // 将图像保存到指定路径
                 mimage.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg); // 可以根据需要修改格式，如 PNG、BMP 等
 
-                hImage.ReadImage("C:/image.jpg");
+                hImage.ReadImage("C:/Users/Public/Pictures/image.jpg");
                 Image = hImage;
 
                 device.StreamGrabber.FreeImageBuffer(frameOut);
@@ -454,8 +454,14 @@ namespace MachineVision.TemplateMatch.ViewModels
         }
         private void SaveImage()
         {
+            HImage hImage = new HImage();//读取主图片
+           
+            hImage.ReadImage("C:/image.jpg");
+            HOperatorSet.WriteImage(hImage, "png", 0, SavePath);//保存模板路径
+
             // Implement the logic for saving the image here
             // Example: Save the image to the specified SavePath
+
             Console.WriteLine($"Image saved to {SavePath}");
         }
         public HObject Image

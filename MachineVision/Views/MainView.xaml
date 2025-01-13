@@ -4,18 +4,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-    xmlns:local="clr-namespace:MachineVision.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:prism="http://prismlibrary.com/"
-    Title="WPF机器视觉检测平台" 
+    Title="机器视觉检测平台"
     Width="1400"
     Height="960"
     prism:ViewModelLocator.AutoWireViewModel="True"
     Background="{DynamicResource MaterialDesignPaper}"
 
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-    
+
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized"
     mc:Ignorable="d">
@@ -76,23 +75,29 @@
                                             <Grid>
                                                 <Border x:Name="border" />
                                                 <Border x:Name="borderHeader" Background="{TemplateBinding Background}" />
-                                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                                <ContentPresenter
+                                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                                             </Grid>
 
                                             <!-- 选中项和鼠标悬停时的触发样式 -->
                                             <ControlTemplate.Triggers>
                                                 <Trigger Property="IsSelected" Value="True">
-                                                    <Setter TargetName="borderHeader" Property="Background" Value="#ffffff" />
+                                                    <Setter TargetName="borderHeader" Property="Background"
+                                                            Value="#ffffff" />
                                                     <Setter TargetName="borderHeader" Property="Opacity" Value="0.1" />
                                                     <Setter TargetName="border" Property="BorderBrush" Value="#ffffff" />
-                                                    <Setter TargetName="border" Property="BorderThickness" Value="0,0,0,3" />
+                                                    <Setter TargetName="border" Property="BorderThickness"
+                                                            Value="0,0,0,3" />
                                                 </Trigger>
 
                                                 <Trigger Property="IsMouseOver" Value="True">
-                                                    <Setter TargetName="borderHeader" Property="Background" Value="#ffffff" />
+                                                    <Setter TargetName="borderHeader" Property="Background"
+                                                            Value="#ffffff" />
                                                     <Setter TargetName="borderHeader" Property="Opacity" Value="0.1" />
                                                     <Setter TargetName="border" Property="BorderBrush" Value="#ffffff" />
-                                                    <Setter TargetName="border" Property="BorderThickness" Value="0,0,0,3" />
+                                                    <Setter TargetName="border" Property="BorderThickness"
+                                                            Value="0,0,0,3" />
                                                 </Trigger>
                                             </ControlTemplate.Triggers>
                                         </ControlTemplate>
@@ -115,7 +120,8 @@
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="SelectionChanged">
                                 <!-- 选择变化时，触发NavigateCommand命令 -->
-                                <i:InvokeCommandAction Command="{Binding NavigateCommand}" CommandParameter="{Binding ElementName=listMenuBox, Path=SelectedItem}" />
+                                <i:InvokeCommandAction Command="{Binding NavigateCommand}"
+                                                       CommandParameter="{Binding ElementName=listMenuBox, Path=SelectedItem}" />
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </ListBox>
@@ -124,7 +130,8 @@
 
             <!-- 主内容区域，使用DrawerHost显示可收缩的侧边栏 -->
             <md:DialogHost Grid.Row="1">
-                <md:DrawerHost Content="{Binding ElementName=MainViewContentControl, Path=Content, Mode=TwoWay}" IsTopDrawerOpen="{Binding IsTopDrawerOpen}">
+                <md:DrawerHost Content="{Binding ElementName=MainViewContentControl, Path=Content, Mode=TwoWay}"
+                               IsTopDrawerOpen="{Binding IsTopDrawerOpen}">
                     <md:DrawerHost.TopDrawerContent>
                         <!-- 显示二级菜单项的ItemsControl -->
                         <ItemsControl ItemsSource="{Binding NavigationService.Items[0].Items}">

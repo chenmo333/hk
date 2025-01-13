@@ -1,11 +1,10 @@
 ﻿<UserControl x:Class="MachineVision.TemplateMatch.Views.HikView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:MachineVision.TemplateMatch.Views" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:controls="clr-namespace:MachineVision.Shared.Controls;assembly=MachineVision.Shared"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -13,188 +12,185 @@
             <ColumnDefinition Width="0.3*" />
         </Grid.ColumnDefinitions>
         <!--  图像编辑器  -->
-       <Grid>
-           <Grid.RowDefinitions>
-               <RowDefinition />
-               <RowDefinition Height="0.3*" />
-               <RowDefinition Height="auto" />
-           </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
 
-           <controls:ImageEditView
-               DrawObjectList="{Binding DrawObjectList}"
-               HWindow="{Binding MatchService.HWindow, Mode=TwoWay}"
-               Image="{Binding Image}"
-               MaskObject="{Binding MaskObject, Mode=TwoWay}" />
+            <controls:ImageEditView
+                DrawObjectList="{Binding DrawObjectList}"
+                HWindow="{Binding MatchService.HWindow, Mode=TwoWay}"
+                Image="{Binding Image}"
+                MaskObject="{Binding MaskObject, Mode=TwoWay}" />
 
-           <DataGrid
-               Grid.Row="1"
-               AutoGenerateColumns="False"
-               BorderThickness="0"
-               CanUserAddRows="False"
-               ColumnWidth="*"
-               IsReadOnly="True"
+            <DataGrid
+                Grid.Row="1"
+                AutoGenerateColumns="False"
+                BorderThickness="0"
+                CanUserAddRows="False"
+                ColumnWidth="*"
+                IsReadOnly="True"
                 FontSize="30"
-               ItemsSource="{Binding MatchService.MatchResult.Informa}">
+                ItemsSource="{Binding MatchService.MatchResult.Informa}">
                 <DataGrid.Columns>
                     <DataGridTextColumn
-                       Width="*"
-      
-                       Binding="{Binding Infor}"
-                       Header="信息" />
+                        Width="*"
+
+                        Binding="{Binding Infor}"
+                        Header="信息" />
 
                 </DataGrid.Columns>
             </DataGrid>
             <TextBlock
-            Grid.Row="2"
-            Margin="10"
-            Text="{Binding MatchService.MatchResult.Message}" />
+                Grid.Row="2"
+                Margin="10"
+                Text="{Binding MatchService.MatchResult.Message}" />
 
         </Grid>
         <Grid Grid.Column="1" Margin="10,0">
             <TabControl HorizontalContentAlignment="Left">
-                <TabItem Header="海康相机" Width="224" >
-                    <StackPanel Grid.Row="1" Margin="0,10">
+                <TabItem Header="海康相机" Width="224">
+                    <StackPanel Margin="0,10">
 
 
                         <DockPanel LastChildFill="False">
-                            <TextBlock Text="       IP:" FontSize="25"   VerticalAlignment="Center"  />
+                            <TextBlock Text="       IP:" FontSize="25" VerticalAlignment="Center" />
                             <TextBox
-                            Margin="0,5"
-                            Padding="5"
-                            Width="200"
-                            FontSize="20"
-                            VerticalAlignment="Center"   
-                                
-                            Text="{Binding IPAddress}" />
-                            
-                            
+                                Margin="0,5"
+                                Padding="5"
+                                Width="200"
+                                FontSize="20"
+                                VerticalAlignment="Center"
+
+                                Text="{Binding IPAddress}" />
+
+
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
-                            <TextBlock Text="子网掩码:" FontSize="20"    VerticalAlignment="Center" />
+                            <TextBlock Text="子网掩码:" FontSize="20" VerticalAlignment="Center" />
                             <TextBox
-                            Margin="0,5"
-                            Padding="5"
-                            Width="200"
-                             FontSize="20"
-                             VerticalAlignment="Center"   
-                                
-                            Text="{Binding SubnetMask}" />
+                                Margin="0,5"
+                                Padding="5"
+                                Width="200"
+                                FontSize="20"
+                                VerticalAlignment="Center"
+
+                                Text="{Binding SubnetMask}" />
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
-                            <TextBlock Text="       网关:" FontSize="20"    VerticalAlignment="Center" />
+                            <TextBlock Text="       网关:" FontSize="20" VerticalAlignment="Center" />
                             <TextBox
-                            Margin="0,5"
-                            Padding="5"
-                            Width="200"
-                             FontSize="20"   
-                                
-                            VerticalAlignment="Center"   
-                            Text="{Binding Gateway}" />
+                                Margin="0,5"
+                                Padding="5"
+                                Width="200"
+                                FontSize="20"
+
+                                VerticalAlignment="Center"
+                                Text="{Binding Gateway}" />
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
-                            <TextBlock Text="    序列号:" FontSize="20"     VerticalAlignment="Center" />
+                            <TextBlock Text="    序列号:" FontSize="20" VerticalAlignment="Center" />
                             <TextBox
-                            Margin="0,5"
-                            Padding="5"
-                            Width="200"
-                            FontSize="20"   
-                            VerticalAlignment="Center"    
-                            Text="{Binding SerialNumber}" />
+                                Margin="0,5"
+                                Padding="5"
+                                Width="200"
+                                FontSize="20"
+                                VerticalAlignment="Center"
+                                Text="{Binding SerialNumber}" />
                         </DockPanel>
-                        <DockPanel LastChildFill="False" Margin="0,15"    VerticalAlignment="Center">
+                        <DockPanel LastChildFill="False" Margin="0,15" VerticalAlignment="Center">
                             <Button
-                            Command="{Binding ScanCameraCommand}"
-                            Content="扫描相机"
-                            Width="100"
-                            />
+                                Command="{Binding ScanCameraCommand}"
+                                Content="扫描相机"
+                                Width="100" />
                             <ComboBox
                                 Margin="0,5"
-                                 Width="200"
+                                Width="200"
                                 Padding="5"
-                                 VerticalAlignment="Center"
-                                
-                               Height="42"
+                                VerticalAlignment="Center"
+
+                                Height="42"
                                 ItemsSource="{Binding CameraList}"
-                                 DisplayMemberPath="CameraName"
-                                 SelectedItem="{Binding SelectedCamera}" 
-                                
-                                 SelectedIndex="0"
-                                >
-                            </ComboBox>
+                                DisplayMemberPath="CameraName"
+                                SelectedItem="{Binding SelectedCamera}"
+
+                                SelectedIndex="0" />
 
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
                             <Button
-                            Command="{Binding StartCameraCommand}"
-                            Content="连接相机"
-                         
-                            Margin="5"/>
+                                Command="{Binding StartCameraCommand}"
+                                Content="连接相机"
+
+                                Margin="5" />
                             <Button
-                            Command="{Binding CaptureImageCommand}"
-                            Content="捕获图像"
-                            
-                            Margin="5"/>
-                 
+                                Command="{Binding CaptureImageCommand}"
+                                Content="捕获图像"
+
+                                Margin="5" />
+
                             <Button
-                            Command="{Binding StopCameraCommand}"
-                            Content="关闭相机"
-                         
-                            Margin="5"/>
-                       </DockPanel>
+                                Command="{Binding StopCameraCommand}"
+                                Content="关闭相机"
+
+                                Margin="5" />
+                        </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
-                        <Button
-                            Command="{Binding SaveImageCommand}"
-                            Content="保存图像"
-                               VerticalAlignment="Center"
-                            
-                            Margin="5"/>
-                            <TextBlock Text="保存路径:" FontSize="15"    VerticalAlignment="Center" />
+                            <Button
+                                Command="{Binding SaveImageCommand}"
+                                Content="保存图像"
+                                VerticalAlignment="Center"
+
+                                Margin="5" />
+                            <TextBlock Text="保存路径:" FontSize="15" VerticalAlignment="Center" />
                             <TextBox
-                             Margin="0,5"
-                             Padding="5"
-                             Width="200"
-                              FontSize="15"   
-                                 VerticalAlignment="Center"  
-                             Text="{Binding SavePath}" />
+                                Margin="0,5"
+                                Padding="5"
+                                Width="200"
+                                FontSize="15"
+                                VerticalAlignment="Center"
+                                Text="{Binding SavePath}" />
 
 
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
-                            <TextBlock Text="  曝光:" FontSize="20"    VerticalAlignment="Center"/>
+                            <TextBlock Text="  曝光:" FontSize="20" VerticalAlignment="Center" />
                             <TextBox
-                             Margin="0,5"
-                             Padding="5"
-                             Width="200"
-                              FontSize="20" 
-                                 VerticalAlignment="Center"  
-                             Text="{Binding ExposureTime}" />
+                                Margin="0,5"
+                                Padding="5"
+                                Width="200"
+                                FontSize="20"
+                                VerticalAlignment="Center"
+                                Text="{Binding ExposureTime}" />
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
-                            <TextBlock Text="  增益:" FontSize="20"    VerticalAlignment="Center"/>
+                            <TextBlock Text="  增益:" FontSize="20" VerticalAlignment="Center" />
                             <TextBox
-                             Margin="0,5"
-                             Padding="5"
-                             Width="200"
-                             FontSize="20"
-                                VerticalAlignment="Center"   
-                             Text="{Binding Gain}" />
+                                Margin="0,5"
+                                Padding="5"
+                                Width="200"
+                                FontSize="20"
+                                VerticalAlignment="Center"
+                                Text="{Binding Gain}" />
                         </DockPanel>
                         <DockPanel LastChildFill="False" Margin="0,15">
                             <Button
-                            Command="{Binding GetparametersCommand}"
-                            Content="获取参数"
-                         
-                            Margin="5"/>
+                                Command="{Binding GetparametersCommand}"
+                                Content="获取参数"
+
+                                Margin="5" />
                             <Button
-                            Command="{Binding ModifyparametersCommand}"
-                            Content="修改参数"
-                         
-                            Margin="5"/>
+                                Command="{Binding ModifyparametersCommand}"
+                                Content="修改参数"
+
+                                Margin="5" />
                         </DockPanel>
 
                     </StackPanel>
                 </TabItem>
-                <TabItem Header="创建模板"  Width="224">
+                <TabItem Header="创建模板" Width="224">
                     <Grid Cursor="">
                         <Grid.RowDefinitions>
                             <RowDefinition />
@@ -203,128 +199,126 @@
 
                         <ScrollViewer VerticalScrollBarVisibility="Hidden">
                             <StackPanel>
-                                
-                                    
-                                        <Grid Margin="-22,0">
-                                            <TextBlock FontSize="16" Text="     模板参数" />
-                                        </Grid>
-                                  
-                                  
-                                        <StackPanel>
+
+
+                                <Grid Margin="-22,0">
+                                    <TextBlock FontSize="16" Text="     模板参数" />
+                                </Grid>
+
+
+                                <StackPanel>
                                     <TextBlock Text="金字塔层数" />
-                                            <ComboBox
-                                  Margin="0,5"
-                                  Padding="5"
-                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                                  Text="{Binding MatchService.TemplateParameter.NumLevels}">
-                                                <ComboBoxItem>auto</ComboBoxItem>
-                                                <ComboBoxItem>0</ComboBoxItem>
-                                                <ComboBoxItem>1</ComboBoxItem>
-                                                <ComboBoxItem>2</ComboBoxItem>
-                                                <ComboBoxItem>3</ComboBoxItem>
-                                                <ComboBoxItem>4</ComboBoxItem>
-                                                <ComboBoxItem>5</ComboBoxItem>
-                                                <ComboBoxItem>6</ComboBoxItem>
-                                                <ComboBoxItem>7</ComboBoxItem>
-                                                <ComboBoxItem>8</ComboBoxItem>
-                                                <ComboBoxItem>9</ComboBoxItem>
-                                                <ComboBoxItem>10</ComboBoxItem>
-                                            </ComboBox>
+                                    <ComboBox
+                                        Margin="0,5"
+                                        Padding="5"
+                                        Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                        Text="{Binding MatchService.TemplateParameter.NumLevels}">
+                                        <ComboBoxItem>auto</ComboBoxItem>
+                                        <ComboBoxItem>0</ComboBoxItem>
+                                        <ComboBoxItem>1</ComboBoxItem>
+                                        <ComboBoxItem>2</ComboBoxItem>
+                                        <ComboBoxItem>3</ComboBoxItem>
+                                        <ComboBoxItem>4</ComboBoxItem>
+                                        <ComboBoxItem>5</ComboBoxItem>
+                                        <ComboBoxItem>6</ComboBoxItem>
+                                        <ComboBoxItem>7</ComboBoxItem>
+                                        <ComboBoxItem>8</ComboBoxItem>
+                                        <ComboBoxItem>9</ComboBoxItem>
+                                        <ComboBoxItem>10</ComboBoxItem>
+                                    </ComboBox>
                                     <TextBlock Text="起始角度" />
-                                            <TextBox
-                                  Margin="0,5"
-                                  Padding="5"
-                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                                  Text="{Binding MatchService.TemplateParameter.AngleStart}" />
+                                    <TextBox
+                                        Margin="0,5"
+                                        Padding="5"
+                                        Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                        Text="{Binding MatchService.TemplateParameter.AngleStart}" />
                                     <TextBlock Text="角度范围" />
-                                            <TextBox
-                                  Margin="0,5"
-                                  Padding="5"
-                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                                  Text="{Binding MatchService.TemplateParameter.AngleExtent}" />
+                                    <TextBox
+                                        Margin="0,5"
+                                        Padding="5"
+                                        Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                        Text="{Binding MatchService.TemplateParameter.AngleExtent}" />
                                     <TextBlock Text="角度步长" />
-                                            <ComboBox
-                                  Margin="0,5"
-                                  Padding="5"
-                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                                  Text="{Binding MatchService.TemplateParameter.AngleStep}">
-                                                <ComboBoxItem>auto</ComboBoxItem>
-                                                <ComboBoxItem>0.01</ComboBoxItem>
-                                                <ComboBoxItem>0.03</ComboBoxItem>
-                                                <ComboBoxItem>0.05</ComboBoxItem>
-                                                <ComboBoxItem>0.06</ComboBoxItem>
-                                                <ComboBoxItem>0.08</ComboBoxItem>
-                                            </ComboBox>
+                                    <ComboBox
+                                        Margin="0,5"
+                                        Padding="5"
+                                        Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                        Text="{Binding MatchService.TemplateParameter.AngleStep}">
+                                        <ComboBoxItem>auto</ComboBoxItem>
+                                        <ComboBoxItem>0.01</ComboBoxItem>
+                                        <ComboBoxItem>0.03</ComboBoxItem>
+                                        <ComboBoxItem>0.05</ComboBoxItem>
+                                        <ComboBoxItem>0.06</ComboBoxItem>
+                                        <ComboBoxItem>0.08</ComboBoxItem>
+                                    </ComboBox>
                                     <TextBlock Text="处理速度" />
-                                            <ComboBox
-                                  Margin="0,5"
-                                  Padding="5"
-                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                                  Text="{Binding MatchService.TemplateParameter.Optimization}">
-                                                <ComboBoxItem>auto</ComboBoxItem>
-                                                <ComboBoxItem>none</ComboBoxItem>
-                                                <ComboBoxItem>point_reduction_low</ComboBoxItem>
-                                                <ComboBoxItem>point_reduction_medium</ComboBoxItem>
-                                                <ComboBoxItem>point_reduction_high</ComboBoxItem>
-                                                <ComboBoxItem>pregeneration</ComboBoxItem>
-                                                <ComboBoxItem>no_pregeneration</ComboBoxItem>
-                                            </ComboBox>
+                                    <ComboBox
+                                        Margin="0,5"
+                                        Padding="5"
+                                        Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                        Text="{Binding MatchService.TemplateParameter.Optimization}">
+                                        <ComboBoxItem>auto</ComboBoxItem>
+                                        <ComboBoxItem>none</ComboBoxItem>
+                                        <ComboBoxItem>point_reduction_low</ComboBoxItem>
+                                        <ComboBoxItem>point_reduction_medium</ComboBoxItem>
+                                        <ComboBoxItem>point_reduction_high</ComboBoxItem>
+                                        <ComboBoxItem>pregeneration</ComboBoxItem>
+                                        <ComboBoxItem>no_pregeneration</ComboBoxItem>
+                                    </ComboBox>
                                     <TextBlock Text="处理度量" />
-                                            <ComboBox
-                                  Margin="0,5"
-                                  Padding="5"
-                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                                  Text="{Binding MatchService.TemplateParameter.Metric}">
-                                                <ComboBoxItem>use_polarity</ComboBoxItem>
-                                                <ComboBoxItem>ignore_global_polarity</ComboBoxItem>
-                                                <ComboBoxItem>ignore_local_polarity</ComboBoxItem>
-                                                <ComboBoxItem>ignore_color_polarity</ComboBoxItem>
-                                            </ComboBox>
+                                    <ComboBox
+                                        Margin="0,5"
+                                        Padding="5"
+                                        Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                        Text="{Binding MatchService.TemplateParameter.Metric}">
+                                        <ComboBoxItem>use_polarity</ComboBoxItem>
+                                        <ComboBoxItem>ignore_global_polarity</ComboBoxItem>
+                                        <ComboBoxItem>ignore_local_polarity</ComboBoxItem>
+                                        <ComboBoxItem>ignore_color_polarity</ComboBoxItem>
+                                    </ComboBox>
                                     <TextBlock Text="亮度度量" />
-                                            <ComboBox
-                                  Margin="0,5"
-                                  Padding="5"
-                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                                  Text="{Binding MatchService.TemplateParameter.Contrast}">
-                                                <ComboBoxItem>auto</ComboBoxItem>
-                                                <ComboBoxItem>auto_contrast</ComboBoxItem>
-                                                <ComboBoxItem>auto_contrast_hyst</ComboBoxItem>
-                                                <ComboBoxItem>auto_min_size</ComboBoxItem>
-                                                <ComboBoxItem>10</ComboBoxItem>
-                                                <ComboBoxItem>20</ComboBoxItem>
-                                                <ComboBoxItem>30</ComboBoxItem>
-                                                <ComboBoxItem>40</ComboBoxItem>
-                                                <ComboBoxItem>60</ComboBoxItem>
-                                                <ComboBoxItem>80</ComboBoxItem>
-                                            </ComboBox>
+                                    <ComboBox
+                                        Margin="0,5"
+                                        Padding="5"
+                                        Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                        Text="{Binding MatchService.TemplateParameter.Contrast}">
+                                        <ComboBoxItem>auto</ComboBoxItem>
+                                        <ComboBoxItem>auto_contrast</ComboBoxItem>
+                                        <ComboBoxItem>auto_contrast_hyst</ComboBoxItem>
+                                        <ComboBoxItem>auto_min_size</ComboBoxItem>
+                                        <ComboBoxItem>10</ComboBoxItem>
+                                        <ComboBoxItem>20</ComboBoxItem>
+                                        <ComboBoxItem>30</ComboBoxItem>
+                                        <ComboBoxItem>40</ComboBoxItem>
+                                        <ComboBoxItem>60</ComboBoxItem>
+                                        <ComboBoxItem>80</ComboBoxItem>
+                                    </ComboBox>
                                     <TextBlock Text="对比度阈值" />
-                                            <ComboBox
-                                  Margin="0,5"
-                                  Padding="5"
-                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                                  Text="{Binding MatchService.TemplateParameter.MinContrast}">
-                                                <ComboBoxItem>auto</ComboBoxItem>
-                                                <ComboBoxItem>1</ComboBoxItem>
-                                                <ComboBoxItem>2</ComboBoxItem>
-                                                <ComboBoxItem>3</ComboBoxItem>
-                                                <ComboBoxItem>4</ComboBoxItem>
-                                                <ComboBoxItem>5</ComboBoxItem>
-                                                <ComboBoxItem>7</ComboBoxItem>
-                                                <ComboBoxItem>10</ComboBoxItem>
-                                                <ComboBoxItem>20</ComboBoxItem>
-                                                <ComboBoxItem>30</ComboBoxItem>
-                                                <ComboBoxItem>40</ComboBoxItem>
-                                            </ComboBox>
+                                    <ComboBox
+                                        Margin="0,5"
+                                        Padding="5"
+                                        Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                        Text="{Binding MatchService.TemplateParameter.MinContrast}">
+                                        <ComboBoxItem>auto</ComboBoxItem>
+                                        <ComboBoxItem>1</ComboBoxItem>
+                                        <ComboBoxItem>2</ComboBoxItem>
+                                        <ComboBoxItem>3</ComboBoxItem>
+                                        <ComboBoxItem>4</ComboBoxItem>
+                                        <ComboBoxItem>5</ComboBoxItem>
+                                        <ComboBoxItem>7</ComboBoxItem>
+                                        <ComboBoxItem>10</ComboBoxItem>
+                                        <ComboBoxItem>20</ComboBoxItem>
+                                        <ComboBoxItem>30</ComboBoxItem>
+                                        <ComboBoxItem>40</ComboBoxItem>
+                                    </ComboBox>
 
-                                            <Button
-                                  Margin="0,10"
-                                  Command="{Binding CreateTemplateCommand}"
-                                  Content="创建匹配模板" />
-                                        </StackPanel>
-                                
-                             
+                                    <Button
+                                        Margin="0,10"
+                                        Command="{Binding CreateTemplateCommand}"
+                                        Content="创建匹配模板" />
+                                </StackPanel>
 
-                            
+
                             </StackPanel>
                         </ScrollViewer>
 

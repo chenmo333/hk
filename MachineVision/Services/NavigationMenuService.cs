@@ -44,7 +44,7 @@ namespace MachineVision.Services
                 new NavigationItem("","Cameraparameters","相机参数","",new ObservableCollection<NavigationItem>()
                 {
                     // 添加子菜单项，形状匹配
-                    new NavigationItem("Hikvision","Hik","海康威视","HikView"),
+                    new NavigationItem("Camera", "Hik", "海康威视","HikView"),
               
                 }),
 

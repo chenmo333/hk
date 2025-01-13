@@ -2,8 +2,10 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="ApplicationName">WPF/HALCON MachineVision Platform</sys:String>
+    <sys:String x:Key="ApplicationName">MachineVision Algorithm Platform</sys:String>
     <sys:String x:Key="All">All</sys:String>
+    <sys:String x:Key="Cameraparameters">CameraParameters</sys:String>
+    <sys:String x:Key="Hik">HKCamera</sys:String>
     <sys:String x:Key="TemplateMatch">TemplateMatch</sys:String>
     <sys:String x:Key="OutlineMatch">OutlineMatch</sys:String>
     <sys:String x:Key="ShapeMatch">ShapeMatch</sys:String>

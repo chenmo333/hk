@@ -2,7 +2,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="ApplicationName">WPF/HALCON 机器视觉平台</sys:String>
+    <sys:String x:Key="ApplicationName">机器视觉算法平台</sys:String>
     <sys:String x:Key="All">全部</sys:String>
     <sys:String x:Key="Cameraparameters">相机参数</sys:String>
     <sys:String x:Key="Hik">海康相机</sys:String>

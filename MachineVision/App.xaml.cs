@@ -53,6 +53,7 @@ namespace MachineVision
             services.Register<IAppMapper, AppMapper>();
             services.Register<ISettingSerivce, SettingSerivce>();
             services.Register<IHostDialogService, HostDialogService>();
+            services.Register<IPlcService, PlcService>();
 
             //系统模块
             services.RegisterForNavigation<SettingView, SettingViewModel>();
