@@ -1,0 +1,15 @@
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\bin\Debug\net6.0-windows\MachineVision.Device.deps.json
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\bin\Debug\net6.0-windows\MachineVision.Device.dll
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\bin\Debug\net6.0-windows\MachineVision.Device.pdb
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\bin\Debug\net6.0-windows\MvCameraControl.Net.dll
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\obj\Debug\net6.0-windows\MachineVision.Device.csproj.AssemblyReference.cache
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\obj\Debug\net6.0-windows\MachineVision.Device.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\obj\Debug\net6.0-windows\MachineVision.Device.AssemblyInfoInputs.cache
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\obj\Debug\net6.0-windows\MachineVision.Device.AssemblyInfo.cs
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\obj\Debug\net6.0-windows\MachineVision.Device.csproj.CoreCompileInputs.cache
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\obj\Debug\net6.0-windows\MachineVision.Device.sourcelink.json
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\obj\Debug\net6.0-windows\MachineV.A3AB194A.Up2Date
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\obj\Debug\net6.0-windows\MachineVision.Device.dll
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\obj\Debug\net6.0-windows\refint\MachineVision.Device.dll
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\obj\Debug\net6.0-windows\MachineVision.Device.pdb
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.Device\obj\Debug\net6.0-windows\ref\MachineVision.Device.dll

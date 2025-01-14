@@ -1,39 +1,38 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq; 
-using System.Threading; 
+using System.Linq;
+using System.Threading;
 using System.Windows;
 
-namespace MachineVision.Extensions
+namespace MachineVision.Extensions;
+
+public static class LanguageHelper
 {
-    public static class LanguageHelper
+    public static string AppCurrentLanguage { get; set; }
+
+    public static Dictionary<string, string> KeyValues { get; set; }
+
+    public static void SetLanguage(string key)
     {
-        public static string AppCurrentLanguage { get; set; }
+        var resource = Application.Current.Resources.MergedDictionaries
+            .FirstOrDefault(t => t.Source                != null &&
+                                 t.Source.OriginalString != null &&
+                                 t.Source.OriginalString.Contains(key));
 
-        public static Dictionary<string, string> KeyValues { get; set; }
+        if (resource != null)
+            Application.Current.Resources.MergedDictionaries.Remove(resource);
 
-        public static void SetLanguage(string key)
-        {
-            var resource = Application.Current.Resources.MergedDictionaries
-                .FirstOrDefault(t => t.Source != null &&
-                 t.Source.OriginalString != null &&
-                 t.Source.OriginalString.Contains(key));
+        Application.Current.Resources.MergedDictionaries.Add(resource);
 
-            if (resource != null)
-                Application.Current.Resources.MergedDictionaries.Remove(resource);
+        var keyValues = new Dictionary<string, string>();
 
-            Application.Current.Resources.MergedDictionaries.Add(resource);
+        foreach (DictionaryEntry item in resource)
+            keyValues.Add(item.Key.ToString(), item.Value.ToString());
 
-            Dictionary<string, string> keyValues = new Dictionary<string, string>();
+        AppCurrentLanguage = key;
+        KeyValues          = keyValues;
 
-            foreach (DictionaryEntry item in resource)
-                keyValues.Add(item.Key.ToString(), item.Value.ToString());
-
-            AppCurrentLanguage = key;
-            KeyValues = keyValues;
-
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(key);
-        }
+        Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(key);
     }
 }

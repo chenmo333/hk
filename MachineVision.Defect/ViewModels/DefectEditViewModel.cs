@@ -25,8 +25,11 @@ using System.Timers;
 using Timer = System.Timers.Timer;
 using S7.Net;
 using System.Windows;
+using MachineVision.Device.Services;
 using MachineVision.Shared.Services;
 using MessageBox = System.Windows.MessageBox;
+using MachineVision.Device;
+using Prism.Ioc;
 
 namespace MachineVision.Defect.ViewModels;
 
@@ -53,7 +56,9 @@ internal class DefectEditViewModel : NavigationViewModel
 
     #endregion
 
-    private IPlcService plcService;
+    public IPlcService PlcService { set; get; }
+
+    public ICameraService CameraService { set; get; }
 
     private ObservableCollection<Camera> _cameraList;
 
@@ -123,9 +128,11 @@ internal class DefectEditViewModel : NavigationViewModel
         ProjectService                       appService,
         InspectionService                    inspec,
         IHostDialogService                   dialog,
-        IEventAggregator                     aggregator,
-        IPlcService                          plcService)
+        IEventAggregator                     aggregator)
     {
+        PlcService    = ContainerLocator.Current.Resolve<IPlcService>(nameof(PLCType.S7_1200));
+        CameraService = ContainerLocator.Current.Resolve<ICameraService>(nameof(CameraType.HK));
+
         // 创建定时器，设置为 2000 毫秒（2 秒）触发一次
         _timer = new Timer(1000);
 
@@ -142,7 +149,6 @@ internal class DefectEditViewModel : NavigationViewModel
         this.inspec        = inspec;
         this.dialog        = dialog;
         this.aggregator    = aggregator;
-        this.plcService    = plcService;
 
         Setting     = new MatchResultSetting();
         MatchResult = new MatchResult();
@@ -426,8 +432,8 @@ internal class DefectEditViewModel : NavigationViewModel
     {
         try
         {
-            PZ = plcService.ReadDbInt(501, 4);
-            plcService.WriteDbInt(501, 6, 6);
+            PZ = PlcService.ReadDbInt(501, 4);
+            PlcService.WriteDbInt(501, 6, 6);
         }
         catch
         {
@@ -456,7 +462,7 @@ internal class DefectEditViewModel : NavigationViewModel
         // Step 1: 创建并连接到 PLC
         // plc = new Plc(CpuType.S71200, "192.168.8.30", 0, 1); // CPU 类型，PLC IP 地址，Rack 和 Slot
         // plc.Open();                                          // 打开连接
-        plcService.InitPLC(CpuType.S71200, "192.168.8.30", 0, 1);
+        PlcService.InitPLC(CpuType.S71200, "192.168.8.30", 0, 1);
     }
 
     private void RefreshDeviceList()

@@ -491,6 +491,23 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
+      "MachineVision.Device/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Prism.DryIoc": "8.1.97",
+          "S7netplus": "0.20.0"
+        },
+        "compile": {
+          "bin/placeholder/MachineVision.Device.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MachineVision.Device.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "MachineVision.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1615,6 +1632,11 @@
       "path": "../MachineVision.Core/MachineVision.Core.csproj",
       "msbuildProject": "../MachineVision.Core/MachineVision.Core.csproj"
     },
+    "MachineVision.Device/1.0.0": {
+      "type": "project",
+      "path": "../MachineVision.Device/MachineVision.Device.csproj",
+      "msbuildProject": "../MachineVision.Device/MachineVision.Device.csproj"
+    },
     "MachineVision.Shared/1.0.0": {
       "type": "project",
       "path": "../MachineVision.Shared/MachineVision.Shared.csproj",
@@ -1625,6 +1647,7 @@
     "net6.0-windows7.0": [
       "AutoMapper >= 13.0.1",
       "MachineVision.Core >= 1.0.0",
+      "MachineVision.Device >= 1.0.0",
       "MachineVision.Shared >= 1.0.0",
       "MaterialDesignColors >= 2.1.4",
       "MaterialDesignThemes >= 4.9.0",
@@ -1667,6 +1690,9 @@
           "projectReferences": {
             "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\MachineVision.Core.csproj": {
               "projectPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\MachineVision.Core.csproj"
+            },
+            "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Device\\MachineVision.Device.csproj": {
+              "projectPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Device\\MachineVision.Device.csproj"
             },
             "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\MachineVision.Shared.csproj": {
               "projectPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\MachineVision.Shared.csproj"

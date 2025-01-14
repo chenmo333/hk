@@ -53,7 +53,7 @@ namespace MachineVision.ObjectMeasure.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MachineVision.ObjectMeasure;component/views/circlemeasureview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MachineVision.ObjectMeasure;V1.0.0.0;component/views/circlemeasureview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\CircleMeasureView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

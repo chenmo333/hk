@@ -1,53 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Documents;
-using System.Windows.Media.Media3D;
 using HalconDotNet;
 using MachineVision.Core;
 using MachineVision.Core.TemplateMatch;
 using MachineVision.Shared.Controls;
-using MachineVision.TemplateMatch.Models;
 using MvCameraControl;
 using Prism.Commands;
 using Prism.Ioc;
-using Microsoft.Win32;
-using ImTools;
-using static MachineVision.Core.TemplateMatch.MatchResult;
-using System.Security.Cryptography;
-using System.Collections.ObjectModel;
 using System.IO;
+using MachineVision.Device.Services;
+using MachineVision.Device;
+using MachineVision.TemplateMatch.Models;
 
 namespace MachineVision.TemplateMatch.ViewModels;
 
 public class HikViewModel : NavigationViewModel
 {
-    public ITemplateMatchService MatchService { get; set; }
+    public ITemplateMatchService MatchService  { get; set; }
+    public ICameraService        CameraService { get; set; }
 
-    #region 相机标志位
-
-    private readonly DeviceTLayerType enumTLayerType = DeviceTLayerType.MvGigEDevice | DeviceTLayerType.MvUsbDevice
-        | DeviceTLayerType.MvGenTLGigEDevice | DeviceTLayerType.MvGenTLCXPDevice |
-        DeviceTLayerType.MvGenTLCameraLinkDevice | DeviceTLayerType.MvGenTLXoFDevice;
-
-    private List<IDeviceInfo> deviceInfoList = new();
-    private IDevice           device         = null;
-
-    private bool isGrabbing = false; // ch:是否正在取图 | en: Grabbing flag
 
     //相机曝光
     private double exposureTime;
 
     //相机增益
     private double gain;
-
-    #endregion
 
     private HObject                                 maskObject;
     private HObject                                 _image;
@@ -69,20 +49,19 @@ public class HikViewModel : NavigationViewModel
         MatchService = ContainerLocator.Current.Resolve<ITemplateMatchService>(nameof(TempalteMatchType.ShapeModel));
         CreateTemplateCommand = new DelegateCommand(CreateTemplate);
         DrawObjectList = new ObservableCollection<DrawingObjectInfo>();
+        CameraService = ContainerLocator.Current.Resolve<ICameraService>(nameof(CameraType.HK));
 
 
-        DeviceInfo              = new ObservableCollection<DeviceInfoItem>(); // 初始化集合
-        GetParametersCommand    = new DelegateCommand(Getparameters);         //修改参数
-        ModifyParametersCommand = new DelegateCommand(ModifyParameters);      //获取参数
-        ScanCameraCommand       = new DelegateCommand(ScanCamera);
-        StartCameraCommand      = new DelegateCommand(async () => await OpenDeviceAndStartGrabAsync());
-        CaptureImageCommand     = new DelegateCommand(CaptureImage);
-        StopCameraCommand       = new DelegateCommand(StopCamera);
-        SaveImageCommand        = new DelegateCommand(SaveImage); //保存图像
-        // Other command initializations...
+        DeviceInfo              = new ObservableCollection<DeviceInfoItem>();                // 初始化集合
+        GetParametersCommand    = new DelegateCommand(GetParameters);                        // 修改参数
+        ModifyParametersCommand = new DelegateCommand(ModifyParameters);                     // 获取参数
+        ScanCameraCommand       = new DelegateCommand(ScanCamera);                           // 扫描相机
+        StartCameraCommand      = new DelegateCommand(async () => await StartCameraAsync()); // 启动相机
+        CaptureImageCommand     = new DelegateCommand(CaptureImage);                         // 捕获图像
+        StopCameraCommand       = new DelegateCommand(StopCamera);                           // 停止相机
+        SaveImageCommand        = new DelegateCommand(SaveImage);                            // 保存图像
 
-        // Set default save path
-        SavePath = "C:/Users/Public/Pictures/_image.png"; // Default path, can be adjusted as needed
+        SavePath = "C:/Users/Public/Pictures/_image.png"; // 默认图像保存路径
 
         #region 默认文本
 
@@ -229,14 +208,10 @@ public class HikViewModel : NavigationViewModel
     /// <summary>
     /// 获取相机曝光时间及增益
     /// </summary>
-    private void Getparameters()
+    private void GetParameters()
     {
-        var nRet = device.Parameters.GetFloatValue("ExposureTime", out var exposureTime_IF);
-        nRet         = device.Parameters.GetFloatValue("Gain", out var gain_IF);
-        exposureTime = exposureTime_IF.CurValue;
-        gain         = gain_IF.CurValue;
-        ExposureTime = exposureTime; // 曝光
-        Gain         = gain;         // 增益
+        ExposureTime = CameraService.GetExposureTime(); // 曝光
+        Gain         = CameraService.GetGain();         // 增益
     }
 
     /// <summary>
@@ -244,8 +219,8 @@ public class HikViewModel : NavigationViewModel
     /// </summary>
     private void ModifyParameters()
     {
-        var nRet = device.Parameters.SetFloatValue("ExposureTime", (float)ExposureTime);
-        nRet = device.Parameters.SetFloatValue("Gain", (float)Gain);
+        CameraService.SetExposureTime((float)ExposureTime);
+        CameraService.SetGain((float)Gain);
 
         AddDeviceInfo($"相机增益已修改为: {ExposureTime}, 曝光时间修改为: {Gain}");
     }
@@ -274,22 +249,7 @@ public class HikViewModel : NavigationViewModel
 
     private void ScanCamera()
     {
-        SDKSystem.Initialize(); // Initialize SDK resources
-
-        // Ensure CameraList is initialized
-        if (CameraList == null) CameraList = new ObservableCollection<CameraDevice>(); // Initialize if not already
-
-        // Clear existing cameras
-        CameraList.Clear();
-
-        // Enumerate devices
-        var nRet = DeviceEnumerator.EnumDevices(enumTLayerType, out deviceInfoList);
-
-        if (nRet != MvError.MV_OK)
-        {
-            MessageBox.Show("设备枚举失败！");
-            return;
-        }
+        var deviceInfoList = CameraService.ScanCamera();
 
         // Add devices to CameraList
         foreach (var deviceInfo in deviceInfoList)
@@ -308,110 +268,34 @@ public class HikViewModel : NavigationViewModel
         }
     }
 
-    public async Task OpenDeviceAndStartGrabAsync()
-    {
-        // 打开设备
-        await StartCameraAsync();
-
-
-        // 在设备成功打开后自动调用开始抓取
-        if (device != null)
-        {
-            AddDeviceInfo("相机已打开");
-            await StartGrabAsync();
-        }
-        else
-        {
-            AddDeviceInfo("相机打开失败");
-        }
-    }
-
     private async Task StartCameraAsync()
     {
-        await Task.Run(() =>
-        {
-            // 获取选择的设备信息 | Get selected device information
-            var deviceInfo = SelectedCamera?.DeviceInfo;
+        var deviceInfo = SelectedCamera.DeviceInfo;
 
-            try
+        // 启动相机的后台任务
+        await Task.Run(() => { CameraService.StartCamera(deviceInfo); })
+            // 任务完成后继续执行
+            .ContinueWith(t =>
             {
-                // 创建设备
-                device = DeviceFactory.CreateDevice(deviceInfo);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("创建设备失败！" + ex.Message);
-                return;
-            }
-
-            var result = device.Open();
-
-
-            // 判断是否为GigE设备并设置包大小
-            if (device is IGigEDevice gigEDevice)
-            {
-                int optionPacketSize;
-                result = gigEDevice.GetOptimalPacketSize(out optionPacketSize);
-                if (result == MvError.MV_OK)
-                    result = device.Parameters.SetIntValue("GevSCPSPacketSize", (long)optionPacketSize);
-            }
-
-            // 设置心跳超时
-            device.Parameters.SetIntValue("GevHeartbeatTimeout", 3000);
-
-            // **设置触发源为软件**
-            result = device.Parameters.SetEnumValueByString("TriggerSource", "Software");
-
-
-            // **启用触发模式**
-            result = device.Parameters.SetEnumValueByString("TriggerMode", "On");
-
-
-            // 设置采集模式为连续
-            result = device.Parameters.SetEnumValueByString("AcquisitionMode", "Continuous");
-        });
+                // 在任务完成后检查相机是否成功打开
+                if (!CameraService.IsCameraNull())
+                    // 相机成功打开，更新界面状态
+                    AddDeviceInfo("相机已打开");
+                else
+                    // 相机打开失败，更新界面状态
+                    AddDeviceInfo("相机打开失败");
+            }, TaskScheduler.FromCurrentSynchronizationContext()); // 确保在 UI 线程中执行
     }
 
-    private async Task StartGrabAsync()
-    {
-        await Task.Run(() =>
-        {
-            isGrabbing = true;
-
-            // ch:开始采集 | en:Start Grabbing
-            var result = device.StreamGrabber.StartGrabbing();
-            if (result != MvError.MV_OK)
-            {
-                isGrabbing = false;
-
-                return;
-            }
-        });
-    }
 
     /// <summary>
     /// 捕获图像
     /// </summary>
     private void CaptureImage()
     {
-        try
-        {
-            // 发送软件触发命令
-            var result = device.Parameters.SetCommandValue("TriggerSoftware");
-            if (result != MvError.MV_OK)
-            {
-                AddDeviceInfo("软件触发命令发送失败");
-                return;
-            }
-        }
-        catch (Exception ex)
-        {
-            AddDeviceInfo($"发送软件触发时出错: {ex.Message}");
-        }
-
         IFrameOut frameOut;
-        var       nRet = device.StreamGrabber.GetImageBuffer(500, out frameOut);
-        if (nRet != MvError.MV_OK)
+        var       nRet = CameraService.CaptureImage(out frameOut);
+        if (!nRet)
         {
             AddDeviceInfo("获取图像失败");
             return;
@@ -448,11 +332,6 @@ public class HikViewModel : NavigationViewModel
         {
             AddDeviceInfo($"加载图像失败: {ex.Message}");
         }
-        finally
-        {
-            // 释放图像缓冲区
-            device.StreamGrabber.FreeImageBuffer(frameOut);
-        }
     }
 
     /// <summary>
@@ -460,11 +339,7 @@ public class HikViewModel : NavigationViewModel
     /// </summary>
     private void StopCamera()
     {
-        // ch:停止采集 | en:Stop Grabbing
-        var result = device.StreamGrabber.StopGrabbing();
-        // ch:关闭设备 | en:Close Device
-        device.Close();
-        device.Dispose();
+        CameraService.StopCamera();
 
         AddDeviceInfo("相机已关闭");
     }

@@ -12,6 +12,7 @@
           "FreeSql.Provider.Sqlite": "3.2.808",
           "MachineVision.Core": "1.0.0",
           "MachineVision.Defect": "1.0.0",
+          "MachineVision.Device": "1.0.0",
           "MachineVision.ObjectMeasure": "1.0.0",
           "MachineVision.Ocr": "1.0.0",
           "MachineVision.Shared": "1.0.0",
@@ -318,6 +319,7 @@
         "dependencies": {
           "AutoMapper": "13.0.1",
           "MachineVision.Core": "1.0.0",
+          "MachineVision.Device": "1.0.0",
           "MachineVision.Shared": "1.0.0",
           "MaterialDesignColors": "2.1.4",
           "MaterialDesignThemes": "4.9.0",
@@ -327,6 +329,18 @@
         },
         "runtime": {
           "MachineVision.Defect.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MachineVision.Device/1.0.0": {
+        "dependencies": {
+          "Prism.DryIoc": "8.1.97",
+          "S7netplus": "0.20.0"
+        },
+        "runtime": {
+          "MachineVision.Device.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -387,6 +401,7 @@
       "MachineVision.TemplateMatch/1.0.0": {
         "dependencies": {
           "MachineVision.Core": "1.0.0",
+          "MachineVision.Device": "1.0.0",
           "MachineVision.Shared": "1.0.0",
           "MaterialDesignColors": "2.1.4",
           "MaterialDesignThemes": "4.9.0",
@@ -640,6 +655,11 @@
       "sha512": ""
     },
     "MachineVision.Defect/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MachineVision.Device/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

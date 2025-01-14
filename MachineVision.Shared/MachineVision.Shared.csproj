@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Library</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="AutoMapper" Version="13.0.1" />
@@ -20,12 +20,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\MachineVision.Core\MachineVision.Core.csproj" />
+		<ProjectReference Include="..\MachineVision.Core\MachineVision.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="halcondotnet">
-	    <HintPath>..\dlls\halcondotnet.dll</HintPath>
-	  </Reference>
-	</ItemGroup> 
+		<Reference Include="halcondotnet">
+			<HintPath>..\dlls\halcondotnet.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>

@@ -53,7 +53,7 @@ namespace MachineVision.Ocr.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MachineVision.Ocr;component/views/barcodeview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MachineVision.Ocr;V1.0.0.0;component/views/barcodeview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\BarCodeView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

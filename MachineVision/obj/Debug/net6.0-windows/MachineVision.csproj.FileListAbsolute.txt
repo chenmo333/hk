@@ -133,3 +133,5 @@ C:\Users\HZSK2023\Desktop\MachineVision\MachineVision\obj\Debug\net6.0-windows\M
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision\obj\Debug\net6.0-windows\ref\MachineVision.dll
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision\obj\Debug\net6.0-windows\MachineVision.sourcelink.json
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision\bin\Debug\net6.0-windows\S7.Net.dll
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision\bin\Debug\net6.0-windows\MachineVision.Device.dll
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision\bin\Debug\net6.0-windows\MachineVision.Device.pdb

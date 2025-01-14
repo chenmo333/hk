@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MachineVision.ObjectMeasure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d037ad56a94466289bf822cbf403a07e1d1a3739")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b3e0360211364568bf067de251f42f753922345")]
 [assembly: System.Reflection.AssemblyProductAttribute("MachineVision.ObjectMeasure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MachineVision.ObjectMeasure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

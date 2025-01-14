@@ -497,6 +497,7 @@
         "dependencies": {
           "AutoMapper": "13.0.1",
           "MachineVision.Core": "1.0.0",
+          "MachineVision.Device": "1.0.0",
           "MachineVision.Shared": "1.0.0",
           "MaterialDesignColors": "2.1.4",
           "MaterialDesignThemes": "4.9.0",
@@ -512,6 +513,23 @@
         },
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App"
+        ]
+      },
+      "MachineVision.Device/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Prism.DryIoc": "8.1.97",
+          "S7netplus": "0.20.0"
+        },
+        "compile": {
+          "bin/placeholder/MachineVision.Device.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MachineVision.Device.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
       "MachineVision.ObjectMeasure/1.0.0": {
@@ -586,6 +604,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "MachineVision.Core": "1.0.0",
+          "MachineVision.Device": "1.0.0",
           "MachineVision.Shared": "1.0.0",
           "MaterialDesignColors": "2.1.4",
           "MaterialDesignThemes": "4.9.0",
@@ -1706,6 +1725,11 @@
       "path": "../MachineVision.Defect/MachineVision.Defect.csproj",
       "msbuildProject": "../MachineVision.Defect/MachineVision.Defect.csproj"
     },
+    "MachineVision.Device/1.0.0": {
+      "type": "project",
+      "path": "../MachineVision.Device/MachineVision.Device.csproj",
+      "msbuildProject": "../MachineVision.Device/MachineVision.Device.csproj"
+    },
     "MachineVision.ObjectMeasure/1.0.0": {
       "type": "project",
       "path": "../MachineVision.ObjectMeasure/MachineVision.ObjectMeasure.csproj",
@@ -1733,6 +1757,7 @@
       "FreeSql.Provider.Sqlite >= 3.2.808",
       "MachineVision.Core >= 1.0.0",
       "MachineVision.Defect >= 1.0.0",
+      "MachineVision.Device >= 1.0.0",
       "MachineVision.ObjectMeasure >= 1.0.0",
       "MachineVision.Ocr >= 1.0.0",
       "MachineVision.Shared >= 1.0.0",
@@ -1779,6 +1804,9 @@
             },
             "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\MachineVision.Defect.csproj": {
               "projectPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Defect\\MachineVision.Defect.csproj"
+            },
+            "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Device\\MachineVision.Device.csproj": {
+              "projectPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Device\\MachineVision.Device.csproj"
             },
             "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.ObjectMeasure\\MachineVision.ObjectMeasure.csproj": {
               "projectPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.ObjectMeasure\\MachineVision.ObjectMeasure.csproj"

@@ -92,6 +92,98 @@
         }
       }
     },
+    "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Device\\MachineVision.Device.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Device\\MachineVision.Device.csproj",
+        "projectName": "MachineVision.Device",
+        "projectPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Device\\MachineVision.Device.csproj",
+        "packagesPath": "C:\\Users\\HZSK2023\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Device\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\HZSK2023\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Prism.DryIoc": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            },
+            "S7netplus": {
+              "target": "Package",
+              "version": "[0.20.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\MachineVision.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -246,6 +338,9 @@
             "projectReferences": {
               "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\MachineVision.Core.csproj": {
                 "projectPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Core\\MachineVision.Core.csproj"
+              },
+              "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Device\\MachineVision.Device.csproj": {
+                "projectPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Device\\MachineVision.Device.csproj"
               },
               "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\MachineVision.Shared.csproj": {
                 "projectPath": "C:\\Users\\HZSK2023\\Desktop\\MachineVision\\MachineVision.Shared\\MachineVision.Shared.csproj"

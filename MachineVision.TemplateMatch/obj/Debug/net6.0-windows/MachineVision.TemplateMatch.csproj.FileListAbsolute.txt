@@ -60,3 +60,5 @@ C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.TemplateMatch\obj\Debug\ne
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.TemplateMatch\obj\Debug\net6.0-windows\Views\HikView.baml
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.TemplateMatch\bin\Debug\net6.0-windows\MvCameraControl.Net.dll
 C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.TemplateMatch\obj\Debug\net6.0-windows\MachineVision.TemplateMatch.sourcelink.json
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.TemplateMatch\bin\Debug\net6.0-windows\MachineVision.Device.dll
+C:\Users\HZSK2023\Desktop\MachineVision\MachineVision.TemplateMatch\bin\Debug\net6.0-windows\MachineVision.Device.pdb
