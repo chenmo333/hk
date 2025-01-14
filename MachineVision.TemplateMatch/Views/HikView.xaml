@@ -30,6 +30,7 @@
                 AutoGenerateColumns="False"
                 BorderThickness="0"
                 CanUserAddRows="False"
+                SelectionMode="Extended"
                 ColumnWidth="*"
                 IsReadOnly="True"
                 FontSize="20"
@@ -37,8 +38,12 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn
                         Width="*"
+                        Binding="{Binding Time}"
+                        Header="时间" />
+                    <DataGridTextColumn
+                        Width="4*"
                         Binding="{Binding Info}"
-                        Header="信息" />
+                        Header="操作" />
                 </DataGrid.Columns>
             </DataGrid>
 

@@ -109,6 +109,7 @@ public class HikViewModel : NavigationViewModel
     // 数据类
     public class DeviceInfoItem
     {
+        public string Time { get; set; }
         public string Info { get; set; }
     }
 
@@ -118,8 +119,11 @@ public class HikViewModel : NavigationViewModel
     /// <param name="info"></param>
     public void AddDeviceInfo(string info)
     {
-        var formattedInfo = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] - [{info}]"; // 格式化时间和操作信息
-        DeviceInfo.Insert(0, new DeviceInfoItem { Info = formattedInfo });      // 在头部插入元素
+        DeviceInfo.Insert(0, new DeviceInfoItem
+        {
+            Time = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss}",
+            Info = info
+        });
     }
 
     #endregion
