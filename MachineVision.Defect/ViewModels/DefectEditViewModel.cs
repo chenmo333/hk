@@ -184,7 +184,7 @@ internal class DefectEditViewModel : NavigationViewModel
 
     //相机
     public DelegateCommand xjCommand                { get; private set; }
-    public DelegateCommand closeDeviceCommand       { get; private set; }
+    public DelegateCommand closeDeviceCommand       { get; private set; }//关闭相机
     public DelegateCommand TextrecognitionCommand   { get; private set; }
     public DelegateCommand RefreshDeviceListCommand { get; private set; } //寻找相机
     public DelegateCommand OpenDeviceCommand        { get; private set; } //打开相机
@@ -444,16 +444,9 @@ internal class DefectEditViewModel : NavigationViewModel
 
     private void closeDevice()
     {
-        StopGrab();
-    }
+        CameraService.StopCamera();
 
-    private void StopGrab() //关闭取流
-    {
-        // ch:停止采集 | en:Stop Grabbing
-        var result = device.StreamGrabber.StopGrabbing();
-        // ch:关闭设备 | en:Close Device
-        device.Close();
-        device.Dispose();
+        Console.WriteLine("相机已关闭");
     }
 
     private void ConnectPlc()
@@ -467,18 +460,13 @@ internal class DefectEditViewModel : NavigationViewModel
 
     private void RefreshDeviceList()
     {
-        SDKSystem.Initialize(); //相机初始化SDK资源
-
 
         // 检查 CameraList 是否已初始化
         if (CameraList == null) CameraList = new ObservableCollection<Camera>(); // 如果未初始化，进行初始化
         // 清空 CameraList
         CameraList.Clear();
 
-        // 枚举设备
-        var nRet = DeviceEnumerator.EnumDevices(enumTLayerType, out deviceInfoList);
-
-
+        var deviceInfoList = CameraService.ScanCamera();
         // 在 CameraList 中添加设备
         foreach (var deviceInfo in deviceInfoList)
         {
@@ -500,89 +488,24 @@ internal class DefectEditViewModel : NavigationViewModel
     /// <returns></returns>
     public async Task OpenDeviceAndStartGrabAsync()
     {
-        // 打开设备
-        await OpenDeviceAsync();
+        var deviceInfo = CameraList[0].DeviceInfo;
 
-        // 在设备成功打开后自动调用开始抓取
-        if (device != null) await StartGrabAsync();
-    }
-
-    /// <summary>
-    /// 打开设备
-    /// </summary>
-    /// <returns></returns>
-    private async Task OpenDeviceAsync()
-    {
-        try
-        {
-            // 将可能阻塞的调用放入 Task.Run
-            await Task.Run(() =>
+        // 启动相机的后台任务
+        await Task.Run(() => { CameraService.StartCamera(deviceInfo); })
+            // 任务完成后继续执行
+            .ContinueWith(t =>
             {
-                // ch: 获取选择的设备信息（这里假定为 CameraList[0]）
-                // en: Get selected device information (here we assume CameraList[0])
-                var deviceInfo = CameraList[0].DeviceInfo;
-
-                // 创建设备
-                device = DeviceFactory.CreateDevice(deviceInfo);
-
-                // 打开设备（同步操作）
-                var result = device.Open();
-                if (result != MvError.MV_OK) MessageBox.Show($"打开设备失败, 错误码={result}");
-
-                // 如果是GigE设备，设置包大小
-                if (device is IGigEDevice gigEDevice)
-                    if (gigEDevice.GetOptimalPacketSize(out var optimalPacketSize) == MvError.MV_OK)
-                        device.Parameters.SetIntValue("GevSCPSPacketSize", optimalPacketSize);
-
-                // 设置心跳超时
-                device.Parameters.SetIntValue("GevHeartbeatTimeout", 3000);
-
-                // 设置触发源为软件
-                device.Parameters.SetEnumValueByString("TriggerSource", "Software");
-
-                // 启用触发模式
-                device.Parameters.SetEnumValueByString("TriggerMode", "On");
-
-                // 设置采集模式为连续
-                device.Parameters.SetEnumValueByString("AcquisitionMode", "Continuous");
-            });
-
-            // 打开成功后提示
-            //MessageBox.Show("设备打开成功！", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show($"创建设备失败：{ex.Message}", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
-        }
+                // 在任务完成后检查相机是否成功打开
+                if (!CameraService.IsCameraNull())
+                    // 相机成功打开，更新界面状态
+                    Console.WriteLine("相机已打开");
+                else
+                    // 相机打开失败，更新界面状态
+                    MessageBox.Show("相机打开失败");
+            }, TaskScheduler.FromCurrentSynchronizationContext()); // 确保在 UI 线程中执行
     }
 
-    /// <summary>
-    /// 启动捕获
-    /// </summary>
-    /// <returns></returns>
-    public async Task StartGrabAsync()
-    {
-        try
-        {
-            await Task.Run(() =>
-            {
-                isGrabbing = true;
 
-                // ch:开始采集 | en:Start Grabbing
-                var result = device.StreamGrabber.StartGrabbing();
-                if (result != MvError.MV_OK)
-                {
-                    isGrabbing = false;
-                    MessageBox.Show($"捕获失败, 错误码={result}");
-                    return;
-                }
-            });
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show($"开始采集失败：{ex.Message}", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
-        }
-    }
 
     /// <summary>
     /// 捕获图像
@@ -590,54 +513,47 @@ internal class DefectEditViewModel : NavigationViewModel
     /// <returns></returns>
     public async Task CaptureImageAsync()
     {
-        await Task.Run(() =>
-        {
-            try
-            {
-                // 发送软件触发命令
-                var result = device.Parameters.SetCommandValue("TriggerSoftware");
-                if (result != MvError.MV_OK) return;
-
-
-                GetImageFromDevice();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("发送软件触发时出错：" + ex.Message, "错误");
-            }
-        });
-    }
-
-    /// <summary>
-    /// 从设备获取图像
-    /// </summary>
-    private void GetImageFromDevice()
-    {
-        int       nRet;
         IFrameOut frameOut;
-        var       hImage = new HImage(); //读取主图片
-        nRet = device.StreamGrabber.GetImageBuffer(500, out frameOut);
-        if (nRet != MvError.MV_OK)
+        var       nRet = CameraService.CaptureImage(out frameOut);
+        if (!nRet)
         {
+            MessageBox.Show("获取图像失败");
             return;
         }
-        else
+
+        Image mimage = frameOut.Image.ToBitmap();
+
+        // 指定保存路径
+        var folderPath = @"./Images";
+        var filePath   = Path.Combine(folderPath, "img.jpg");
+
+        // 如果文件夹不存在，则创建文件夹
+        if (!Directory.Exists(folderPath)) Directory.CreateDirectory(folderPath);
+
+        // 将图像保存到指定路径
+        try
         {
-            var   img    = new HImage();
-            Image mimage = frameOut.Image.ToBitmap();
+            mimage.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"保存图像失败: {ex.Message}");
+            return;
+        }
 
-            // 指定保存路径
-            var filePath = @"C:/Users/Public/Pictures/image.jpg"; // 可以修改文件名和格式
-
-            // 将图像保存到指定路径
-            mimage.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg); // 可以根据需要修改格式，如 PNG、BMP 等
-
-            hImage.ReadImage("C:/Users/Public/Pictures/image.jpg");
+        try
+        {
+            var hImage = new HImage();
+            hImage.ReadImage(filePath);
             Image = hImage;
-
-            device.StreamGrabber.FreeImageBuffer(frameOut);
+            Console.WriteLine("捕获图像");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载图像失败: {ex.Message}");
         }
     }
+
 
     private void ShapeRecognition()
     {
