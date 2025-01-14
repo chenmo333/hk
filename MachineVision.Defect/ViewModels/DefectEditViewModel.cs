@@ -221,15 +221,14 @@ internal class DefectEditViewModel : NavigationViewModel
     private void InitBindingCommands()
     {
         LoadImageCommand         = new DelegateCommand(LoadImage);
-        xjCommand                = new DelegateCommand(xj);
         ConnectPlcCommand        = new DelegateCommand(ConnectPlc);
         RefreshDeviceListCommand = new DelegateCommand(RefreshDeviceList); //枚举相机
 
         OpenDeviceCommand      = new DelegateCommand(async () => await OpenDeviceAndStartGrabAsync()); //打开相机
         OnceSoftTriggerCommand = new DelegateCommand(async () => await CaptureImageAsync());           //拍照
 
-        TextrecognitionCommand = new DelegateCommand(Textrecognition); //识别文字
-        closeDeviceCommand     = new DelegateCommand(closeDevice);     //识别文字
+        TextrecognitionCommand = new DelegateCommand(ShapeRecognition); //识别形状
+        closeDeviceCommand     = new DelegateCommand(closeDevice);
 
         SetModelParamCommand    = new DelegateCommand(SetModelParam);
         UpdateModelParamCommand = new DelegateCommand(UpdateModelParam);
@@ -427,80 +426,15 @@ internal class DefectEditViewModel : NavigationViewModel
     {
         try
         {
-           PZ= plcService.ReadDbInt(501, 4);
-            plcService.WriteDbInt(501,6,6);
-            //ZP();
-            //DB();
-
-            //if (PZ == 1)
-            //{
-            //    CaptureImageAsync();
-            //    WritePLC(22, 1);
-            //    Textrecognition();
-            //}
+            PZ = plcService.ReadDbInt(501, 4);
+            plcService.WriteDbInt(501, 6, 6);
         }
         catch
         {
         }
     }
 
-    #region 转换
-
-    private static int ToInt(byte[] D, int startndex)
-    {
-        var wordBytes = new byte[2];
-        Array.Copy(D, startndex, wordBytes, 0, 2);
-        Array.Reverse(wordBytes); // 反转字节顺序以适应大端序
-        return BitConverter.ToUInt16(wordBytes, 0);
-    }
-
     #endregion
-
-    private static void DB()
-    {
-        PZ = ToInt(D, 0);
-    }
-
-    private static void ZP()
-    {
-        try
-        {
-            D = plc.ReadBytes(DataType.DataBlock, 501, 0, 30); //提取整个DB块
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
-        }
-    }
-
-
-    /// <summary>
-    /// 装配数据 写入
-    /// </summary>
-    /// <param name="varaddres"></param>
-    /// <param name="varValue"></param>
-    /// <returns></returns>
-    public string WritePLC(int varaddres, int varValue)
-    {
-        lock (this)
-        {
-            try
-            {
-                plc.Write(DataType.DataBlock, 501, varaddres, varValue); //  DB块编号            DB块偏移量        写入字符 
-                return "写入成功";
-            }
-            catch (Exception ex)
-            {
-                return "写入失败" + ex.Message;
-            }
-        }
-    }
-
-    #endregion
-
-    private void xj()
-    {
-    }
 
     private void closeDevice()
     {
@@ -699,7 +633,7 @@ internal class DefectEditViewModel : NavigationViewModel
         }
     }
 
-    private void Textrecognition()
+    private void ShapeRecognition()
     {
         var    modelid  = new HTuple();             ////定义变量给模板
         HTuple hv_Row   = new(), hv_Column = new(); //定义变量

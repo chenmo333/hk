@@ -4,35 +4,38 @@ using MachineVision.Defect.Services;
 using MachineVision.Shared.Services.Session;
 using Prism.Services.Dialogs;
 
-namespace MachineVision.Defect.ViewModels
+namespace MachineVision.Defect.ViewModels;
+
+internal class CreateProjectViewModel : HostDialogViewModel
 {
-    internal class CreateProjectViewModel : HostDialogViewModel
+    public CreateProjectViewModel(ProjectService appService)
     {
-        public CreateProjectViewModel(ProjectService appService)
-        {
-            this.appService = appService;
-        }
+        this.appService = appService;
+    }
 
-        private string name;
-        private readonly ProjectService appService;
+    private          string         name;
+    private readonly ProjectService appService;
 
-        public string Name
+    public string Name
+    {
+        get => name;
+        set
         {
-            get { return name; }
-            set { name = value; RaisePropertyChanged(); }
+            name = value;
+            RaisePropertyChanged();
         }
+    }
 
-        public override async Task Save()
+    public override async Task Save()
+    {
+        await appService.CreateOrUpdateAsync(new ProjectModel()
         {
-            await appService.CreateOrUpdateAsync(new ProjectModel()
-            {
-                Name = Name,
-            });
-            await base.Save();
-        }
+            Name = Name
+        });
+        await base.Save();
+    }
 
-        public override void OnDialogOpened(IDialogParameters parameters)
-        {
-        }
+    public override void OnDialogOpened(IDialogParameters parameters)
+    {
     }
 }

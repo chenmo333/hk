@@ -2,33 +2,32 @@
 using MachineVision.Models;
 using MachineVision.Services;
 using Prism.Commands;
-using Prism.Regions; 
+using Prism.Regions;
 
-namespace MachineVision.ViewModels
+namespace MachineVision.ViewModels;
+
+internal class DashboardViewModel : NavigationViewModel
 {
-    internal class DashboardViewModel : NavigationViewModel
+    private readonly IRegionManager manager;
+
+    public DashboardViewModel(IRegionManager manager, INavigationMenuService navigationService)
     {
-        private readonly IRegionManager manager;
+        this.manager      = manager;
+        NavigationService = navigationService;
+        OpenPageCommand   = new DelegateCommand<NavigationItem>(OpenPage);
+    }
 
-        public DashboardViewModel(IRegionManager manager, INavigationMenuService navigationService)
-        {
-            this.manager = manager;
-            NavigationService = navigationService;
-            OpenPageCommand = new DelegateCommand<NavigationItem>(OpenPage);
-        }
+    public INavigationMenuService NavigationService { get; }
 
-        public INavigationMenuService NavigationService { get; }
+    public DelegateCommand<NavigationItem> OpenPageCommand { get; private set; }
 
-        public DelegateCommand<NavigationItem> OpenPageCommand { get; private set; }
+    private void OpenPage(NavigationItem item)
+    {
+        manager.Regions["MainViewRegion"].RequestNavigate(item.PageName);
+    }
 
-        private void OpenPage(NavigationItem item)
-        {
-            manager.Regions["MainViewRegion"].RequestNavigate(item.PageName);
-        }
-
-        public override void OnNavigatedTo(NavigationContext navigationContext)
-        {
-            base.OnNavigatedTo(navigationContext);
-        }
+    public override void OnNavigatedTo(NavigationContext navigationContext)
+    {
+        base.OnNavigatedTo(navigationContext);
     }
 }

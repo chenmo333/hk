@@ -5,7 +5,6 @@
     xmlns:controls="clr-namespace:MachineVision.Defect.Controls"
     xmlns:cv="clr-namespace:MachineVision.Defect.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:MachineVision.Defect.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
     d:DesignHeight="450"
@@ -13,7 +12,6 @@
     mc:Ignorable="d">
     <UserControl.Resources>
         <cv:KindToColorConverter x:Key="kindConverter" />
-        <cv:IStatusToColorConverter x:Key="stvConverter" />
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -100,56 +98,56 @@
                 BorderThickness="1"
                 Opacity="0.3" />
             <Button
-                 Background="Green"
-                 BorderThickness="0"
-                 Command="{Binding  ConnectPlcCommand}"
-              
-                 Content="连接PLC" Margin="5,365,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
+                Background="Green"
+                BorderThickness="0"
+                Command="{Binding  ConnectPlcCommand}"
+
+                Content="连接PLC" Margin="5,365,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
 
             <Button
-                 Background="Green"
-                 BorderThickness="0"
-                 Command="{Binding  TextrecognitionCommand}"
-              
-                 Content="识别文字" Margin="5,410,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
+                Background="Green"
+                BorderThickness="0"
+                Command="{Binding  TextrecognitionCommand}"
+
+                Content="识别文字" Margin="5,410,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
 
             <ListBox
-                 x:Name="CameraListBox"
-                 Grid.Column="1"
-                 Margin="5,375,13,0"
-                 Height="150"
-                 ItemsSource="{Binding CameraList}"  
-                 DisplayMemberPath="CameraName"               
-                 SelectionMode="Single"
-                 SelectedItem="{Binding SelectedCamera, Mode=TwoWay}"
-                  Cursor="Hand" />
+                x:Name="CameraListBox"
+                Grid.Column="1"
+                Margin="5,375,13,0"
+                Height="150"
+                ItemsSource="{Binding CameraList}"
+                DisplayMemberPath="CameraName"
+                SelectionMode="Single"
+                SelectedItem="{Binding SelectedCamera, Mode=TwoWay}"
+                Cursor="Hand" />
 
             <Button
-                 Background="Green"
-                 BorderThickness="0"
-                 Command="{Binding RefreshDeviceListCommand}"
-              
-                 Content="寻找相机" Margin="5,510,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
+                Background="Green"
+                BorderThickness="0"
+                Command="{Binding RefreshDeviceListCommand}"
+
+                Content="寻找相机" Margin="5,510,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
 
 
-                <Button
-                 Background="Green"
-                 BorderThickness="0"
-                 Command="{Binding OpenDeviceCommand}"
-                
-                 Content="连接相机" Margin="5,555,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
             <Button
-                 Background="Green"
-                 BorderThickness="0"
-                 Command="{Binding OnceSoftTriggerCommand}"
-               
-                 Content="开始拍照" Margin="5,600,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
+                Background="Green"
+                BorderThickness="0"
+                Command="{Binding OpenDeviceCommand}"
+
+                Content="连接相机" Margin="5,555,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
             <Button
-                 Background="Green"
-                 BorderThickness="0"
-                 Command="{Binding closeDeviceCommand}"
-               
-                 Content="关闭相机" Margin="5,645,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
+                Background="Green"
+                BorderThickness="0"
+                Command="{Binding OnceSoftTriggerCommand}"
+
+                Content="开始拍照" Margin="5,600,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
+            <Button
+                Background="Green"
+                BorderThickness="0"
+                Command="{Binding closeDeviceCommand}"
+
+                Content="关闭相机" Margin="5,645,13,0" Height="40" Grid.Column="1" VerticalAlignment="Top" Cursor="Hand" />
 
 
             <TabControl

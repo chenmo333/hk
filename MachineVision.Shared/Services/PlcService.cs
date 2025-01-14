@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Principal;
+using System.Text;
 using S7.Net;
 
 namespace MachineVision.Shared.Services;
@@ -112,6 +113,68 @@ public class PlcService : IPlcService
 
     public void WriteDbBool(int db, int startByteAddress, byte bitAdr, bool value)
     {
-        throw new NotImplementedException();
+        try
+        {
+            byte[] bytes = plc.ReadBytes(DataType.DataBlock, db, startByteAddress, 1);
+
+            if (value)
+                bytes[0] |= (byte)(1 << bitAdr);
+            else
+                bytes[0] &= (byte)~(1 << bitAdr);
+
+            plc.WriteBytes(DataType.DataBlock, db, startByteAddress, bytes);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"写入 DB Bool 失败: {ex.Message}");
+            throw;
+        }
+    }
+
+    public string ReadDbString(int db, int startByteAddress, int maxLength)
+    {
+        try
+        {
+            byte[] bytes = plc.ReadBytes(DataType.DataBlock, db, startByteAddress, maxLength + 2);
+
+            // 第一个字节是最大长度，第二个字节是实际长度
+            int actualLength = bytes[1];
+            if (actualLength > maxLength)
+                throw new Exception("实际字符串长度超出最大长度。");
+
+            // 提取字符串内容
+            return Encoding.ASCII.GetString(bytes, 2, actualLength);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"读取 DB String 失败: {ex.Message}");
+            throw;
+        }
+    }
+
+    public void WriteDbString(int db, int startByteAddress, string value, int maxLength)
+    {
+        try
+        {
+            if (value.Length > maxLength)
+                throw new ArgumentException("字符串长度超过指定的最大长度。");
+
+            byte[] bytes = new byte[maxLength + 2];
+
+            // 第一个字节是最大长度，第二个字节是实际长度
+            bytes[0] = (byte)maxLength;
+            bytes[1] = (byte)value.Length;
+
+            // 写入字符串内容
+            Encoding.ASCII.GetBytes(value, 0, value.Length, bytes, 2);
+
+            // 写入到 PLC
+            plc.WriteBytes(DataType.DataBlock, db, startByteAddress, bytes);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"写入 DB String 失败: {ex.Message}");
+            throw;
+        }
     }
 }
